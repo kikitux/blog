@@ -10,6 +10,6 @@ I am a person who like to have backups, and be on the bleeding edge most of the 
 
 I was wondering how long it will take break my mac server anyways.. took, 2 days.. :D
 
-[![OSX Server](https://github.com/kikitux/kikitux.github.com/raw/master/img/Server.png)]()
+![OSX Server](https://github.com/kikitux/kikitux.github.com/raw/master/img/Server.png "Osx Server")
 
 Alvaro
