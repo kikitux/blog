@@ -1,0 +1,6 @@
+cd _site
+echo git add . && git commit -m "mini site" && git push
+pwd
+cd ..
+echo git add . && git commit -m "mini site" && git push
+pwd
