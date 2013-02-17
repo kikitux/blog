@@ -112,10 +112,6 @@
       
     
   
-    
-      
-    
-  
 
 
 
@@ -150,9 +146,8 @@ http://kikitux.net/tags.html
 http://kikitux.nettag/osx/index.html
 http://kikitux.nettag/dr/index.html
 http://kikitux.netcategories/osx/index.html
-http://kikitux.netcategories/dr/index.html
 
-http://kikitux.net/osx/dr/2013/02/14/osx-server-and-ruby-dependencies
+http://kikitux.net/osx/2013/02/14/osx-server-and-ruby-dependencies
   </div>
 </div>
 
