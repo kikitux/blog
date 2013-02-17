@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-17T21:47:21+13:00</updated>
+ <updated>2013-02-17T21:50:16+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -21,20 +21,22 @@
 
 &lt;p&gt;You can download the script from github public-yum-downloader.sh&lt;/p&gt;
 
-&lt;p&gt;usage public-yum-downloader.sh -h -h|&amp;#8211;help this screen -a|&amp;#8211;arch=&lt;pre class='markdown-html-error' style='border: solid 3px red; background-color: pink'&gt;REXML could not parse this XML/HTML: 
-&amp;lt;arch&amp;gt;        architecture (ie. i386 or x86_64)
-	-R|--release=&amp;lt;release&amp;gt;  release to download
-	-P|--path=&amp;lt;path&amp;gt;        destination path of download (ie. /var/www/html)
-	-p|--proxy=&amp;lt;url&amp;gt;        proxy (ie http://proxy:3128)
-	-r|--repo=&amp;lt;repo&amp;gt;        manual repo download (ie. ol6_addons)
-	-m|--min                minimal package download for LXC host
-	-u|--url=&amp;lt;url&amp;gt;          local yum repo url (ie. local yum mirror)
-	-s|--src                download source rpm
-	-l|--local=&amp;lt;path&amp;gt;&amp;gt;      local path to check for rpms (ie. /media/iso)&lt;/pre&gt;&lt;/p&gt;
+&lt;p&gt;usage&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;	public-yum-downloader.sh -h
+	-h|--help               this screen
+	-a|--arch&lt;span class='o'&gt;=&lt;/span&gt;&amp;lt;arch&amp;gt;        architecture &lt;span class='o'&gt;(&lt;/span&gt;ie. i386 or x86_64&lt;span class='o'&gt;)&lt;/span&gt;
+	-R|--release&lt;span class='o'&gt;=&lt;/span&gt;&amp;lt;release&amp;gt;  release to download
+	-P|--path&lt;span class='o'&gt;=&lt;/span&gt;&amp;lt;path&amp;gt;        destination path of download &lt;span class='o'&gt;(&lt;/span&gt;ie. /var/www/html&lt;span class='o'&gt;)&lt;/span&gt;
+	-p|--proxy&lt;span class='o'&gt;=&lt;/span&gt;&amp;lt;url&amp;gt;        proxy &lt;span class='o'&gt;(&lt;/span&gt;ie http://proxy:3128&lt;span class='o'&gt;)&lt;/span&gt;
+	-r|--repo&lt;span class='o'&gt;=&lt;/span&gt;&amp;lt;repo&amp;gt;        manual repo download &lt;span class='o'&gt;(&lt;/span&gt;ie. ol6_addons&lt;span class='o'&gt;)&lt;/span&gt;
+	-m|--min                minimal package download &lt;span class='k'&gt;for &lt;/span&gt;LXC host
+	-u|--url&lt;span class='o'&gt;=&lt;/span&gt;&amp;lt;url&amp;gt;          &lt;span class='nb'&gt;local &lt;/span&gt;yum repo url &lt;span class='o'&gt;(&lt;/span&gt;ie. &lt;span class='nb'&gt;local &lt;/span&gt;yum mirror&lt;span class='o'&gt;)&lt;/span&gt;
+	-s|--src                download &lt;span class='nb'&gt;source &lt;/span&gt;rpm
+	-l|--local&lt;span class='o'&gt;=&lt;/span&gt;&amp;lt;path&amp;gt;&amp;gt;      &lt;span class='nb'&gt;local &lt;/span&gt;path to check &lt;span class='k'&gt;for &lt;/span&gt;rpms &lt;span class='o'&gt;(&lt;/span&gt;ie. /media/iso&lt;span class='o'&gt;)&lt;/span&gt;
 
-&lt;pre&gt;&lt;code&gt;Release is of the format &amp;quot;major.minor&amp;quot;, for example &amp;quot;5.8&amp;quot;, &amp;quot;6.3&amp;quot;, or &amp;quot;6.latest&amp;quot;
-To download latest UEK kernel, use 6.UEK or 5.UEK&lt;/code&gt;&lt;/pre&gt;
-
+	Release is of the format &lt;span class='s2'&gt;&amp;quot;major.minor&amp;quot;&lt;/span&gt;, &lt;span class='k'&gt;for &lt;/span&gt;example &lt;span class='s2'&gt;&amp;quot;5.8&amp;quot;&lt;/span&gt;, &lt;span class='s2'&gt;&amp;quot;6.3&amp;quot;&lt;/span&gt;, or &lt;span class='s2'&gt;&amp;quot;6.latest&amp;quot;&lt;/span&gt;
+	To download latest UEK kernel, use 6.UEK or 5.UEK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;examples if you want to download 6.latest (or keep updated) DocumentRoot for the webserver is /var/www/html url will be http://mirandaa00 proxy is http://proxy:3128&lt;/p&gt;
 
 &lt;p&gt;public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.latest -a x86_64 &amp;#8211;url http://mirandaa00&lt;/p&gt;
