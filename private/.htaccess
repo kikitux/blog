@@ -1,6 +1,0 @@
-SSLOptions +StrictRequire
-SSLRequireSSL
-ErrorDocument 403 https://mini.kikitux.net/private
-AuthName "Access only registered users"
-AuthType Basic
-Require valid-user

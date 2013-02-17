@@ -65,10 +65,6 @@
     
   
     
-  
-    
-  
-    
       
     
   
@@ -151,8 +147,6 @@ http://kikitux.net/about.html
 http://kikitux.net/archive.html
 http://kikitux.net/atom.xml
 http://kikitux.net/categories.html
-http://kikitux.net/.htaccess
-http://kikitux.net/private/.htaccess
 http://kikitux.net/index.html
 http://kikitux.net/pages/test.html
 http://kikitux.net/pages/test2.html
