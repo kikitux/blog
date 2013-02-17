@@ -122,7 +122,7 @@ http://kikitux.net/pages.html
 http://kikitux.net/sitemap.txt
 http://kikitux.net/tags.html
 
-http://kikitux.net/2013/02/14/osx-server-and-ruby-dependencies
+http://kikitux.net/osx/2013/02/14/osx-server-and-ruby-dependencies
   </div>
 </div>
 
