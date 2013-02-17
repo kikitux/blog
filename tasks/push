@@ -1,6 +1,8 @@
 cd _site
-echo git add . && git commit -m "mini site" && git push
 pwd
+echo "push of _site to kikitux.github.com" | growlnotify
+git add . && git commit -a -m "update kikitux site" && git push
 cd ..
-echo git add . && git commit -m "mini site" && git push
 pwd
+echo "push of kikitux.net to mini" | growlnotify
+git add . && git commit -a -m "update kikitux site" && git push
