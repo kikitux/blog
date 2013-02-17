@@ -32,7 +32,7 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="/">mini.kikitux.net</a>
+          <a class="brand" href="/">kikitux.net</a>
           <ul class="nav">
             
             
@@ -100,6 +100,14 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
 
 
 
@@ -119,19 +127,22 @@
 <div class="row">
   <div class="span12">
     
-https://mini.kikitux.net/about.html
-https://mini.kikitux.net/archive.html
-https://mini.kikitux.net/atom.xml
-https://mini.kikitux.net/categories.html
-https://mini.kikitux.net/.htaccess
-https://mini.kikitux.net/private/.htaccess
-https://mini.kikitux.net/index.html
-https://mini.kikitux.net/pages/test.html
-https://mini.kikitux.net/pages/test2.html
-https://mini.kikitux.net/pages.html
-https://mini.kikitux.net/sitemap.txt
-https://mini.kikitux.net/tags.html
+http://kikitux.net/about.html
+http://kikitux.net/archive.html
+http://kikitux.net/atom.xml
+http://kikitux.net/categories.html
+http://kikitux.net/.htaccess
+http://kikitux.net/private/.htaccess
+http://kikitux.net/index.html
+http://kikitux.net/pages/test.html
+http://kikitux.net/pages/test2.html
+http://kikitux.net/pages.html
+http://kikitux.net/sitemap.txt
+http://kikitux.net/tags.html
+http://kikitux.netcategories/osx/index.html
+http://kikitux.netcategories/dr/index.html
 
+http://kikitux.net/osx/dr/2013/02/14/osx-server-and-ruby-dependencies
   </div>
 </div>
 
