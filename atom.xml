@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-17T22:11:52+13:00</updated>
+ <updated>2013-02-17T22:13:32+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -21,22 +21,44 @@
 
 &lt;p&gt;You can download the script from github &lt;a href='https://github.com/kikitux/public-yum-downloader'&gt;public-yum-downloader.sh&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;usage&lt;/p&gt;
+&lt;h2 id='usage'&gt;usage&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;public-yum-downloader.sh -h&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;public-yum-downloader.sh -h
+-h|--help               this screen
+-a|--arch=``arch``          architecture (ie. i386 or x86_64)
+-R|--release=``release``    release to download
+-P|--path=``path``          destination path of download (ie. /var/www/html)
+-p|--proxy=``url``          proxy (ie http://proxy:3128)
+-r|--repo=``repo``          manual repo download (ie. ol6_addons)
+-m|--min                minimal package download for LXC host
+-u|--url=``url``            local yum repo url (ie. local yum mirror)
+-s|--src                download source rpm
+-l|--local=``path``         local path to check for rpms (ie. /media/iso)
 
-&lt;p&gt;-h|&amp;#8211;help this screen -a|&amp;#8211;arch=&lt;code&gt;arch&lt;/code&gt; architecture (ie. i386 or x86_64) -R|&amp;#8211;release=&lt;code&gt;release&lt;/code&gt; release to download -P|&amp;#8211;path=&lt;code&gt;path&lt;/code&gt; destination path of download (ie. /var/www/html) -p|&amp;#8211;proxy=&lt;code&gt;url&lt;/code&gt; proxy (ie http://proxy:3128) -r|&amp;#8211;repo=&lt;code&gt;repo&lt;/code&gt; manual repo download (ie. ol6_addons) -m|&amp;#8211;min minimal package download for LXC host -u|&amp;#8211;url=&lt;code&gt;url&lt;/code&gt; local yum repo url (ie. local yum mirror) -s|&amp;#8211;src download source rpm -l|&amp;#8211;local=&lt;code&gt;path&lt;/code&gt; local path to check for rpms (ie. /media/iso)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Release is of the format &amp;quot;major.minor&amp;quot;, for example &amp;quot;5.8&amp;quot;, &amp;quot;6.3&amp;quot;, or &amp;quot;6.latest&amp;quot;
+Release is of the format &amp;quot;major.minor&amp;quot;, for example &amp;quot;5.8&amp;quot;, &amp;quot;6.3&amp;quot;, or &amp;quot;6.latest&amp;quot;
 To download latest UEK kernel, use 6.UEK or 5.UEK&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;examples if you want to download 6.latest (or keep updated) DocumentRoot for the webserver is /var/www/html url will be http://mirandaa00 proxy is http://proxy:3128&lt;/p&gt;
+&lt;h2 id='examples'&gt;examples&lt;/h2&gt;
+
+&lt;p&gt;if you want to download 6.latest (or keep updated)&lt;/p&gt;
+
+&lt;p&gt;DocumentRoot for the webserver is /var/www/html&lt;/p&gt;
+
+&lt;p&gt;url will be http://mirandaa00&lt;/p&gt;
+
+&lt;p&gt;proxy is http://proxy:3128&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.latest -a x86_64 --url http://mirandaa00&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;At the end of the run, will create a package /var/ww/html/local-yum-ol6.repo available as http://mirandaa00/local-yum-ol6.repo&lt;/p&gt;
 
-&lt;p&gt;if you want to download latest UEK (or keep updated) DocumentRoot for the webserver is /var/www/html url will be http://mirandaa00 proxy is http://proxy:3128&lt;/p&gt;
+&lt;p&gt;if you want to download latest UEK (or keep updated)&lt;/p&gt;
+
+&lt;p&gt;DocumentRoot for the webserver is /var/www/html&lt;/p&gt;
+
+&lt;p&gt;url will be http://mirandaa00&lt;/p&gt;
+
+&lt;p&gt;proxy is http://proxy:3128&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.UEK -a x86_64 --url http://mirandaa00&lt;/code&gt;&lt;/pre&gt;
 
