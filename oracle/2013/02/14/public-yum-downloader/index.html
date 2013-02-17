@@ -146,50 +146,30 @@
 
 <div class="row">
   <div class="span8">
-    
+    <p>for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.</p>
 
+<p>You can download the script from github <a href='https://github.com/kikitux/public-yum-downloader'>public-yum-downloader.sh</a></p>
 
-for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.
+<p>usage</p>
 
+<pre><code>public-yum-downloader.sh -h</code></pre>
 
-You can download the script from github [public-yum-downloader.sh](https://github.com/kikitux/public-yum-downloader)
+<p>-h|&#8211;help this screen -a|&#8211;arch=<code>arch</code> architecture (ie. i386 or x86_64) -R|&#8211;release=<code>release</code> release to download -P|&#8211;path=<code>path</code> destination path of download (ie. /var/www/html) -p|&#8211;proxy=<code>url</code> proxy (ie http://proxy:3128) -r|&#8211;repo=<code>repo</code> manual repo download (ie. ol6_addons) -m|&#8211;min minimal package download for LXC host -u|&#8211;url=<code>url</code> local yum repo url (ie. local yum mirror) -s|&#8211;src download source rpm -l|&#8211;local=<code>path</code> local path to check for rpms (ie. /media/iso)</p>
 
-usage
+<pre><code>Release is of the format &quot;major.minor&quot;, for example &quot;5.8&quot;, &quot;6.3&quot;, or &quot;6.latest&quot;
+To download latest UEK kernel, use 6.UEK or 5.UEK</code></pre>
 
-	public-yum-downloader.sh -h
--h|--help               this screen
--a|--arch=``arch``          architecture (ie. i386 or x86_64)
--R|--release=``release``    release to download
--P|--path=``path``          destination path of download (ie. /var/www/html)
--p|--proxy=``url``          proxy (ie http://proxy:3128)
--r|--repo=``repo``          manual repo download (ie. ol6_addons)
--m|--min                minimal package download for LXC host
--u|--url=``url``            local yum repo url (ie. local yum mirror)
--s|--src                download source rpm
--l|--local=``path``         local path to check for rpms (ie. /media/iso)
+<p>examples if you want to download 6.latest (or keep updated) DocumentRoot for the webserver is /var/www/html url will be http://mirandaa00 proxy is http://proxy:3128</p>
 
-	Release is of the format "major.minor", for example "5.8", "6.3", or "6.latest"
-	To download latest UEK kernel, use 6.UEK or 5.UEK
+<pre><code>public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.latest -a x86_64 --url http://mirandaa00</code></pre>
 
-examples
- if you want to download 6.latest (or keep updated) 
- DocumentRoot for the webserver is /var/www/html 
- url will be http://mirandaa00 
- proxy is http://proxy:3128
+<p>At the end of the run, will create a package /var/ww/html/local-yum-ol6.repo available as http://mirandaa00/local-yum-ol6.repo</p>
 
-	public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.latest -a x86_64 --url http://mirandaa00
+<p>if you want to download latest UEK (or keep updated) DocumentRoot for the webserver is /var/www/html url will be http://mirandaa00 proxy is http://proxy:3128</p>
 
-At the end of the run, will create a package /var/ww/html/local-yum-ol6.repo available as http://mirandaa00/local-yum-ol6.repo
+<pre><code>public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.UEK -a x86_64 --url http://mirandaa00</code></pre>
 
- if you want to download latest UEK (or keep updated) 
- DocumentRoot for the webserver is /var/www/html 
- url will be http://mirandaa00 
- proxy is http://proxy:3128
-
-	public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.UEK -a x86_64 --url http://mirandaa00
-
-Alvaro
-
+<p>Alvaro</p>
     <hr>
     <div class="pagination">
       <ul>
