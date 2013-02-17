@@ -46,10 +46,6 @@
   
     
       
-    
-  
-    
-      
       	
       	<li><a href="/archive.html">Archive</a></li>
       	
@@ -151,7 +147,6 @@
 <div class="row">
   <div class="span12">
     
-http://kikitux.net/aa.html
 http://kikitux.net/about.html
 http://kikitux.net/archive.html
 http://kikitux.net/atom.xml
