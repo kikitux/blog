@@ -151,21 +151,14 @@
 <p>You can download the script from github public-yum-downloader.sh</p>
 
 <p>usage</p>
-<div class='highlight'><pre><code class='bash'>	public-yum-downloader.sh -h
-	-h|--help               this screen
-	-a|--arch<span class='o'>=</span>&lt;arch&gt;        architecture <span class='o'>(</span>ie. i386 or x86_64<span class='o'>)</span>
-	-R|--release<span class='o'>=</span>&lt;release&gt;  release to download
-	-P|--path<span class='o'>=</span>&lt;path&gt;        destination path of download <span class='o'>(</span>ie. /var/www/html<span class='o'>)</span>
-	-p|--proxy<span class='o'>=</span>&lt;url&gt;        proxy <span class='o'>(</span>ie http://proxy:3128<span class='o'>)</span>
-	-r|--repo<span class='o'>=</span>&lt;repo&gt;        manual repo download <span class='o'>(</span>ie. ol6_addons<span class='o'>)</span>
-	-m|--min                minimal package download <span class='k'>for </span>LXC host
-	-u|--url<span class='o'>=</span>&lt;url&gt;          <span class='nb'>local </span>yum repo url <span class='o'>(</span>ie. <span class='nb'>local </span>yum mirror<span class='o'>)</span>
-	-s|--src                download <span class='nb'>source </span>rpm
-	-l|--local<span class='o'>=</span>&lt;path&gt;&gt;      <span class='nb'>local </span>path to check <span class='k'>for </span>rpms <span class='o'>(</span>ie. /media/iso<span class='o'>)</span>
 
-	Release is of the format <span class='s2'>&quot;major.minor&quot;</span>, <span class='k'>for </span>example <span class='s2'>&quot;5.8&quot;</span>, <span class='s2'>&quot;6.3&quot;</span>, or <span class='s2'>&quot;6.latest&quot;</span>
-	To download latest UEK kernel, use 6.UEK or 5.UEK
-</code></pre></div>
+<p>&#8221;&#8217; public-yum-downloader.sh -h -h|&#8211;help this screen -a|&#8211;arch=arch architecture (ie. i386 or x86_64) -R|&#8211;release=release release to download -P|&#8211;path=path destination path of download (ie. /var/www/html) -p|&#8211;proxy=url proxy (ie http://proxy:3128) -r|&#8211;repo=repo manual repo download (ie. ol6_addons) -m|&#8211;min minimal package download for LXC host -u|&#8211;url=url local yum repo url (ie. local yum mirror) -s|&#8211;src download source rpm -l|&#8211;local=path local path to check for rpms (ie. /media/iso)</p>
+
+<pre><code>Release is of the format &quot;major.minor&quot;, for example &quot;5.8&quot;, &quot;6.3&quot;, or &quot;6.latest&quot;
+To download latest UEK kernel, use 6.UEK or 5.UEK</code></pre>
+
+<p>&#8221;&#8217;</p>
+
 <p>examples if you want to download 6.latest (or keep updated) DocumentRoot for the webserver is /var/www/html url will be http://mirandaa00 proxy is http://proxy:3128</p>
 
 <p>public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.latest -a x86_64 &#8211;url http://mirandaa00</p>
