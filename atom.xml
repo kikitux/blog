@@ -1,28 +1,30 @@
----
-layout: nil
-title : Atom Feed
----
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>{{ site.title }}</title>
- <link href="{{ site.production_url }}/atom.xml" rel="self"/>
- <link href="{{ site.production_url }}"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.production_url }}</id>
+ <title>kikitux.net</title>
+ <link href="http://kikitux.net/atom.xml" rel="self"/>
+ <link href="http://kikitux.net"/>
+ <updated>2013-02-17T14:43:31+13:00</updated>
+ <id>http://kikitux.net</id>
  <author>
-   <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
+   <name>Alvaro Miranda</name>
+   <email>kikitux@gmail.com</email>
  </author>
 
- {% for post in site.posts %}
+ 
  <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.production_url }}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.production_url }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <title>OSX server and ruby dependencies</title>
+   <link href="http://kikitux.net/2013/02/14/osx-server-and-ruby-dependencies"/>
+   <updated>2013-02-14T00:00:00+13:00</updated>
+   <id>http://kikitux.net/2013/02/14/osx-server-and-ruby-dependencies</id>
+   <content type="html">&lt;p&gt;I am a person who like to have backups, and be on the bleeding edge most of the times.. even when that mean break my database box at the office and also found that yesterdy update of ruby at my mac mini server &lt;a href='http://support.apple.com/kb/TS4042'&gt;broke the ruby dependencies&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I was wondering how long it will take break my mac server anyways.. took, 2 days.. :D&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='OSX Server' src='https://github.com/kikitux/kikitux.github.com/raw/master/img/Server.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Alvaro&lt;/p&gt;</content>
  </entry>
- {% endfor %}
+ 
  
 </feed>
