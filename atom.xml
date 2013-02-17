@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-17T22:02:11+13:00</updated>
+ <updated>2013-02-17T22:04:39+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -19,7 +19,7 @@
    <id>http://kikitux.net/oracle/2013/02/14/public-yum-downloader</id>
    <content type="html">&lt;p&gt;for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.&lt;/p&gt;
 
-&lt;p&gt;You can download the script from github public-yum-downloader.sh &lt;a href='https://github.com/kikitux/public-yum-downloader'&gt;https://github.com/kikitux/public-yum-downloader&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can download the script from github &lt;a href='https://github.com/kikitux/public-yum-downloader'&gt;public-yum-downloader.sh&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;usage&lt;/p&gt;
 
