@@ -1,0 +1,3 @@
+SSLOptions +StrictRequire
+SSLRequireSSL
+ErrorDocument 403 https://mini.kikitux.net
