@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-17T22:48:50+13:00</updated>
+ <updated>2013-02-18T09:06:19+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>public-yum-downloader script</title>
-   <link href="http://kikitux.net/oracle/2013/02/14/public-yum-downloader"/>
+   <link href="http://kikitux.net/oracle/public-yum-downloader.html"/>
    <updated>2013-02-14T00:00:00+13:00</updated>
-   <id>http://kikitux.net/oracle/2013/02/14/public-yum-downloader</id>
+   <id>http://kikitux.net/oracle/public-yum-downloader</id>
    <content type="html">&lt;p&gt;for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.&lt;/p&gt;
 
 &lt;p&gt;You can download the script from github &lt;a href=&quot;https://github.com/kikitux/public-yum-downloader&quot;&gt;public-yum-downloader.sh&lt;/a&gt;&lt;/p&gt;
@@ -61,9 +61,9 @@
  
  <entry>
    <title>OSX server and ruby dependencies</title>
-   <link href="http://kikitux.net/osx/2013/02/14/osx-server-and-ruby-dependencies"/>
+   <link href="http://kikitux.net/osx/osx-server-and-ruby-dependencies.html"/>
    <updated>2013-02-14T00:00:00+13:00</updated>
-   <id>http://kikitux.net/osx/2013/02/14/osx-server-and-ruby-dependencies</id>
+   <id>http://kikitux.net/osx/osx-server-and-ruby-dependencies</id>
    <content type="html">&lt;p&gt;I am a person who likes to have backups, and be on the bleeding edge most of the time, testing, checking.. learnings.. even when that mean break my database box at the office and also found that yesterdy update of ruby at my mac mini server &lt;a href=&quot;http://support.apple.com/kb/TS4042&quot;&gt;broke the ruby dependencies&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I was wondering how long it will take break my mac server anyways.. took, 2 days.. :D&lt;/p&gt;

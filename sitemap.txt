@@ -167,8 +167,8 @@ http://kikitux.nettag/ol/index.html
 http://kikitux.netcategories/osx/index.html
 http://kikitux.netcategories/oracle/index.html
 
-http://kikitux.net/oracle/2013/02/14/public-yum-downloader
-http://kikitux.net/osx/2013/02/14/osx-server-and-ruby-dependencies
+http://kikitux.net/oracle/public-yum-downloader.html
+http://kikitux.net/osx/osx-server-and-ruby-dependencies.html
   </div>
 </div>
 
