@@ -63,6 +63,8 @@
     
   
     
+  
+    
       
     
   
@@ -113,6 +115,7 @@ http://kikitux.net/archive.html
 http://kikitux.net/atom.xml
 http://kikitux.net/categories.html
 http://kikitux.net/index.html
+http://kikitux.net/math.html
 http://kikitux.net/pages/test.html
 http://kikitux.net/pages/test2.html
 http://kikitux.net/pages.html
@@ -136,22 +139,6 @@ http://kikitux.net/2013/02/14/osx-server-and-ruby-dependencies
     </div> <!-- /container -->
 
     
-
-
-  <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-123-12']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-
-
-
   </body>
 </html>
 
