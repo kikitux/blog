@@ -148,16 +148,24 @@
   <div class="span8">
     <p>for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.</p>
 
-<p>You can download the script from github public-yum-downloader.sh</p>
+<p>You can download the script from github public-yum-downloader.sh <a href='https://github.com/kikitux/public-yum-downloader'>https://github.com/kikitux/public-yum-downloader</a></p>
 
 <p>usage</p>
 
-<p>&#8221;&#8217; public-yum-downloader.sh -h -h|&#8211;help this screen -a|&#8211;arch=arch architecture (ie. i386 or x86_64) -R|&#8211;release=release release to download -P|&#8211;path=path destination path of download (ie. /var/www/html) -p|&#8211;proxy=url proxy (ie http://proxy:3128) -r|&#8211;repo=repo manual repo download (ie. ol6_addons) -m|&#8211;min minimal package download for LXC host -u|&#8211;url=url local yum repo url (ie. local yum mirror) -s|&#8211;src download source rpm -l|&#8211;local=path local path to check for rpms (ie. /media/iso)</p>
+<pre><code>public-yum-downloader.sh -h
+-h|--help               this screen
+-a|--arch=arch          architecture (ie. i386 or x86_64)
+-R|--release=release    release to download
+-P|--path=path          destination path of download (ie. /var/www/html)
+-p|--proxy=url          proxy (ie http://proxy:3128)
+-r|--repo=repo          manual repo download (ie. ol6_addons)
+-m|--min                minimal package download for LXC host
+-u|--url=url            local yum repo url (ie. local yum mirror)
+-s|--src                download source rpm
+-l|--local=path         local path to check for rpms (ie. /media/iso)
 
-<pre><code>Release is of the format &quot;major.minor&quot;, for example &quot;5.8&quot;, &quot;6.3&quot;, or &quot;6.latest&quot;
+Release is of the format &quot;major.minor&quot;, for example &quot;5.8&quot;, &quot;6.3&quot;, or &quot;6.latest&quot;
 To download latest UEK kernel, use 6.UEK or 5.UEK</code></pre>
-
-<p>&#8221;&#8217;</p>
 
 <p>examples if you want to download 6.latest (or keep updated) DocumentRoot for the webserver is /var/www/html url will be http://mirandaa00 proxy is http://proxy:3128</p>
 
