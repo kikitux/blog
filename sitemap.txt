@@ -68,6 +68,10 @@
   
     
       
+    
+  
+    
+      
       	
       	<li><a href="/pages.html">Pages</a></li>
       	
@@ -110,6 +114,7 @@ http://kikitux.net/atom.xml
 http://kikitux.net/categories.html
 http://kikitux.net/index.html
 http://kikitux.net/pages/test.html
+http://kikitux.net/pages/test2.html
 http://kikitux.net/pages.html
 http://kikitux.net/sitemap.txt
 http://kikitux.net/tags.html
