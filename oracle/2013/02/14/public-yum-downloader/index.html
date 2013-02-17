@@ -146,10 +146,23 @@
 
 <div class="row">
   <div class="span8">
-    <script src='http://gist.github.com/4672125.js' />
-<p>for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.</p>
+    <p>for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.</p>
 
 <p>You can download the script from github public-yum-downloader.sh</p>
+
+<p>usage public-yum-downloader.sh -h -h|&#8211;help this screen -a|&#8211;arch=<pre class='markdown-html-error' style='border: solid 3px red; background-color: pink'>REXML could not parse this XML/HTML: 
+&lt;arch&gt;        architecture (ie. i386 or x86_64)
+	-R|--release=&lt;release&gt;  release to download
+	-P|--path=&lt;path&gt;        destination path of download (ie. /var/www/html)
+	-p|--proxy=&lt;url&gt;        proxy (ie http://proxy:3128)
+	-r|--repo=&lt;repo&gt;        manual repo download (ie. ol6_addons)
+	-m|--min                minimal package download for LXC host
+	-u|--url=&lt;url&gt;          local yum repo url (ie. local yum mirror)
+	-s|--src                download source rpm
+	-l|--local=&lt;path&gt;&gt;      local path to check for rpms (ie. /media/iso)</pre></p>
+
+<pre><code>Release is of the format &quot;major.minor&quot;, for example &quot;5.8&quot;, &quot;6.3&quot;, or &quot;6.latest&quot;
+To download latest UEK kernel, use 6.UEK or 5.UEK</code></pre>
 
 <p>examples if you want to download 6.latest (or keep updated) DocumentRoot for the webserver is /var/www/html url will be http://mirandaa00 proxy is http://proxy:3128</p>
 

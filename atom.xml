@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-17T21:44:12+13:00</updated>
+ <updated>2013-02-17T21:47:21+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -17,10 +17,23 @@
    <link href="http://kikitux.net/oracle/2013/02/14/public-yum-downloader"/>
    <updated>2013-02-14T00:00:00+13:00</updated>
    <id>http://kikitux.net/oracle/2013/02/14/public-yum-downloader</id>
-   <content type="html">&lt;script src='http://gist.github.com/4672125.js' /&gt;
-&lt;p&gt;for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.&lt;/p&gt;
+   <content type="html">&lt;p&gt;for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.&lt;/p&gt;
 
 &lt;p&gt;You can download the script from github public-yum-downloader.sh&lt;/p&gt;
+
+&lt;p&gt;usage public-yum-downloader.sh -h -h|&amp;#8211;help this screen -a|&amp;#8211;arch=&lt;pre class='markdown-html-error' style='border: solid 3px red; background-color: pink'&gt;REXML could not parse this XML/HTML: 
+&amp;lt;arch&amp;gt;        architecture (ie. i386 or x86_64)
+	-R|--release=&amp;lt;release&amp;gt;  release to download
+	-P|--path=&amp;lt;path&amp;gt;        destination path of download (ie. /var/www/html)
+	-p|--proxy=&amp;lt;url&amp;gt;        proxy (ie http://proxy:3128)
+	-r|--repo=&amp;lt;repo&amp;gt;        manual repo download (ie. ol6_addons)
+	-m|--min                minimal package download for LXC host
+	-u|--url=&amp;lt;url&amp;gt;          local yum repo url (ie. local yum mirror)
+	-s|--src                download source rpm
+	-l|--local=&amp;lt;path&amp;gt;&amp;gt;      local path to check for rpms (ie. /media/iso)&lt;/pre&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Release is of the format &amp;quot;major.minor&amp;quot;, for example &amp;quot;5.8&amp;quot;, &amp;quot;6.3&amp;quot;, or &amp;quot;6.latest&amp;quot;
+To download latest UEK kernel, use 6.UEK or 5.UEK&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;examples if you want to download 6.latest (or keep updated) DocumentRoot for the webserver is /var/www/html url will be http://mirandaa00 proxy is http://proxy:3128&lt;/p&gt;
 
