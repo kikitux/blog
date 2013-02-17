@@ -46,6 +46,10 @@
   
     
       
+    
+  
+    
+      
       	
       	<li><a href="/archive.html">Archive</a></li>
       	
@@ -148,9 +152,9 @@
   <div class="span8">
     <p>for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.</p>
 
-<p>You can download the script from github <a href='https://github.com/kikitux/public-yum-downloader'>public-yum-downloader.sh</a></p>
+<p>You can download the script from github <a href="https://github.com/kikitux/public-yum-downloader">public-yum-downloader.sh</a></p>
 
-<h2 id='usage'>usage</h2>
+<h2>usage</h2>
 
 <pre><code>public-yum-downloader.sh -h
 -h|--help               this screen
@@ -164,10 +168,11 @@
 -s|--src                download source rpm
 -l|--local=``path``         local path to check for rpms (ie. /media/iso)
 
-Release is of the format &quot;major.minor&quot;, for example &quot;5.8&quot;, &quot;6.3&quot;, or &quot;6.latest&quot;
-To download latest UEK kernel, use 6.UEK or 5.UEK</code></pre>
+Release is of the format "major.minor", for example "5.8", "6.3", or "6.latest"
+To download latest UEK kernel, use 6.UEK or 5.UEK
+</code></pre>
 
-<h2 id='examples'>examples</h2>
+<h2>examples</h2>
 
 <p>if you want to download 6.latest (or keep updated)</p>
 
@@ -177,7 +182,8 @@ To download latest UEK kernel, use 6.UEK or 5.UEK</code></pre>
 
 <p>proxy is http://proxy:3128</p>
 
-<pre><code>public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.latest -a x86_64 --url http://mirandaa00</code></pre>
+<pre><code>public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.latest -a x86_64 --url http://mirandaa00
+</code></pre>
 
 <p>At the end of the run, will create a package /var/ww/html/local-yum-ol6.repo available as http://mirandaa00/local-yum-ol6.repo</p>
 
@@ -189,9 +195,11 @@ To download latest UEK kernel, use 6.UEK or 5.UEK</code></pre>
 
 <p>proxy is http://proxy:3128</p>
 
-<pre><code>public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.UEK -a x86_64 --url http://mirandaa00</code></pre>
+<pre><code>public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.UEK -a x86_64 --url http://mirandaa00
+</code></pre>
 
 <p>Alvaro</p>
+
     <hr>
     <div class="pagination">
       <ul>

@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-17T22:13:32+13:00</updated>
+ <updated>2013-02-17T22:32:32+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -19,9 +19,9 @@
    <id>http://kikitux.net/oracle/2013/02/14/public-yum-downloader</id>
    <content type="html">&lt;p&gt;for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.&lt;/p&gt;
 
-&lt;p&gt;You can download the script from github &lt;a href='https://github.com/kikitux/public-yum-downloader'&gt;public-yum-downloader.sh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can download the script from github &lt;a href=&quot;https://github.com/kikitux/public-yum-downloader&quot;&gt;public-yum-downloader.sh&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id='usage'&gt;usage&lt;/h2&gt;
+&lt;h2&gt;usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;public-yum-downloader.sh -h
 -h|--help               this screen
@@ -35,10 +35,11 @@
 -s|--src                download source rpm
 -l|--local=``path``         local path to check for rpms (ie. /media/iso)
 
-Release is of the format &amp;quot;major.minor&amp;quot;, for example &amp;quot;5.8&amp;quot;, &amp;quot;6.3&amp;quot;, or &amp;quot;6.latest&amp;quot;
-To download latest UEK kernel, use 6.UEK or 5.UEK&lt;/code&gt;&lt;/pre&gt;
+Release is of the format &quot;major.minor&quot;, for example &quot;5.8&quot;, &quot;6.3&quot;, or &quot;6.latest&quot;
+To download latest UEK kernel, use 6.UEK or 5.UEK
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='examples'&gt;examples&lt;/h2&gt;
+&lt;h2&gt;examples&lt;/h2&gt;
 
 &lt;p&gt;if you want to download 6.latest (or keep updated)&lt;/p&gt;
 
@@ -48,7 +49,8 @@ To download latest UEK kernel, use 6.UEK or 5.UEK&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;proxy is http://proxy:3128&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.latest -a x86_64 --url http://mirandaa00&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.latest -a x86_64 --url http://mirandaa00
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;At the end of the run, will create a package /var/ww/html/local-yum-ol6.repo available as http://mirandaa00/local-yum-ol6.repo&lt;/p&gt;
 
@@ -60,9 +62,11 @@ To download latest UEK kernel, use 6.UEK or 5.UEK&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;proxy is http://proxy:3128&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.UEK -a x86_64 --url http://mirandaa00&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.UEK -a x86_64 --url http://mirandaa00
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Alvaro&lt;/p&gt;</content>
+&lt;p&gt;Alvaro&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -70,13 +74,14 @@ To download latest UEK kernel, use 6.UEK or 5.UEK&lt;/code&gt;&lt;/pre&gt;
    <link href="http://kikitux.net/osx/2013/02/14/osx-server-and-ruby-dependencies"/>
    <updated>2013-02-14T00:00:00+13:00</updated>
    <id>http://kikitux.net/osx/2013/02/14/osx-server-and-ruby-dependencies</id>
-   <content type="html">&lt;p&gt;I am a person who likes to have backups, and be on the bleeding edge most of the time, testing, checking.. learnings.. even when that mean break my database box at the office and also found that yesterdy update of ruby at my mac mini server &lt;a href='http://support.apple.com/kb/TS4042'&gt;broke the ruby dependencies&lt;/a&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;I am a person who likes to have backups, and be on the bleeding edge most of the time, testing, checking.. learnings.. even when that mean break my database box at the office and also found that yesterdy update of ruby at my mac mini server &lt;a href=&quot;http://support.apple.com/kb/TS4042&quot;&gt;broke the ruby dependencies&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I was wondering how long it will take break my mac server anyways.. took, 2 days.. :D&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='OSX Server' src='https://github.com/kikitux/kikitux.github.com/raw/master/img/Server.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/kikitux/kikitux.github.com/raw/master/img/Server.png&quot; title=&quot;Osx Server&quot; alt=&quot;OSX Server&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Alvaro&lt;/p&gt;</content>
+&lt;p&gt;Alvaro&lt;/p&gt;
+</content>
  </entry>
  
  
