@@ -122,6 +122,18 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
 
 
 
@@ -156,9 +168,13 @@ http://kikitux.nettag/dr/index.html
 http://kikitux.nettag/yum/index.html
 http://kikitux.nettag/update/index.html
 http://kikitux.nettag/ol/index.html
+http://kikitux.nettag/test/index.html
+http://kikitux.nettag/test2/index.html
 http://kikitux.netcategories/osx/index.html
 http://kikitux.netcategories/oracle/index.html
+http://kikitux.netcategories/test/index.html
 
+http://kikitux.net/test/new-post.html
 http://kikitux.net/oracle/public-yum-downloader.html
 http://kikitux.net/osx/osx-server-and-ruby-dependencies.html
   </div>
