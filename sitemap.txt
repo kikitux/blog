@@ -122,14 +122,6 @@
       
     
   
-    
-      
-    
-  
-    
-      
-    
-  
 
 
 
@@ -166,8 +158,6 @@ http://kikitux.nettag/update/index.html
 http://kikitux.nettag/ol/index.html
 http://kikitux.nettag/test/index.html
 http://kikitux.nettag/test2/index.html
-http://kikitux.netcategories/osx/index.html
-http://kikitux.netcategories/oracle/index.html
 
 http://kikitux.net/osx/new-post.html
 http://kikitux.net/oracle/public-yum-downloader.html
