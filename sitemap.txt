@@ -40,10 +40,6 @@
   
     
       
-    
-  
-    
-      
       	
       	<li><a href="/archive.html">Archive</a></li>
       	
@@ -59,14 +55,6 @@
       	
       	<li><a href="/categories.html">Categories</a></li>
       	
-      
-    
-  
-    
-      
-    
-  
-    
       
     
   
@@ -94,34 +82,6 @@
       
     
   
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
 
 
 
@@ -141,26 +101,15 @@
 <div class="row">
   <div class="span12">
     
-http://kikitux.net/about.html
 http://kikitux.net/archive.html
 http://kikitux.net/atom.xml
 http://kikitux.net/categories.html
 http://kikitux.net/index.html
-http://kikitux.net/pages/test.html
-http://kikitux.net/pages/test2.html
 http://kikitux.net/pages.html
 http://kikitux.net/sitemap.txt
 http://kikitux.net/tags.html
-http://kikitux.nettag/osx/index.html
-http://kikitux.nettag/dr/index.html
-http://kikitux.nettag/yum/index.html
-http://kikitux.nettag/update/index.html
-http://kikitux.nettag/ol/index.html
-http://kikitux.nettag/test/index.html
-http://kikitux.nettag/test2/index.html
 
-http://kikitux.net/osx/new-post.html
-http://kikitux.net/oracle/public-yum-downloader.html
+http://kikitux.net/test/new-post1.html
 http://kikitux.net/osx/osx-server-and-ruby-dependencies.html
   </div>
 </div>

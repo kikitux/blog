@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-20T09:25:32+13:00</updated>
+ <updated>2013-02-20T09:39:34+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -13,58 +13,11 @@
 
  
  <entry>
-   <title>new post</title>
-   <link href="http://kikitux.net/osx/new-post.html"/>
+   <title>new post1</title>
+   <link href="http://kikitux.net/test/new-post1.html"/>
    <updated>2013-02-20T00:00:00+13:00</updated>
-   <id>http://kikitux.net/osx/new-post</id>
+   <id>http://kikitux.net/test/new-post1</id>
    <content type="html">
-</content>
- </entry>
- 
- <entry>
-   <title>public-yum-downloader script</title>
-   <link href="http://kikitux.net/oracle/public-yum-downloader.html"/>
-   <updated>2013-02-14T00:00:00+13:00</updated>
-   <id>http://kikitux.net/oracle/public-yum-downloader</id>
-   <content type="html">&lt;p&gt;for those looking to grab a local copy of public-yum.oracle.com, I have created a script that will automate the process.&lt;/p&gt;
-
-&lt;p&gt;You can download the script from github &lt;a href=&quot;https://github.com/kikitux/public-yum-downloader&quot;&gt;public-yum-downloader.sh&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2&gt;usage&lt;/h2&gt;
-
-&lt;script src='https://gist.github.com/4672125.js?file='&gt;&lt;/script&gt;
-
-
-&lt;div&gt;&lt;noscript&gt;&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;examples&lt;/h2&gt;
-
-&lt;p&gt;if you want to download 6.latest (or keep updated)&lt;/p&gt;
-
-&lt;p&gt;DocumentRoot for the webserver is /var/www/html&lt;/p&gt;
-
-&lt;p&gt;url will be http://mirandaa00&lt;/p&gt;
-
-&lt;p&gt;proxy is http://proxy:3128&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.latest -a x86_64 --url http://mirandaa00
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;At the end of the run, will create a package /var/ww/html/local-yum-ol6.repo available as http://mirandaa00/local-yum-ol6.repo&lt;/p&gt;
-
-&lt;p&gt;if you want to download latest UEK (or keep updated)&lt;/p&gt;
-
-&lt;p&gt;DocumentRoot for the webserver is /var/www/html&lt;/p&gt;
-
-&lt;p&gt;url will be http://mirandaa00&lt;/p&gt;
-
-&lt;p&gt;proxy is http://proxy:3128&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;public-yum-downloader.sh -P /var/www/html -p http://proxy:3128 -R 6.UEK -a x86_64 --url http://mirandaa00
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Alvaro&lt;/p&gt;
 </content>
  </entry>
  
