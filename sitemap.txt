@@ -12,8 +12,6 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
     <!-- Le styles -->
     <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
@@ -124,6 +122,18 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
 
 
 
@@ -158,9 +168,14 @@ http://kikitux.nettag/dr/index.html
 http://kikitux.nettag/yum/index.html
 http://kikitux.nettag/update/index.html
 http://kikitux.nettag/ol/index.html
+http://kikitux.nettag/linux/index.html
+http://kikitux.nettag/oracle/index.html
 http://kikitux.netcategories/osx/index.html
 http://kikitux.netcategories/oracle/index.html
+http://kikitux.netcategories/linux/index.html
 
+http://kikitux.net/met.html
+http://kikitux.net/linux/first-post.html
 http://kikitux.net/oracle/public-yum-downloader.html
 http://kikitux.net/osx/osx-server-and-ruby-dependencies.html
   </div>

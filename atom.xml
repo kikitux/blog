@@ -4,13 +4,320 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-18T09:32:55+13:00</updated>
+ <updated>2013-02-20T09:17:04+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
    <email>kikitux@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Met</title>
+   <link href="http://kikitux.net/met.html"/>
+   <updated>2013-02-19T00:00:00+13:00</updated>
+   <id>http://kikitux.net/met</id>
+   <content type="html">&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=US-ASCII&quot;&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;SQL*Plus 11.2.0&quot;&gt;
+&lt;style type='text/css'&gt; body {font:10pt Arial,Helvetica,sans-serif; color:black; background:White;} p {font:10pt Arial,Helvetica,sans-serif; color:black; background:White;} table,tr,td {font:10pt Arial,Helvetica,sans-serif; color:Black; background:#f7f7e7; padding:0px 0px 0px 0px; margin:0px 0px 0px 0px;} th {font:bold 10pt Arial,Helvetica,sans-serif; color:#336699; background:#cccc99; padding:0px 0px 0px 0px;} h1 {font:16pt Arial,Helvetica,Geneva,sans-serif; color:#336699; background-color:White; border-bottom:1px solid #cccc99; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;-
+} h2 {font:bold 10pt Arial,Helvetica,Geneva,sans-serif; color:#336699; background-color:White; margin-top:4pt; margin-bottom:0pt;} a {font:9pt Arial,Helvetica,sans-serif; color:#663300; background:#ffffff; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}&lt;/style&gt;&lt;title&gt;SQL*Plus Report&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;
+&lt;table BORDER=2&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;col&quot;&gt;
+NODE_ID
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+NODE_KEY
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+NODE_PATH
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+OS
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+REL
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+VER
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+INFO
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+CPUS
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+RAM
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+GB
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+TZ
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+BKUP
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+NUM_CPUS
+&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;
+CORES
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;right&quot;&gt;
+   1375040
+&lt;/td&gt;
+&lt;td&gt;
+kl-ora-prod-1
+&lt;/td&gt;
+&lt;td&gt;
+/MetService/
+&lt;/td&gt;
+&lt;td&gt;
+Linux
+&lt;/td&gt;
+&lt;td&gt;
+2.6.18-194.el5
+&lt;/td&gt;
+&lt;td&gt;
+RedHat 5.2
+&lt;/td&gt;
+&lt;td&gt;
+&amp;nbsp;
+&lt;/td&gt;
+&lt;td&gt;
+4x2666
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+     48301
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+	 0
+&lt;/td&gt;
+&lt;td&gt;
+BAD; Local TimeZone database incorrect
+&lt;/td&gt;
+&lt;td&gt;
+&amp;nbsp;
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+	 4
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+&amp;nbsp;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;right&quot;&gt;
+   4077743
+&lt;/td&gt;
+&lt;td&gt;
+kt-icedb1
+&lt;/td&gt;
+&lt;td&gt;
+/MetService/
+&lt;/td&gt;
+&lt;td&gt;
+Linux
+&lt;/td&gt;
+&lt;td&gt;
+2.6.32-300.38.1.el5uek
+&lt;/td&gt;
+&lt;td&gt;
+Oracle Linux Server release 5.8
+&lt;/td&gt;
+&lt;td&gt;
+&amp;nbsp;
+&lt;/td&gt;
+&lt;td&gt;
+2x2266
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+     24142
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+      6220
+&lt;/td&gt;
+&lt;td&gt;
+BAD; Local TimeZone database incorrect
+&lt;/td&gt;
+&lt;td&gt;
+&amp;nbsp;
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+	 2
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+	 4
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;right&quot;&gt;
+   1374670
+&lt;/td&gt;
+&lt;td&gt;
+kl-ora-test-1
+&lt;/td&gt;
+&lt;td&gt;
+/MetService/
+&lt;/td&gt;
+&lt;td&gt;
+Linux
+&lt;/td&gt;
+&lt;td&gt;
+2.6.18-194.el5
+&lt;/td&gt;
+&lt;td&gt;
+RedHat 5.2
+&lt;/td&gt;
+&lt;td&gt;
+&amp;nbsp;
+&lt;/td&gt;
+&lt;td&gt;
+  2666
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+     48301
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+   12652.5
+&lt;/td&gt;
+&lt;td&gt;
+BAD; Local TimeZone database incorrect
+&lt;/td&gt;
+&lt;td&gt;
+&amp;nbsp;
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+	 1
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+	 4
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;right&quot;&gt;
+   4024224
+&lt;/td&gt;
+&lt;td&gt;
+kp-oda1
+&lt;/td&gt;
+&lt;td&gt;
+/MetService/
+&lt;/td&gt;
+&lt;td&gt;
+Linux
+&lt;/td&gt;
+&lt;td&gt;
+2.6.32-300.32.4.el5uek
+&lt;/td&gt;
+&lt;td&gt;
+Oracle Linux Server release 5.8
+&lt;/td&gt;
+&lt;td&gt;
+&amp;nbsp;
+&lt;/td&gt;
+&lt;td&gt;
+2x3059
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+     96610
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+     11524
+&lt;/td&gt;
+&lt;td&gt;
+BAD; Local TimeZone database incorrect
+&lt;/td&gt;
+&lt;td&gt;
+&amp;nbsp;
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+	 2
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+	 2
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;right&quot;&gt;
+   4111269
+&lt;/td&gt;
+&lt;td&gt;
+kp-oda2
+&lt;/td&gt;
+&lt;td&gt;
+/MetService/
+&lt;/td&gt;
+&lt;td&gt;
+Linux
+&lt;/td&gt;
+&lt;td&gt;
+2.6.32-300.32.4.el5uek
+&lt;/td&gt;
+&lt;td&gt;
+Oracle Linux Server release 5.8
+&lt;/td&gt;
+&lt;td&gt;
+&amp;nbsp;
+&lt;/td&gt;
+&lt;td&gt;
+2x3058
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+     96610
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+   17473.4
+&lt;/td&gt;
+&lt;td&gt;
+BAD; Local TimeZone database incorrect
+&lt;/td&gt;
+&lt;td&gt;
+&amp;nbsp;
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+	 2
+&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;
+	 2
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ofa</title>
+   <link href="http://kikitux.net/linux/first-post.html"/>
+   <updated>2013-02-19T00:00:00+13:00</updated>
+   <id>http://kikitux.net/linux/first-post</id>
+   <content type="html">&lt;h1&gt;OFA&lt;/h1&gt;
+
+&lt;p&gt;database and grid
+&lt;figure&gt;&lt;a href=&quot;/images/yuml/yuml-787d1fb1d0d5cc73ff895c1afd34a5ad.png&quot; title=&quot;picture&quot; rel=&quot;bookmark&quot;&gt;&lt;img src=&quot;/images/yuml/yuml-787d1fb1d0d5cc73ff895c1afd34a5ad.png&quot; class=&quot;hm-cat-img&quot; border=&quot;0&quot; title=&quot;picture&quot; width=&quot;80%&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;e-business suite r12&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href=&quot;/images/yuml/yuml-d059d52df55c73c6ab8b1288c279ba7b.png&quot; title=&quot;picture&quot; rel=&quot;bookmark&quot;&gt;&lt;img src=&quot;/images/yuml/yuml-d059d52df55c73c6ab8b1288c279ba7b.png&quot; class=&quot;hm-cat-img&quot; border=&quot;0&quot; title=&quot;picture&quot; width=&quot;80%&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;both products
+&lt;figure&gt;&lt;a href=&quot;/images/yuml/yuml-cae8004092355ca9cea4d9cf716c6dc1.png&quot; title=&quot;picture&quot; rel=&quot;bookmark&quot;&gt;&lt;img src=&quot;/images/yuml/yuml-cae8004092355ca9cea4d9cf716c6dc1.png&quot; class=&quot;hm-cat-img&quot; border=&quot;0&quot; title=&quot;picture&quot; width=&quot;80%&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>public-yum-downloader script</title>
