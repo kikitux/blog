@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>kikitux.net</title>
- <link href="http://kikitux.net/atom.xml" rel="self"/>
- <link href="http://kikitux.net"/>
+ <title>Recursive</title>
+ <link href="http://kikitux.net/feed/" rel="self"/>
+ <link href="http://kikitux.net/"/>
  <updated>2013-02-21T11:37:30+13:00</updated>
- <id>http://kikitux.net</id>
+ <id>http://kikitux.net/</id>
  <author>
-   <name>Alvaro Miranda</name>
-   <email>kikitux@gmail.com</email>
+   <name>kikitux</name>
+   <email>kikitux+feed@gmail.com</email>
  </author>
 
  
