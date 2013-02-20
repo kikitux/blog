@@ -109,6 +109,7 @@ http://kikitux.net/pages.html
 http://kikitux.net/sitemap.txt
 http://kikitux.net/tags.html
 
+http://kikitux.net/sql/sql-staments.html
 http://kikitux.net/test/new-post1.html
 http://kikitux.net/osx/osx-server-and-ruby-dependencies.html
   </div>
