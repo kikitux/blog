@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-21T08:42:39+13:00</updated>
+ <updated>2013-02-21T08:45:02+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -69,7 +69,7 @@ SAVEPOINT
 
 &lt;p&gt;I was wondering how long it will take break my mac server anyways.. took, 2 days.. :D&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/kikitux/kikitux.github.com/raw/master/img/osx/Server.png&quot; title=&quot;Osx Server&quot; alt=&quot;OSX Server&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.github.com/kikitux/kikitux.github.com/master/images/osx/Server.png&quot; title=&quot;Osx Server&quot; alt=&quot;OSX Server&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Alvaro&lt;/p&gt;
 </content>
