@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-22T15:34:33+13:00</updated>
+ <updated>2013-02-22T15:35:48+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -117,6 +117,15 @@ zwimming/triple  23.8M   310M  23.8M  /zwimming/triple
  </entry>
  
  <entry>
+   <title>link example</title>
+   <link href="http://kikitux.net/link-example.html"/>
+   <updated>2013-02-22T00:00:00+13:00</updated>
+   <id>http://kikitux.net/link-example</id>
+   <content type="html">&lt;p&gt;&lt;figure&gt;&lt;a href=https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/meminfo.png&gt;&lt;img src=https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/meminfo.png max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>SQL Staments</title>
    <link href="http://kikitux.net/sql/sql-staments.html"/>
    <updated>2013-02-21T00:00:00+13:00</updated>
@@ -165,26 +174,6 @@ SAVEPOINT
 &lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/oracle/hr.png' &gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/oracle/hr.png'  max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
 
 &lt;p&gt;Alvaro&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>New Post1</title>
-   <link href="http://kikitux.net/new-post1.html"/>
-   <updated>2013-02-20T00:00:00+13:00</updated>
-   <id>http://kikitux.net/new-post1</id>
-   <content type="html">&lt;p&gt;layout: post
-title: &quot;new post1&quot;
-description: &quot;&quot;
-category: test&lt;/p&gt;
-
-&lt;h2&gt;tags: []&lt;/h2&gt;
-
-&lt;p&gt;post&lt;/p&gt;
-
-&lt;h1&gt;aa&lt;/h1&gt;
-
-&lt;h2&gt;aa&lt;/h2&gt;
 </content>
  </entry>
  
