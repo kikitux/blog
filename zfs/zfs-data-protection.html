@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>zfs data protection</title>
+    
+    <meta name="author" content="Alvaro Miranda">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">kikitux.net</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>zfs data protection <small>Alvaro Miranda</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p>When ZFS for MAC came out with ZEVO, I did run to get the software and being used for about a year or so..</p>
+
+<p>If you stay away enabling dedup, the filesystem run very good.</p>
+
+<p>Today, I did format a 500gb disk to use for some VM's in my laptop. If those VM's die, it's ok, I usually have VirtualBox appliances, and backup of the software, so I could be able to start from scratch.</p>
+
+<p>However, I will like to protect the whole disk file without having to backup, in case I drop the hdd (again), and some blocks came corrupted.</p>
+
+<p>I did use the zfs option to have more copies stored on disk, in this case 2.</p>
+
+<h3>Disk just formatted</h3>
+
+<p>retina:~ mirandaa$ zfs get copies
+NAME      PROPERTY  VALUE   SOURCE
+zfs500gb  copies    1       local</p>
+
+<h3>Enable the option copy=2</h3>
+
+<p>retina:~ mirandaa$ zfs set copies=2 zfs500gb
+retina:~ mirandaa$ zfs get copies
+NAME      PROPERTY  VALUE   SOURCE
+zfs500gb  copies    2       local</p>
+
+<h2>let's write some data</h2>
+
+<h3>100MB</h3>
+
+<pre><code>retina:~ mirandaa$ df -h /Volumes/zfs500gb/
+Filesystem   Size   Used  Avail Capacity iused     ifree %iused  Mounted on
+/dev/disk2  457Gi  354Ki  457Gi     1%      70 957873343    0%   /Volumes/zfs500gb
+retina:~ mirandaa$ dd if=/dev/zero of=/Volumes/zfs500gb/file bs=1024000 count=100
+100+0 records in
+100+0 records out
+102400000 bytes transferred in 0.067305 secs (1521435685 bytes/sec)
+retina:~ mirandaa$ df -h /Volumes/zfs500gb/
+Filesystem   Size   Used  Avail Capacity iused     ifree %iused  Mounted on
+/dev/disk2  457Gi  196Mi  457Gi     1%      71 957472837    0%   /Volumes/zfs500gb
+retina:~ mirandaa$ ls -alh /Volumes/zfs500gb/file 
+-rw-r--r--  1 mirandaa  staff    98M 22 Feb 13:31 /Volumes/zfs500gb/file
+</code></pre>
+
+<h3>1GB</h3>
+
+<pre><code>retina:~ mirandaa$ dd if=/dev/zero of=/Volumes/zfs500gb/file bs=1024000 count=1000
+1000+0 records in
+1000+0 records out
+1024000000 bytes transferred in 32.551312 secs (31458025 bytes/sec)
+retina:~ mirandaa$ df -h /Volumes/zfs500gb/
+Filesystem   Size   Used  Avail Capacity iused     ifree %iused  Mounted on
+/dev/disk2  457Gi  1.9Gi  455Gi     1%      71 953981891    0%   /Volumes/zfs500gb
+retina:~ mirandaa$ ls -alh /Volumes/zfs500gb/file 
+-rw-r--r--  1 mirandaa  staff   977M 22 Feb 13:32 /Volumes/zfs500gb/file
+retina:~ mirandaa$ 
+</code></pre>
+
+<p>The system, is transparent, just just get more used space, and less free space:</p>
+
+<p><figure><a href='/images/kikitux.net 2013-02-22 at 1.42.08 PM.png' ><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/kikitux.net 2013-02-22 at 1.42.08 PM.png'  max-width='99%' /></a></figure></p>
+
+<p><figure><a href='/images/kikitux.net 2013-02-22 at 1.41.49 PM.png' ><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/kikitux.net 2013-02-22 at 1.41.49 PM.png'  max-width='99%' /></a></figure></p>
+
+<p>This is an excerpt from an oracle post <a href="https://blogs.oracle.com/relling/entry/zfs_copies_and_data_protection">https://blogs.oracle.com/relling/entry/zfs_copies_and_data_protection</a></p>
+
+<h3>Using Copies</h3>
+
+<p>To change the numbers of data copies, set the copies property. For example, suppose I have a zpool named "zwimming." The default number of data copies is 1. But you can change that to 2 quite easily.</p>
+
+<pre><code># zfs set copies=2 zwimming
+</code></pre>
+
+<p>The copies property works for all new writes, so I recommend that you set that policy when you create the file system or immediately after you create a zpool.</p>
+
+<p>You can verify the copies setting by looking at the properties.</p>
+
+<pre><code># zfs get copies zwimming
+NAME      PROPERTY  VALUE     SOURCE
+zwimming  copies    2         local
+</code></pre>
+
+<p>ZFS will account for the space used. For example, suppose I create three new file systems and copy some data to them. You can then see that the space used reflects the number of copies. If you use quotas, then the copies will be charged against the quotas, too.</p>
+
+<pre><code># zfs create -o copies=1 zwimming/single
+# zfs create -o copies=2 zwimming/dual
+# zfs create -o copies=3 zwimming/triple
+# cp -rp /usr/share/man1 /zwimming/single
+# cp -rp /usr/share/man1 /zwimming/dual
+# cp -rp /usr/share/man1 /zwimming/triple
+# zfs list -r zwimming                                                       
+NAME              USED  AVAIL  REFER  MOUNTPOINT
+zwimming         48.2M   310M  33.5K  /zwimming
+zwimming/dual    16.0M   310M  16.0M  /zwimming/dual
+zwimming/single  8.09M   310M  8.09M  /zwimming/single
+zwimming/triple  23.8M   310M  23.8M  /zwimming/triple
+</code></pre>
+
+<p>This makes sense. Each file system has one, two, or three copies of the data and will use correspondingly one, two, or three times as much space to store the data.</p>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/sql/sql-staments.html" title="SQL Staments">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>22 February 2013</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#zfs-ref">zfs <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#data protection-ref">data protection <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Alvaro Miranda 2013
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

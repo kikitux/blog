@@ -114,6 +114,7 @@ http://kikitux.net/pages.html
 http://kikitux.net/sitemap.txt
 http://kikitux.net/tags.html
 
+http://kikitux.net/zfs/zfs-data-protection.html
 http://kikitux.net/sql/sql-staments.html
 http://kikitux.net/oracle/hr-schema.html
 http://kikitux.net/test/new-post1.html
