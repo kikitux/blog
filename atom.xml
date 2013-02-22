@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-22T15:29:31+13:00</updated>
+ <updated>2013-02-22T15:30:34+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -180,7 +180,8 @@ category: test&lt;/p&gt;
 
 &lt;h2&gt;tags: []&lt;/h2&gt;
 
-&lt;p&gt;&lt;figure&gt;&lt;a href=https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/meminfo_05.png&gt;&lt;img src=https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/meminfo_05.png max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;figure&amp;gt;&amp;lt;a href=https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/meminfo_05.png&amp;gt;&amp;lt;img src=https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/meminfo_05.png max-width='99%' /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/figure&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 </content>
  </entry>
  
