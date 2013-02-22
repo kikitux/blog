@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-22T15:30:44+13:00</updated>
+ <updated>2013-02-22T15:31:32+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -165,23 +165,6 @@ SAVEPOINT
 &lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/oracle/hr.png' &gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/oracle/hr.png'  max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
 
 &lt;p&gt;Alvaro&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>New Post1</title>
-   <link href="http://kikitux.net/new-post1.html"/>
-   <updated>2013-02-20T00:00:00+13:00</updated>
-   <id>http://kikitux.net/new-post1</id>
-   <content type="html">&lt;p&gt;layout: post
-title: &quot;new post1&quot;
-description: &quot;&quot;
-category: test&lt;/p&gt;
-
-&lt;h2&gt;tags: []&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;figure&amp;gt;&amp;lt;a href=https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/meminfo_05.png&amp;gt;&amp;lt;img src=https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/meminfo_05.png max-width='99%' /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/figure&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
 </content>
  </entry>
  
