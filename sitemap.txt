@@ -122,6 +122,7 @@ http://kikitux.net/tags.html
 http://kikitux.net/zsync/.htaccess
 http://kikitux.net/zsync/index.html
 
+http://kikitux.net/zsync/zsync.html
 http://kikitux.net/zfs/zfs-data-protection.html
 http://kikitux.net/link-example.html
 http://kikitux.net/sql/sql-staments.html
