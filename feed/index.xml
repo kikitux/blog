@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-27T18:49:00+13:00</updated>
+ <updated>2013-02-27T18:55:46+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -194,6 +194,8 @@ US          Wimmekes.net
 &lt;p&gt;In a separate post, I will cover how to do this, and how to create a new Oracle Linux 6.3 ISO.&lt;/p&gt;
 
 &lt;p&gt;If you will like to try this, without all the problems to extract the iso, modified, recreate one, you may try an &lt;a href=&quot;https://www.dropbox.com/s/waht5bii6nchkrd/OracleLinux-R6-U3-Server-x86_64-btrfs.iso&quot;&gt;ISO image that I have created&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Other resources, check what I have shared &lt;a href=&quot;/dropbox&quot;&gt;on dropbox&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The main difference is, you can actually choose btrfs from the installer.&lt;/p&gt;
 
