@@ -1,1 +1,1 @@
-jekyll build && jekyll build 
+jekyll --safe build && jekyll --safe build 
