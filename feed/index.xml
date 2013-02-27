@@ -4,13 +4,240 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-25T10:11:42+13:00</updated>
+ <updated>2013-02-27T18:10:52+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
    <email>kikitux@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Getting started with Oracle Linux</title>
+   <link href="http://kikitux.net/ol/getting-started-with-oracle-linux.html"/>
+   <updated>2013-02-27T00:00:00+13:00</updated>
+   <id>http://kikitux.net/ol/getting-started-with-oracle-linux</id>
+   <content type="html">&lt;h2&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;This post will be very basic, the goal is to end with the iso of Oracle Linux on your local machine.&lt;/p&gt;
+
+&lt;p&gt;The version we will use here, will be Oracle Linux 6.3 x86_64, at some point will update the post to cover OL 6.4&lt;/p&gt;
+
+&lt;p&gt;This post will be divided in the following parts&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1 Some general information&lt;/li&gt;
+&lt;li&gt;2 Downloading OL6 ISO from the mirrors&lt;/li&gt;
+&lt;li&gt;3 Downloading OL6 ISO from e-delivery.oracle.com&lt;/li&gt;
+&lt;li&gt;4 Patches or yum repository&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Part 1&lt;/h2&gt;
+
+&lt;h3&gt;Some general information&lt;/h3&gt;
+
+&lt;p&gt;A good source of information is the &lt;a href=&quot;https://wikis.oracle.com/display/oraclelinux/Home&quot;&gt;Oracle Linux Wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You will find useful information written from people close to Support, Marketing, etc.&lt;/p&gt;
+
+&lt;p&gt;Oracle is a big company, so expect them to be sometimes slow, or some times you won't understand them at all.&lt;/p&gt;
+
+&lt;p&gt;Is not just a Linux Company, is a end-to-end, or disk-to-app company. They do a lot of things, and keep buying companies to expand they offer. Real business.&lt;/p&gt;
+
+&lt;p&gt;Oracle, keep changing all the time, and the way they go to the market, keep changing also.&lt;/p&gt;
+
+&lt;p&gt;This can be very frustrating for the new starterts, and a total challenge for the experts, but is part of the magic to work with Oracle.&lt;/p&gt;
+
+&lt;p&gt;There is not secret formula, there is no single source of truth with Oracle, what may work for someone, may not work at all for someone else.&lt;/p&gt;
+
+&lt;p&gt;And more important, what used to work, now doesn't work at all.&lt;/p&gt;
+
+&lt;p&gt;Work with oracle require, test, test, test, test, test, test, test.&lt;/p&gt;
+
+&lt;p&gt;The best advise that I can share is, be nice, gentle and keep what you do under control.&lt;/p&gt;
+
+&lt;p&gt;If you are a bit messy in the test environment, then your dev environment will be a bit dirty, and when the time to push something into production came, you will be forced to acknowledge to put something in production that is not 100% nice.&lt;/p&gt;
+
+&lt;p&gt;This may sound silly, and you may be thinking 'whatever, I am the linux ninja in my company' but in the Oracle world, the idea is keep the business running, keep the system up and running, and get uptime.&lt;/p&gt;
+
+&lt;p&gt;So I will share, the clean way, and at some points will be MY WAY, I will try to share my expertise here, and If you can use anything, I will be happy.&lt;/p&gt;
+
+&lt;p&gt;In the &lt;a href=&quot;/about.html&quot;&gt;about page&lt;/a&gt;, you will find my name, couple of links and my email. All feedback is welcome.&lt;/p&gt;
+
+&lt;h2&gt;Part 2&lt;/h2&gt;
+
+&lt;h3&gt;Downloading OL6 ISO from the mirrors&lt;/h3&gt;
+
+&lt;p&gt;From the Oracle Wiki, we can find there is a &lt;a href=&quot;https://wikis.oracle.com/display/oraclelinux/Downloading+Oracle+Linux&quot;&gt;list of mirrors&lt;/a&gt; from where download Oracle Linux.&lt;/p&gt;
+
+&lt;p&gt;This is very nice, as you may have a mirror close to you, and it will be faster and simpler than using the Oracle Way.&lt;/p&gt;
+
+&lt;p&gt;As I am writing this, the mirror available are:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Country     Mirror 
+AU          AARnet  
+                    http://mirror.aarnet.edu.au/pub/oraclelinux/
+                    ftp://mirror.aarnet.edu.au/pub/oraclelinux/
+
+DE 
+            GWDG
+                    http://ftp5.gwdg.de/pub/linux/oracle/
+                    ftp://ftp5.gwdg.de/pub/linux/oracle/
+                    rsync://ftp5.gwdg.de/pub/linux/oracle/
+
+DE          NetCologne
+                    http://mirror.netcologne.de/oracle-linux/
+                    ftp://mirror.netcologne.de/oracle-linux/
+                    rsync://mirror.netcologne.de/oracle-linux/ 
+DK 
+            dotsrc.org
+                    http://mirrors.dotsrc.org/oracle-linux/
+                    ftp://mirrors.dotsrc.org/oracle-linux/ 
+FR 
+            Institut de recherche et coordination acoustique/musique
+                    http://mirrors.ircam.fr/pub/oraclelinux/
+                    ftp://mirrors.ircam.fr/pub/oraclelinux/
+                    rsync://mirrors.ircam.fr/pub/oraclelinux/
+IE 
+            HEAnet
+                    http://ftp.heanet.ie/mirrors/oracle-linux/
+                    ftp://ftp.heanet.ie/mirrors/oracle-linux/
+                    rsync://ftp.heanet.ie/mirrors/oracle-linux/
+PL 
+            University of Warsaw - ICM
+                    http://ftp.icm.edu.pl/pub/Linux/dist/oracle-linux/
+                    ftp://ftp.icm.edu.pl/pub/Linux/dist/oracle-linux/
+                    rsync://ftp.icm.edu.pl/pub/Linux/dist/oracle-linux/
+UK 
+            linux.org.uk
+                    http://ftp.linux.org.uk/pub/distributions/enterprise/
+                    ftp://ftp.linux.org.uk/pub/distributions/enterprise/
+                    rsync://zeniv.linux.org.uk/distributions/enterprise/
+US          Wimmekes.net
+                    http://mirrors.wimmekes.net/pub/OracleLinux/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With great surprise I found this information when I had to download couple of isos.. I am located in NZ, and the internet here.. you get the idea.. so the mirror in Australia did the trick.&lt;/p&gt;
+
+&lt;p&gt;As an additional tip, the mirror on Wimmekes.net is one of the Senior VP of Oracle Linux, so chances that something show up there before the public-yum.oracle.com are very high time by time.. When that happen, he will update &lt;a href=&quot;https://blogs.oracle.com/wim/&quot;&gt;his blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Part 3&lt;/h2&gt;
+
+&lt;h3&gt;Downloading OL6 ISO from e-delivery.oracle.com&lt;/h3&gt;
+
+&lt;p&gt;Oracle is a big company, because of this, you need to be prepared to log in to some portals, click on some agreements (export, security, etc).&lt;/p&gt;
+
+&lt;p&gt;If you want to avoid that, use wget/curl/script go with the mirrors, and all happy.&lt;/p&gt;
+
+&lt;p&gt;The official source for distribution of Oracle Linux, OracleVM, and OracleVM Templates is on &lt;a href=&quot;http://edelivery.oracle.com/linux&quot;&gt;edelivery.oracle.com/linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;For other products you may find the source could be &lt;a href=&quot;http://otn.oracle.com&quot;&gt;otn.oracle.com&lt;/a&gt;, or in form of patches in &lt;a href=&quot;https://support.oracle.com&quot;&gt;support&lt;/a&gt;, or the general &lt;a href=&quot;http://edelivery.oracle.com&quot;&gt;edelivery.oracle.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;At some point you should register an account to become your oracle single sign on (sso) account, this account will be the same, for &lt;a href=&quot;http://otn.oracle.com&quot;&gt;otn.oracle.com&lt;/a&gt; &lt;a href=&quot;http://edelivery.oracle.com&quot;&gt;edelivery.oracle.com&lt;/a&gt; or the &lt;a href=&quot;https://forums.oracle.com/&quot;&gt;forums&lt;/a&gt;, so when you get some time, create one.&lt;/p&gt;
+
+&lt;p&gt;When you got to &lt;a href=&quot;http://edelivery.oracle.com/linux&quot;&gt;edelivery.oracle.com/linux&lt;/a&gt; you will see this:&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.27.31 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.27.31 PM.png' max-width='70%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;If you click on Sign in / Register button, you will redirected to the actual logi in / register page&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.29.01 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.29.01 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Here, highlighted in the red square is the part of the register. Follow the instructions, and you will be done with your account.&lt;/p&gt;
+
+&lt;p&gt;At some point it will ask if you will like to get some emails with information. I find to be very nice the emails that oracle sent, so don't be shy and mark all the areas you are interested in. You will have the chance to opt out of those mails later if you don't like them.&lt;/p&gt;
+
+&lt;p&gt;With the account created, you can log in.&lt;/p&gt;
+
+&lt;p&gt;After the export regulation agrement, you will be on the main menu of &lt;a href=&quot;http://edelivery.oracle.com/linux&quot;&gt;edelivery.oracle.com/linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.34.07 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.34.07 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;If your window is not the same, please check on top you are on Cloud Linux&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.34.55 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.34.55 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;If not, probably you are in &lt;a href=&quot;http://edelivery.oracle.com&quot;&gt;edelivery.oracle.com&lt;/a&gt; instead of &lt;a href=&quot;http://edelivery.oracle.com/linux&quot;&gt;edelivery.oracle.com/linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then select the version and the architecture, here 6.3 x86_64 bits and click on GO&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.36.53 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.36.53 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you can click on the Oracle Linux Release 6 Update 3 Media Pack for x86_64 (64 bit) or select the radio button, scroll down and click on Continue.&lt;/p&gt;
+
+&lt;p&gt;Now you should see 6 options for Oracle Linux 6.3 x86_64&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.39.34 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-27 at 5.39.34 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;On top Left of the option, there is a README button, in case of doubt, or just because you want to check, click on that, and have a look at the readme.  From here you have the option to download the isos.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Oracle Linux Release 6 Update 3 for x86_64 (64 Bit)                       V33411-01   3.5G
+  The DVD to install the Oracle Linux 6.3&lt;/li&gt;
+&lt;li&gt;Oracle Linux Release 6 Update 3 Boot iso image for x86_64 (64 bit)        V33412-01   198M
+  The boot.iso image to use this same iso to boot from hard disk or network (ftp, http or nfs)&lt;/li&gt;
+&lt;li&gt;Oracle Linux Release 6 Update 3 source DVD 1                              V33413-01   3.1G&lt;/li&gt;
+&lt;li&gt;Oracle Linux Release 6 Update 3 source DVD 2                              V33414-01   1.7G
+  The sources, source rpm of the content of the media&lt;/li&gt;
+&lt;li&gt;Oracle Linux Release 6 Update 3 UEK Boot ISO image for x86_64 (64 bit)    V34537-01   196M
+  A second boot.iso, this one is to be able to use btrfs as a filesystem option during the install.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;In the README are the instructions on how to use the UEK Boot ISO image for x86_64, those instruction are are very clear on how to prepare a network point.&lt;/p&gt;
+
+&lt;p&gt;In a separate post, I will cover how to do this, and how to create a new Oracle Linux 6.3 ISO.&lt;/p&gt;
+
+&lt;p&gt;If you will like to try this, without all the problems to extract the iso, modified, recreate one, you may try an &lt;a href=&quot;https://www.dropbox.com/s/waht5bii6nchkrd/OracleLinux-R6-U3-Server-x86_64-btrfs.iso&quot;&gt;ISO image that I have created&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The main difference is, you can actually choose btrfs from the installer.&lt;/p&gt;
+
+&lt;p&gt;I will cover this option, and some examples on btrfs in a separate post, however, if you google about btrfs you will see all the nice features this have.&lt;/p&gt;
+
+&lt;h2&gt;Part 4&lt;/h2&gt;
+
+&lt;h3&gt;Patches or yum repository&lt;/h3&gt;
+
+&lt;p&gt;Oracle Linux is one of those RedHat derivates.&lt;/p&gt;
+
+&lt;p&gt;I won't go deep on here, and won't compare with CentOS or other RedHat derivates.&lt;/p&gt;
+
+&lt;p&gt;Back to Oracle Linux.&lt;/p&gt;
+
+&lt;p&gt;Oracle Linux is based on RPM, that is RedHat Package Management. The tool to use RPM is the command rpm.&lt;/p&gt;
+
+&lt;p&gt;RPM works very great that is used by other Linux distros (like Suse) and even some other Unix (AIX use some packages on RPM format).&lt;/p&gt;
+
+&lt;p&gt;In the old days, the rpm had a downside, that was the dependency nightmare.&lt;/p&gt;
+
+&lt;p&gt;You wanted to install patch A, and you found patch A, require patch B, and patch B required patch C and D, and so on..&lt;/p&gt;
+
+&lt;p&gt;You may ended downloading 15 patches on different versions to then find the new versions conflict with the existing ones due versions, so you had to say I will update the installed one (and end updating say 50 rpms) or re-download rpms again to match the ones installed.&lt;/p&gt;
+
+&lt;p&gt;Real 'fun'&lt;/p&gt;
+
+&lt;p&gt;Then, the guys at Yellow Dog came with the YUM, Yellow Dog Update Manager, YUM, that basically used an external database to track versions and dependencies and with a repository, it will download and take of the nightmare.&lt;/p&gt;
+
+&lt;p&gt;For the version 4 of the distro, YUM was external. Once the system was installed you can use it.. very nice.&lt;/p&gt;
+
+&lt;p&gt;For version 5 of the distro, the YUM came included at the moment of the install, so once the OS was installed, you pointed the new fresh machine to a yum repo, and you can update immediately.&lt;/p&gt;
+
+&lt;p&gt;For the version 6, now this is cool, you can point to a yum repository during the install (interactive by a menu, or automated by a kickstart file) and instead of using the packages of the DVD or the network share, it will install the updates one.&lt;/p&gt;
+
+&lt;p&gt;It may sound similar, but let's check on times.&lt;/p&gt;
+
+&lt;p&gt;On version 5, say install 20 minutes, boot, full update 20 minutes, boot. Total 40 minutes and 1 reboot.&lt;/p&gt;
+
+&lt;p&gt;On version 6, say install 20 mins.. boot.. done.. Updated. Total 20 mins no reboot.&lt;/p&gt;
+
+&lt;p&gt;For oracle linux, the public source of repo is &lt;a href=&quot;http://public-yum.oracle.com&quot;&gt;public-yum.oracle.com&lt;/a&gt; in the web page are the instructions, and work very very nice.&lt;/p&gt;
+
+&lt;p&gt;With this you have now all the information to download your Oracle Linux iso, and keep the system updated.&lt;/p&gt;
+
+&lt;p&gt;Alvaro.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>zsync</title>

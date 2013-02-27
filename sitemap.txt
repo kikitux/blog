@@ -40,6 +40,10 @@
   
     
       
+    
+  
+    
+      
       	
       	<li><a href="/archive.html">Archive</a></li>
       	
@@ -55,6 +59,10 @@
       	
       	<li><a href="/categories.html">Categories</a></li>
       	
+      
+    
+  
+    
       
     
   
@@ -111,17 +119,20 @@
 <div class="row">
   <div class="span12">
     
+http://kikitux.net/about.html
 http://kikitux.net/archive.html
 http://kikitux.net/atom.xml
 http://kikitux.net/categories.html
 http://kikitux.net/feed/index.xml
 http://kikitux.net/index.html
+http://kikitux.net/ol/oracle-linux.html
 http://kikitux.net/pages.html
 http://kikitux.net/sitemap.txt
 http://kikitux.net/tags.html
 http://kikitux.net/zsync/.htaccess
 http://kikitux.net/zsync/index.html
 
+http://kikitux.net/ol/getting-started-with-oracle-linux.html
 http://kikitux.net/zsync/zsync.html
 http://kikitux.net/cert/ol6-certified-implementation-specialist.html
 http://kikitux.net/zfs/zfs-data-protection.html
