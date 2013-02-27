@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-27T18:20:03+13:00</updated>
+ <updated>2013-02-27T18:25:19+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -173,15 +173,19 @@ US          Wimmekes.net
 &lt;p&gt;On top Left of the option, there is a README button, in case of doubt, or just because you want to check, click on that, and have a look at the readme.  From here you have the option to download the isos.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Oracle Linux Release 6 Update 3 for x86_64 (64 Bit)                       V33411-01   3.5G
-  The DVD to install the Oracle Linux 6.3&lt;/li&gt;
-&lt;li&gt;Oracle Linux Release 6 Update 3 Boot iso image for x86_64 (64 bit)        V33412-01   198M
-  The boot.iso image to use this same iso to boot from hard disk or network (ftp, http or nfs)&lt;/li&gt;
-&lt;li&gt;Oracle Linux Release 6 Update 3 source DVD 1                              V33413-01   3.1G&lt;/li&gt;
-&lt;li&gt;Oracle Linux Release 6 Update 3 source DVD 2                              V33414-01   1.7G
-  The sources, source rpm of the content of the media&lt;/li&gt;
-&lt;li&gt;Oracle Linux Release 6 Update 3 UEK Boot ISO image for x86_64 (64 bit)    V34537-01   196M
-  A second boot.iso, this one is to be able to use btrfs as a filesystem option during the install.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Oracle Linux Release 6 Update 3 for x86_64 (64 Bit)                       V33411-01   3.5G&lt;/p&gt;
+
+&lt;p&gt;  The DVD to install the Oracle Linux 6.3&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Oracle Linux Release 6 Update 3 Boot iso image for x86_64 (64 bit)        V33412-01   198M&lt;/p&gt;
+
+&lt;p&gt;  The boot.iso image to use this same iso to boot from hard disk or network (ftp, http or nfs)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Oracle Linux Release 6 Update 3 source DVD 1                              V33413-01   3.1G&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Oracle Linux Release 6 Update 3 source DVD 2                              V33414-01   1.7G&lt;/p&gt;
+
+&lt;p&gt;  The sources, source rpm of the content of the media&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Oracle Linux Release 6 Update 3 UEK Boot ISO image for x86_64 (64 bit)    V34537-01   196M&lt;/p&gt;
+
+&lt;p&gt;  A second boot.iso, this one is to be able to use btrfs as a filesystem option during the install.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 
@@ -233,7 +237,26 @@ US          Wimmekes.net
 
 &lt;p&gt;For oracle linux, the public source of repo is &lt;a href=&quot;http://public-yum.oracle.com&quot;&gt;public-yum.oracle.com&lt;/a&gt; in the web page are the instructions, and work very very nice.&lt;/p&gt;
 
-&lt;p&gt;With this you have now all the information to download your Oracle Linux iso, and keep the system updated.&lt;/p&gt;
+&lt;p&gt;On a new installed machine, with direct access to internet:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Oracle Linux 6
+
+# cd /etc/yum.repos.d
+# wget http://public-yum.oracle.com/public-yum-ol6.repo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With no direct access to internet, say with a proxy:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Oracle Linux 6
+
+# cd /etc/yum.repos.d
+# http_proxy=http://proxy:3128 wget http://public-yum.oracle.com/public-yum-ol6.repo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Just replace proxy:3128 with the correct url of the proxy.&lt;/p&gt;
+
+&lt;p&gt;In a later post I will post information how to use an &lt;a href=&quot;https://github.com/kikitux/public-yum-downloader&quot;&gt;script I wrote to create a local yum repo from public-yum&lt;/a&gt;.
+With this you have now all the information to download your Oracle Linux iso, and keep the system updated.&lt;/p&gt;
 
 &lt;p&gt;Alvaro.&lt;/p&gt;
 </content>

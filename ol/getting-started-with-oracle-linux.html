@@ -274,15 +274,19 @@ US          Wimmekes.net
 <p>On top Left of the option, there is a README button, in case of doubt, or just because you want to check, click on that, and have a look at the readme.  From here you have the option to download the isos.</p>
 
 <ul>
-<li>Oracle Linux Release 6 Update 3 for x86_64 (64 Bit)                       V33411-01   3.5G
-  The DVD to install the Oracle Linux 6.3</li>
-<li>Oracle Linux Release 6 Update 3 Boot iso image for x86_64 (64 bit)        V33412-01   198M
-  The boot.iso image to use this same iso to boot from hard disk or network (ftp, http or nfs)</li>
-<li>Oracle Linux Release 6 Update 3 source DVD 1                              V33413-01   3.1G</li>
-<li>Oracle Linux Release 6 Update 3 source DVD 2                              V33414-01   1.7G
-  The sources, source rpm of the content of the media</li>
-<li>Oracle Linux Release 6 Update 3 UEK Boot ISO image for x86_64 (64 bit)    V34537-01   196M
-  A second boot.iso, this one is to be able to use btrfs as a filesystem option during the install.</li>
+<li><p>Oracle Linux Release 6 Update 3 for x86_64 (64 Bit)                       V33411-01   3.5G</p>
+
+<p>  The DVD to install the Oracle Linux 6.3</p></li>
+<li><p>Oracle Linux Release 6 Update 3 Boot iso image for x86_64 (64 bit)        V33412-01   198M</p>
+
+<p>  The boot.iso image to use this same iso to boot from hard disk or network (ftp, http or nfs)</p></li>
+<li><p>Oracle Linux Release 6 Update 3 source DVD 1                              V33413-01   3.1G</p></li>
+<li><p>Oracle Linux Release 6 Update 3 source DVD 2                              V33414-01   1.7G</p>
+
+<p>  The sources, source rpm of the content of the media</p></li>
+<li><p>Oracle Linux Release 6 Update 3 UEK Boot ISO image for x86_64 (64 bit)    V34537-01   196M</p>
+
+<p>  A second boot.iso, this one is to be able to use btrfs as a filesystem option during the install.</p></li>
 </ul>
 
 
@@ -334,7 +338,26 @@ US          Wimmekes.net
 
 <p>For oracle linux, the public source of repo is <a href="http://public-yum.oracle.com">public-yum.oracle.com</a> in the web page are the instructions, and work very very nice.</p>
 
-<p>With this you have now all the information to download your Oracle Linux iso, and keep the system updated.</p>
+<p>On a new installed machine, with direct access to internet:</p>
+
+<pre><code>Oracle Linux 6
+
+# cd /etc/yum.repos.d
+# wget http://public-yum.oracle.com/public-yum-ol6.repo
+</code></pre>
+
+<p>With no direct access to internet, say with a proxy:</p>
+
+<pre><code>Oracle Linux 6
+
+# cd /etc/yum.repos.d
+# http_proxy=http://proxy:3128 wget http://public-yum.oracle.com/public-yum-ol6.repo
+</code></pre>
+
+<p>Just replace proxy:3128 with the correct url of the proxy.</p>
+
+<p>In a later post I will post information how to use an <a href="https://github.com/kikitux/public-yum-downloader">script I wrote to create a local yum repo from public-yum</a>.
+With this you have now all the information to download your Oracle Linux iso, and keep the system updated.</p>
 
 <p>Alvaro.</p>
 
