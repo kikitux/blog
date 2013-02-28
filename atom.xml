@@ -4,13 +4,26 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-02-28T09:56:10+13:00</updated>
+ <updated>2013-02-28T13:06:24+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
    <email>kikitux@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Public Yum for Oracle Linux 6.4 is out</title>
+   <link href="http://kikitux.net/ol/public-yum-for-oracle-linux-64-is-out.html"/>
+   <updated>2013-02-28T00:00:00+13:00</updated>
+   <id>http://kikitux.net/ol/public-yum-for-oracle-linux-64-is-out</id>
+   <content type="html">&lt;p&gt;Oracle Linux 6.4 public-yum channel is out, happy updating.&lt;/p&gt;
+
+&lt;p&gt;New kernel UEK also, 2.6.39-400&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-28 at 1.03.12 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/kikitux.net 2013-02-28 at 1.03.12 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Getting started with Oracle Linux</title>
