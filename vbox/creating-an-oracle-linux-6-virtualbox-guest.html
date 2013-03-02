@@ -232,30 +232,42 @@
 
 <p>Each virtualguest can have 4 virtual nics from the gui, but you always can add more from the command line</p>
 
-<h3>A typical setup when you want the guest connected to the network at your home or office will be</h3>
+<ul>
+<li><p>A typical setup when you want the guest connected to the network at your home or office will be</p>
 
-<pre><code>- virtual nic 1, type Bridge
-</code></pre>
+<ul>
+<li>virtual nic 1, type Bridge</li>
+</ul>
+</li>
+<li><p>A setup where you don't need the guest to be avaliable to the network will be</p>
 
-<h3>A setup where you don't need the guest to be avaliable to the network will be</h3>
+<ul>
+<li>virtual nic 1, type NAT</li>
+</ul>
+</li>
+<li><p>A setup where you want to have the guest be able to access the network, but need some portability, example a virtual guest in a laptop, will be</p>
 
-<pre><code>- virtual nic 1, type NAT
-</code></pre>
+<ul>
+<li>virtual nic 1, type NAT</li>
+<li>virtual nic 2, type Bridge when the phyiscal host is connected to a network, if you are on the the go, like a demo, put as Host Only</li>
+</ul>
+</li>
+</ul>
 
-<h3>A setup where you want to have the guest be able to access the network, but need some portability, example a virtual guest in a laptop, will be</h3>
-
-<pre><code>- virtual nic 1, type NAT
-- virtual nic 2, type Bridge when the phyiscal host is connected to a network, if you are on the the go, like a demo, put as Host Only
-</code></pre>
 
 <p>With this setup, the IP on the virtual nic 1, eth0 will be always the same, so you won't run in troubles or won't have to edit /etc/hosts each time you change network.</p>
 
-<h3>A more complex but real setup, will be for example an Oracle RAC in virtual box</h3>
+<ul>
+<li><p>A more complex but real setup, will be for example an Oracle RAC in virtual box</p>
 
-<pre><code>- virtual nic 1, type Bridge
-- virtual nic 2, type Internal Network (interconnect 1)
-- virtual nic 3, type Internal Network (interconnect 2)
-</code></pre>
+<ul>
+<li>virtual nic 1, type Bridge</li>
+<li>virtual nic 2, type Internal Network (interconnect 1)</li>
+<li>virtual nic 3, type Internal Network (interconnect 2)</li>
+</ul>
+</li>
+</ul>
+
 
 <p>If you are on the go, you can change nic 1 to Host Only, as the guest will be with fixed IP, the virtual machines will be reachable between them.</p>
 
