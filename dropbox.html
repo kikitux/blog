@@ -174,7 +174,8 @@
 
 <h3>- ol64os_minimal.ova</h3>
 
-<pre><code>    user root       password oracle
+<pre><code>user        root
+password    oracle
 </code></pre>
 
 <p>When import the appliance in virtualbox, set the proper networking configuration, turn the guest on, execute "yum update" and you are done.</p>
@@ -185,9 +186,14 @@
 
 <h3>- ol64os_for_dba.ova</h3>
 
-<pre><code>user root   password oracle
-    user grid       password oracle
-user oracle password oracle
+<pre><code>user        root
+password    oracle
+
+user        grid
+password    oracle
+
+user        oracle
+password    oracle
 </code></pre>
 
 <p>When import the appliance in virtualbox, set the proper networking configuration and you are done</p>
@@ -209,7 +215,8 @@ user oracle password oracle
 
 <h3>- ol64os_lxc.ova</h3>
 
-<pre><code>    user root       password oracle
+<pre><code>user        root
+password    oracle
 </code></pre>
 
 <p>When import the appliance in virtualbox, set the proper networking configuration and you are done</p>
