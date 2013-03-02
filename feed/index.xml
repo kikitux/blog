@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-03-02T18:06:23+13:00</updated>
+ <updated>2013-03-02T18:12:43+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -338,7 +338,7 @@ Fixed is supposed to be a bit faster as will avoid defragmentation the disk.&lt;
 
 &lt;h1&gt;What's next&lt;/h1&gt;
 
-&lt;p&gt;The installation of the Oracle Linux will be in a separate post, as will past for the options we have, and won't be just Virtual Box related.&lt;/p&gt;
+&lt;p&gt;The installation of the Oracle Linux will be in a separate post, as will review some options we have, and won't be just Virtual Box related.&lt;/p&gt;
 
 &lt;p&gt;If you want to get started, you can &lt;a href=&quot;/dropbox&quot;&gt;download one of the virtual appliances&lt;/a&gt; I have created and are shared by Dropbox&lt;/p&gt;
 
