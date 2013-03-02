@@ -232,35 +232,31 @@
 
 <p>Each virtualguest can have 4 virtual nics from the gui, but you always can add more from the command line</p>
 
-<ul>
-<li><p>A typical setup when you want the guest connected to the network at your home or office will be</p>
+<h3>A typical setup when you want the guest connected to the network at your home or office will be</h3>
 
-<pre><code>  virtual nic 1, type Bridge
-</code></pre></li>
-<li><p>A setup where you don't need the guest to be avaliable to the network will be</p>
+<pre><code>    virtual nic 1, type Bridge
+</code></pre>
 
-<pre><code>  virtual nic 1, type NAT
-</code></pre></li>
-<li><p>A setup where you want to have the guest be able to access the network, but need some portability, example a virtual guest in a laptop, will be</p>
+<h3>A setup where you don't need the guest to be avaliable to the network will be</h3>
 
-<pre><code>  virtual nic 1, type NAT
-  virtual nic 2, type Bridge  when the phyiscal host is connected to a network
-                              if you are on the the go, like a demo, use Host Only
-</code></pre></li>
-</ul>
+<pre><code>    virtual nic 1, type NAT
+</code></pre>
 
+<h3>A setup where you want to have the guest be able to access the network, but need some portability, example a virtual guest in a laptop, will be</h3>
+
+<pre><code>    virtual nic 1, type NAT
+    virtual nic 2, type Bridge  when the phyiscal host is connected to a network
+                                if you are on the the go, like a demo, use Host Only
+</code></pre>
 
 <p>With this setup, the IP on the virtual nic 1, eth0 will be always the same, so you won't run in troubles or won't have to edit /etc/hosts each time you change network.</p>
 
-<ul>
-<li><p>A more complex but real setup, will be for example an Oracle RAC in virtual box</p>
+<h3>A more complex but real setup, will be for example an Oracle RAC in virtual box</h3>
 
-<pre><code>  virtual nic 1, type Bridge
-  virtual nic 2, type Internal Network (interconnect 1)
-  virtual nic 3, type Internal Network (interconnect 2)
-</code></pre></li>
-</ul>
-
+<pre><code>    virtual nic 1, type Bridge
+    virtual nic 2, type Internal Network (interconnect 1)
+    virtual nic 3, type Internal Network (interconnect 2)
+</code></pre>
 
 <p>If you are on the go, you can change nic 1 to Host Only, as the guest will be with fixed IP, the virtual machines will be reachable between them.</p>
 
@@ -373,10 +369,7 @@ Fixed is supposed to be a bit faster as will avoid defragmentation the disk.</p>
 
 <p>Right click on the machine, then Settings will open the settings page</p>
 
-<ol>
-<li>Systems - Motherboard</li>
-</ol>
-
+<h3>Systems - Motherboard</h3>
 
 <p>Here you will be able to change some options like you were interacting at motherboard level</p>
 
@@ -384,19 +377,13 @@ Fixed is supposed to be a bit faster as will avoid defragmentation the disk.</p>
 
 <p>You can adjust the amount of memory here</p>
 
-<ol>
-<li>Systems - Processor</li>
-</ol>
-
+<h3>Systems - Processor</h3>
 
 <p>Here you will be able to change some options like the number of processors/core</p>
 
 <p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.04.12 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.04.12 PM.png' max-width='99%' /></a></figure></p>
 
-<ol>
-<li>Storage</li>
-</ol>
-
+<h3>Storage</h3>
 
 <p>On storage, you will see what looks like the controllers on a real computer/server</p>
 
@@ -414,10 +401,7 @@ Fixed is supposed to be a bit faster as will avoid defragmentation the disk.</p>
 
 <p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.05.36 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.05.36 PM.png' max-width='99%' /></a></figure></p>
 
-<ol>
-<li>Network</li>
-</ol>
-
+<h3>Network</h3>
 
 <p>On the network options, you have the chance to modify the default value of 1 nic as NAT.</p>
 
@@ -427,13 +411,13 @@ Fixed is supposed to be a bit faster as will avoid defragmentation the disk.</p>
 
 <p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.06.36 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.06.36 PM.png' max-width='99%' /></a></figure></p>
 
-<h3>Review the configuration</h3>
+<h2>Review the configuration</h2>
 
 <p>Now the machine have been setup, and we change some values from the default options, you can check on the side panel an overview of the machine</p>
 
 <p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.12.23 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.12.23 PM.png' max-width='99%' /></a></figure></p>
 
-<h3>Starting the virtual machine</h3>
+<h2>Starting the virtual machine</h2>
 
 <p>Select the virtual machine, right click and start</p>
 
@@ -445,7 +429,7 @@ Fixed is supposed to be a bit faster as will avoid defragmentation the disk.</p>
 
 <p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.14.19 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.14.19 PM.png' max-width='99%' /></a></figure></p>
 
-<h3>First boot</h3>
+<h2>First boot</h2>
 
 <p>Now the virtual machine is one, you should see an error that the machine doesn't have an OS installed</p>
 
@@ -467,7 +451,7 @@ Fixed is supposed to be a bit faster as will avoid defragmentation the disk.</p>
 
 <p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.26.01 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.26.01 PM.png' max-width='99%' /></a></figure></p>
 
-<h3>What's next</h3>
+<h1>What's next</h1>
 
 <p>The installation of the Oracle Linux will be in a separate post, as will past for the options we have, and won't be just Virtual Box related.</p>
 
