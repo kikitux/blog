@@ -4,13 +4,356 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-03-02T15:34:31+13:00</updated>
+ <updated>2013-03-02T17:29:46+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
    <email>kikitux@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Creating an Oracle Linux 6 Virtualbox guest</title>
+   <link href="http://kikitux.net/vbox/creating-an-oracle-linux-6-virtualbox-guest.html"/>
+   <updated>2013-03-02T00:00:00+13:00</updated>
+   <id>http://kikitux.net/vbox/creating-an-oracle-linux-6-virtualbox-guest</id>
+   <content type="html">&lt;p&gt;On a previous post, we did check the way to &lt;a href=&quot;http://kikitux.net/ol/getting-started-with-oracle-linux.html&quot;&gt;download oracle linux 6 dvd&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that you got the iso image, let's create a virtualbox guest and create our first Oracle Linux 6 guest.&lt;/p&gt;
+
+&lt;h2&gt;Downloading Virtual Box&lt;/h2&gt;
+
+&lt;p&gt;The good friends of Oracle Linux have been working in create hand ons lab for Oracle Linux.&lt;/p&gt;
+
+&lt;p&gt;You can check the wiki &lt;a href=&quot;https://wikis.oracle.com/display/oraclelinux/Oracle+Linux+Hands-on+Labs&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;They start from the basic that is download the Virtual Box and end with some cool hand on guided tasks, it worth have a look.&lt;/p&gt;
+
+&lt;p&gt;Download virtualbox, is quite easy, go to &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;Virtualbox download page&lt;/a&gt; and download the software and Expansion pack.&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.08.49 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.08.49 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Download the software for your platform and install first the VirtualBox part, and then the Expansion pack.&lt;/p&gt;
+
+&lt;p&gt;When you execute virtual box for the first time, you should see a window similar to this:&lt;/p&gt;
+
+&lt;p&gt;OSX&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.12.57 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.12.57 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;h2&gt;Virtualbox networking&lt;/h2&gt;
+
+&lt;p&gt;Virtualbox provide a very powerful networking component for our virtual machines&lt;/p&gt;
+
+&lt;p&gt;there are 5 network types for virtual guests&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.19.10 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.19.10 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;not attached&lt;/p&gt;
+
+&lt;p&gt;  This means the virtual nic is not connected to any particular network.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;NAT&lt;/p&gt;
+
+&lt;p&gt;  This is the Network Address Translation, the same kind of network that you are familiar in your home with a router for internet that give you those private address 192.168.x.x&lt;/p&gt;
+
+&lt;p&gt;  This type is very useful when you want to work from the console of the virtual machine and you require the guest having access to the network or internet and you don't require the virtual machine having his own ip in the network.&lt;/p&gt;
+
+&lt;p&gt;  The virtual guest will take an ip like 10.2.0.15 and you can't reach from your computer or from any computer from the network.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bridged Adapter&lt;/p&gt;
+
+&lt;p&gt;  This type of networking is the most easy to use.&lt;/p&gt;
+
+&lt;p&gt;  You choose to bridge the virtual nic to one nic on your physical host, and will behave like any computer on the network.&lt;/p&gt;
+
+&lt;p&gt;  This is, if there is an dhcp server on the network, the virtual guest will take an IP from the network, and you will be able to ssh or connect to any application running on the virtual guest, plus the guest will have access to the network as any other machine.&lt;/p&gt;
+
+&lt;p&gt;  Keep in mind if you need to set up a proxy to reach internet, you will have to do the same on the virtual guest in order to get to internet.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Internal Network&lt;/p&gt;
+
+&lt;p&gt;  This type of network is like connecting the virtual guest to a switch that is not connected to any other device or network.&lt;/p&gt;
+
+&lt;p&gt;  You will end with the virtual guest connected to the virtual switch, and will be isolated.&lt;/p&gt;
+
+&lt;p&gt;  This type of network is very useful when you need to connect 2 or more virtual guest in a isolated network, example, Oracle RAC, 2 nodes with private interconnect&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Host-Only&lt;/p&gt;
+
+&lt;p&gt;  This type of network is similar to the Internal Network, but the host machine (the real computer) will be able to connect and work with the virtual guests.&lt;/p&gt;
+
+&lt;p&gt;  This type of network also allow create the network on the host, set up the ip you want to use, and will enable dhcp, so the guest will take an IP automatically.&lt;/p&gt;
+
+&lt;p&gt;  example:&lt;/p&gt;
+
+&lt;p&gt;  From the settings of virtual box, go to network&lt;/p&gt;
+
+&lt;p&gt;  Then click on the + sign&lt;/p&gt;
+
+&lt;p&gt;  &lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.31.15 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.31.15 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;  This will create a network called vboxnet0 with some default settings&lt;/p&gt;
+
+&lt;p&gt;  &lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.32.39 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.32.39 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Address 192.168.56.1 (this is the IP that will be assigned to the physical host)&lt;/li&gt;
+&lt;li&gt;Netmask 255.255.255.0&lt;/li&gt;
+&lt;li&gt;DHCP disabled&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;  Double click on the network, or select and click on the screwdriver, and you will be able to change the parameters or enable the DHCP for the guest&lt;/p&gt;
+
+&lt;p&gt;  Example:&lt;/p&gt;
+
+&lt;p&gt;  &lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.34.54 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.34.54 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;More about virtualbox networking&lt;/h2&gt;
+
+&lt;p&gt;Each virtualguest can have 4 virtual nics from the gui, but you always can add more from the command line&lt;/p&gt;
+
+&lt;h3&gt;A typical setup when you want the guest connected to the network at your home or office will be&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;- virtual nic 1, type Bridge
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;A setup where you don't need the guest to be avaliable to the network will be&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;- virtual nic 1, type NAT
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;A setup where you want to have the guest be able to access the network, but need some portability, example a virtual guest in a laptop, will be&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;- virtual nic 1, type NAT
+- virtual nic 2, type Bridge when the phyiscal host is connected to a network, if you are on the the go, like a demo, put as Host Only
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With this setup, the IP on the virtual nic 1, eth0 will be always the same, so you won't run in troubles or won't have to edit /etc/hosts each time you change network.&lt;/p&gt;
+
+&lt;h3&gt;A more complex but real setup, will be for example an Oracle RAC in virtual box&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;- virtual nic 1, type Bridge
+- virtual nic 2, type Internal Network (interconnect 1)
+- virtual nic 3, type Internal Network (interconnect 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you are on the go, you can change nic 1 to Host Only, as the guest will be with fixed IP, the virtual machines will be reachable between them.&lt;/p&gt;
+
+&lt;h2&gt;Creating the first virtual machine&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;On the main window of virtual box, you can click on NEW, and this will lead us to create the first virtual guest&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;OSX&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_1df9ed66.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_1df9ed66.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Windows 7&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_5c315d51.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_5c315d51.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Or go to the menu machine, and then new&lt;/p&gt;
+
+&lt;p&gt;OSX&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.48.42 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.48.42 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Windows 7&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_60b3e6e4.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_60b3e6e4.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Write a name and Select the OS&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;OSX&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.50.17 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.50.17 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Windows 7&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_740f5071.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_740f5071.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Set memory size&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.08 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.08 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Hard drive&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;If you are creating a virtual machine for an existing virtual hard drive select existing, otherwise, select new&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.44 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.44 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Hard disk format&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;You can choose between several formats&lt;/p&gt;
+
+&lt;p&gt;VDI from virtual box works just fine, and allow you increase the size of the disk, like when you expand a lun.&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.52.46 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.52.46 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Storage on physical hard drive&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Here you can choose between dynamic or fixed assigned&lt;/p&gt;
+
+&lt;p&gt;Dynamic will create an small disk, and will grow as you use more space on the virtual disk
+Fixed will create the disk immediately of the size you assign.&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.53.56 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.53.56 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Dynamic have the advantage you can make the disk to grow.
+Fixed is supposed to be a bit faster as will avoid defragmentation the disk.&lt;/p&gt;
+
+&lt;p&gt;In my personal case, I always go as Dynamic, because my virtual machines have a very short life span.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Size&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Here, there is no magic formula.&lt;/p&gt;
+
+&lt;p&gt;If you are confortable managing separate disks, like in the real world, you can setup a disk for just the OS.&lt;/p&gt;
+
+&lt;p&gt;Depending on how much memory and how much you will need, the size will change.&lt;/p&gt;
+
+&lt;p&gt;For just the OS, and 4GB of Swap, you can go with 16GB disk.&lt;/p&gt;
+
+&lt;p&gt;For having say Oracle grid and Oracle database binaries installed, make the disk 32GB minimun.&lt;/p&gt;
+
+&lt;p&gt;If you want to have a database on disk, add more disk, but you should go with separate disk for datafiles with asm.&lt;/p&gt;
+
+&lt;p&gt;If you don't want to use ASM, you should either way use a separate disk for the datafiles (and another for FRA and archivelogs)&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.57.13 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.57.13 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;h2&gt;Review of the normal setup of the new guest&lt;/h2&gt;
+
+&lt;p&gt;Now the virtual guest have been created, is time to check few options, like CPU and Network.&lt;/p&gt;
+
+&lt;p&gt;Right click on the machine, then Settings will open the settings page&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Systems - Motherboard&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Here you will be able to change some options like you were interacting at motherboard level&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.03.08 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.03.08 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;You can adjust the amount of memory here&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Systems - Processor&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Here you will be able to change some options like the number of processors/core&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.04.12 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.04.12 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Storage&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;On storage, you will see what looks like the controllers on a real computer/server&lt;/p&gt;
+
+&lt;p&gt;The first controller, is IDE, for a CD-ROM/DVD&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.06.36 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.06.36 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;The second controller, is SATA, for the virtual hard disk&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.07.02 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.07.02 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;You can select the virtual hard disk, and see the size and how much is being used at the moment&lt;/p&gt;
+
+&lt;p&gt;You can also select an ssd option, and tell virtualbox the disk is on ssd.&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.05.36 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.05.36 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Network&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;On the network options, you have the chance to modify the default value of 1 nic as NAT.&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.08.17 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.08.17 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;For this particular machine, as I am home, I will use Bridge to the wifi of the mac&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.06.36 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.06.36 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;h3&gt;Review the configuration&lt;/h3&gt;
+
+&lt;p&gt;Now the machine have been setup, and we change some values from the default options, you can check on the side panel an overview of the machine&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.12.23 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.12.23 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;h3&gt;Starting the virtual machine&lt;/h3&gt;
+
+&lt;p&gt;Select the virtual machine, right click and start&lt;/p&gt;
+
+&lt;p&gt;or, Select the virtual machine, then the green arrow on the menu&lt;/p&gt;
+
+&lt;p&gt;or, double click on the virtual machine&lt;/p&gt;
+
+&lt;p&gt;all this options will start our virtual machine&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.14.19 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.14.19 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;h3&gt;First boot&lt;/h3&gt;
+
+&lt;p&gt;Now the virtual machine is one, you should see an error that the machine doesn't have an OS installed&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.16.15 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.16.15 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;If you just create a virtual machine, and go straight to start, it will open a dialog box to mount a DVD to install the OS.&lt;/p&gt;
+
+&lt;p&gt;On the Devices menu, Select CD/DVD, Choose CD/DVD and browse for the OS you want to use&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.20.39 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.20.39 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the virtual DVD iso is on the virtual DVD, reboot the machine.&lt;/p&gt;
+
+&lt;p&gt;This can be done, selecting the virtual machine on virtual box, right click and reset&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.24.42 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.24.42 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you should see the welcome window for the OS install, in our case, Oracle Linux 6.3&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.26.01 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.26.01 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;h3&gt;What's next&lt;/h3&gt;
+
+&lt;p&gt;The installation of the Oracle Linux will be in a separate post, as will past for the options we have, and won't be just Virtual Box related.&lt;/p&gt;
+
+&lt;p&gt;If you want to get started, you can &lt;a href=&quot;/dropbox&quot;&gt;download one of the virtual appliances I have created and are shared by Dropbox&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Download the file, double click, and review the options.&lt;/p&gt;
+
+&lt;p&gt;Once the machine is imported, review the Options for ram, cpu, disks, and turn the machine on.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Public Yum for Oracle Linux 6.4 is out</title>
