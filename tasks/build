@@ -1,1 +1,3 @@
-jekyll --safe build && jekyll --safe build 
+jekyll build && jekyll build 
+cp _site/dropbox.html ~/Dropbox/work/iso/
+cp _site/dropbox.html ~/Dropbox/work/vbox/
