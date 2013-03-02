@@ -149,9 +149,11 @@
 
 <p>For the <a href="https://www.dropbox.com/sh/jsb3y18z4ebbowa/Z3qVA6JDC-">ISO images I have on dropbox here</a></p>
 
+<h2>ISO IMAGES</h2>
+
 <h2>Oracle Linux 6.3 x86_64 with BTRFS ISO</h2>
 
-<p><a href="https://www.dropbox.com/s/waht5bii6nchkrd/OracleLinux-R6-U3-Server-x86_64-btrfs.iso">OracleLinux-R6-U3-Server-x86_64-btrfs.iso</a></p>
+<h3><a href="https://www.dropbox.com/s/waht5bii6nchkrd/OracleLinux-R6-U3-Server-x86_64-btrfs.iso">OracleLinux-R6-U3-Server-x86_64-btrfs.iso</a></h3>
 
 <p>This is a modified iso for Oracle Linux 6.3, this allow to format a filesystem with BTRFS during the installation, give a try.</p>
 
@@ -166,11 +168,12 @@
 
 <h2>Oracle Linux 6 Virtual Box template</h2>
 
-<h3>Oracle Linux 6 x86_64 6.4 Updated.</h3>
+<h2>Oracle Linux 6 x86_64 6.4 Updated.</h2>
 
-<h3>File ol64os_for_dba.ova</h3>
+<h3>ol64os_for_dba.ova</h3>
 
 <pre><code>user root   password oracle
+    user grid       password oracle
 user oracle password oracle
 </code></pre>
 
@@ -191,13 +194,10 @@ user oracle password oracle
 
 <p>This is the OS only, just mount or copy the binaries, then execute runInstaller and get started.</p>
 
-<h2>Oracle Linux 6 Virtual Box template</h2>
-
-<h3>Oracle Linux 6 x86_64 6.4 Updated.</h3>
-
-<h3>File ol64grid_db_112035.ova</h3>
+<h3>ol64grid_db_112035.ova</h3>
 
 <pre><code>    user root       password oracle
+    user grid       password oracle
     user oracle     password oracle
 </code></pre>
 
@@ -213,10 +213,6 @@ user oracle password oracle
 
 <p>GI is installed on /u01/app/11.2.0.3/grid
 DB is installed on /u01/app/oracle/product/11.2.0.3/dbhome_1</p>
-
-<p>user root password oracle
-user grid password oracle
-user oracle password oracle</p>
 
 <p>This template is based on the previous one, so include all the parameters, settings and packages to install:</p>
 
