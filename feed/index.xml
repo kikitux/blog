@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-03-02T15:28:06+13:00</updated>
+ <updated>2013-03-02T15:28:50+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -455,15 +455,6 @@ zwimming/triple  23.8M   310M  23.8M  /zwimming/triple
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This makes sense. Each file system has one, two, or three copies of the data and will use correspondingly one, two, or three times as much space to store the data.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>link example</title>
-   <link href="http://kikitux.net/link-example.html"/>
-   <updated>2013-02-22T00:00:00+13:00</updated>
-   <id>http://kikitux.net/link-example</id>
-   <content type="html">&lt;p&gt;&lt;figure&gt;&lt;a href=https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/meminfo.png&gt;&lt;img src=https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/02/meminfo.png max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
 </content>
  </entry>
  
