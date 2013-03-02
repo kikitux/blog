@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-03-02T17:39:09+13:00</updated>
+ <updated>2013-03-02T17:41:17+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -146,14 +146,14 @@
 
 &lt;h2&gt;Creating the first virtual machine&lt;/h2&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;On the main window of virtual box, you can click on NEW, and this will lead us to create the first virtual guest&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 
 &lt;p&gt;OSX&lt;/p&gt;
 
-&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_1df9ed66.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_1df9ed66.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.16.36 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.16.36 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
 
 &lt;p&gt;Windows 7&lt;/p&gt;
 
@@ -169,9 +169,9 @@
 
 &lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_60b3e6e4.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_60b3e6e4.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;Write a name and Select the OS&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 
 &lt;p&gt;OSX&lt;/p&gt;
@@ -182,25 +182,25 @@
 
 &lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_740f5071.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_740f5071.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;Set memory size&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 
 &lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.08 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.08 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;Hard drive&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 
 &lt;p&gt;If you are creating a virtual machine for an existing virtual hard drive select existing, otherwise, select new&lt;/p&gt;
 
 &lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.44 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.44 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;Hard disk format&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 
 &lt;p&gt;You can choose between several formats&lt;/p&gt;
@@ -209,9 +209,9 @@
 
 &lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.52.46 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.52.46 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;Storage on physical hard drive&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 
 &lt;p&gt;Here you can choose between dynamic or fixed assigned&lt;/p&gt;
@@ -226,9 +226,9 @@ Fixed is supposed to be a bit faster as will avoid defragmentation the disk.&lt;
 
 &lt;p&gt;In my personal case, I always go as Dynamic, because my virtual machines have a very short life span.&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;Size&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 
 &lt;p&gt;Here, there is no magic formula.&lt;/p&gt;
