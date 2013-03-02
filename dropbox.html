@@ -138,9 +138,37 @@
   <div class="span12">
     <p>I will be sharing some files by dropbox, so this will be a list of that I have shared.</p>
 
+<p>For the <a href="https://www.dropbox.com/sh/0q6ydkka05mr49f/JwToohYVgz">vbox appliances I have on dropbox here</a></p>
+
+<ul>
+<li>8.4G  ol64grid_db_112035.ova</li>
+<li>2.4G  ol64os_for_dba.ova</li>
+<li>2.4G  ol64os_lxc.ova</li>
+</ul>
+
+
+<p>For the <a href="https://www.dropbox.com/sh/jsb3y18z4ebbowa/Z3qVA6JDC-">ISO images I have on dropbox here</a></p>
+
+<h2>Oracle Linux 6.3 x86_64 with BTRFS ISO</h2>
+
+<p><a href="https://www.dropbox.com/s/waht5bii6nchkrd/OracleLinux-R6-U3-Server-x86_64-btrfs.iso">OracleLinux-R6-U3-Server-x86_64-btrfs.iso</a></p>
+
+<p>This is a modified iso for Oracle Linux 6.3, this allow to format a filesystem with BTRFS during the installation, give a try.</p>
+
+<p>Use a layout like:</p>
+
+<ul>
+<li>/boot ext4</li>
+<li>/ btrfs</li>
+<li>swap  swap</li>
+</ul>
+
+
 <h2>Oracle Linux 6 Virtual Box template</h2>
 
-<p><a href="https://www.dropbox.com/s/rhbsnkqdx2hh48c/ol6.ova">ol6.ova</a> Oracle Linux 6 x86_64 6.3 Updated.</p>
+<h3>Oracle Linux 6 x86_64 6.4 Updated.</h3>
+
+<h3>File ol64os_for_dba.ova</h3>
 
 <pre><code>user root   password oracle
 user oracle password oracle
@@ -161,20 +189,45 @@ user oracle password oracle
 </ul>
 
 
-<p>This is the OS only, just execute runInstaller and get quick started.</p>
+<p>This is the OS only, just mount or copy the binaries, then execute runInstaller and get started.</p>
 
-<h2>Oracle Linux 6.3 x86_64 with BTRFS ISO</h2>
+<h2>Oracle Linux 6 Virtual Box template</h2>
 
-<p><a href="https://www.dropbox.com/s/waht5bii6nchkrd/OracleLinux-R6-U3-Server-x86_64-btrfs.iso">OracleLinux-R6-U3-Server-x86_64-btrfs.iso</a></p>
+<h3>Oracle Linux 6 x86_64 6.4 Updated.</h3>
 
-<p>This is a modified iso for Oracle Linux 6.3, this allow to format a filesystem with BTRFS during the installation, give a try.</p>
+<h3>File ol64grid_db_112035.ova</h3>
 
-<p>Use a layout like:</p>
+<pre><code>    user root       password oracle
+    user oracle     password oracle
+</code></pre>
+
+<p>When import the appliance in virtualbox, set the proper networking configuration and you are done</p>
+
+<p>This machine includei:</p>
 
 <ul>
-<li>/boot ext4</li>
-<li>/ btrfs</li>
-<li>swap  swap</li>
+<li>grid 11.2.0.3.5 that is 11.2.0.3 with Jan CPU patch</li>
+<li>database home 11.2.0.3.5 that is 11.2.0.3 with Jan CPU patch</li>
+</ul>
+
+
+<p>GI is installed on /u01/app/11.2.0.3/grid
+DB is installed on /u01/app/oracle/product/11.2.0.3/dbhome_1</p>
+
+<p>user root password oracle
+user grid password oracle
+user oracle password oracle</p>
+
+<p>This template is based on the previous one, so include all the parameters, settings and packages to install:</p>
+
+<ul>
+<li>Oracle Clusterware</li>
+<li>Oracle Database 10 11.1 11.2</li>
+<li>Oracle Weblogic</li>
+<li>Oracle Enterprise Manager</li>
+<li>Oracle eBusiness Suite R12</li>
+<li>Oracle Enterprise Manager Cloud Control</li>
+<li>Oracle Enterprise Manager Ops Center</li>
 </ul>
 
 
