@@ -166,11 +166,22 @@
 <p>For the <a href="https://www.dropbox.com/sh/0q6ydkka05mr49f/JwToohYVgz">vbox appliances I have on dropbox here</a></p>
 
 <ul>
+<li>488M  ol64os_minimal.ova</li>
 <li>2.4G  ol64os_for_dba.ova</li>
-<li>8.4G  ol64grid_db_112035.ova</li>
 <li>2.4G  ol64os_lxc.ova</li>
 </ul>
 
+
+<h3>- ol64os_minimal.ova</h3>
+
+<pre><code>    user root       password oracle
+</code></pre>
+
+<p>When import the appliance in virtualbox, set the proper networking configuration, turn the guest one, execute "yum update" and you are done.</p>
+
+<p>This machine include the minimal installation of Oracle Linux.</p>
+
+<p>It's fully updated to Oracle Linux 6.4.</p>
 
 <h3>- ol64os_for_dba.ova</h3>
 
@@ -195,39 +206,6 @@ user oracle password oracle
 
 
 <p>This is the OS only, just mount or copy the binaries, then execute runInstaller and get started.</p>
-
-<h3>- ol64grid_db_112035.ova</h3>
-
-<pre><code>    user root       password oracle
-    user grid       password oracle
-    user oracle     password oracle
-</code></pre>
-
-<p>When import the appliance in virtualbox, set the proper networking configuration and you are done</p>
-
-<p>This machine include:</p>
-
-<ul>
-<li>grid 11.2.0.3.5 that is 11.2.0.3 with Jan CPU patch</li>
-<li>database home 11.2.0.3.5 that is 11.2.0.3 with Jan CPU patch</li>
-</ul>
-
-
-<p>GI is installed on /u01/app/11.2.0.3/grid
-DB is installed on /u01/app/oracle/product/11.2.0.3/dbhome_1</p>
-
-<p>This template is based on the previous one, so include all the parameters, settings and packages to install:</p>
-
-<ul>
-<li>Oracle Clusterware</li>
-<li>Oracle Database 10 11.1 11.2</li>
-<li>Oracle Weblogic</li>
-<li>Oracle Enterprise Manager</li>
-<li>Oracle eBusiness Suite R12</li>
-<li>Oracle Enterprise Manager Cloud Control</li>
-<li>Oracle Enterprise Manager Ops Center</li>
-</ul>
-
 
 <h3>- ol64os_lxc.ova</h3>
 
