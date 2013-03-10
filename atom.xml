@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-03-10T17:02:03+13:00</updated>
+ <updated>2013-03-10T17:05:56+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -168,10 +168,6 @@ Preface
 &lt;iframe width=&quot;560&quot; height=&quot;420&quot; src=&quot;http://www.youtube.com/embed/wmzm9GU9E2c&quot; frameborder=&quot;0&quot;&gt;        &lt;/iframe&gt;
 
 
-&lt;p&gt;At the of this post, you should be able to achieve the same, create your own unattended install&lt;/p&gt;
-
-&lt;p&gt;So get an DVD-RW as you may end modifying your Oracle Linux DVD to your own needs.&lt;/p&gt;
-
 &lt;h2&gt;Installation Method&lt;/h2&gt;
 
 &lt;p&gt;The installation of Oracle Linux, can be divided in 2 separate tasks.&lt;/p&gt;
@@ -197,6 +193,8 @@ Preface
 &lt;h3&gt;cd/dvd&lt;/h3&gt;
 
 &lt;p&gt;You are familiar with this one, is just use the iso in a dvd, physical or virtual, and start the installer.&lt;/p&gt;
+
+&lt;p&gt;Get an DVD-RW as you may end modifying your Oracle Linux DVD to your own needs.&lt;/p&gt;
 
 &lt;h3&gt;pendrive/hard drive&lt;/h3&gt;
 
