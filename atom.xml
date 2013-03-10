@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-03-10T17:47:51+13:00</updated>
+ <updated>2013-03-10T17:48:12+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -284,9 +284,11 @@ swap
 
 &lt;p&gt;This image is from &lt;a href=&quot;&quot;&gt;Redhat 6 LVM Manual&lt;/a&gt;https://access.redhat.com/knowledge/docs/resources/docs/en-US/Red_Hat_Enterprise_Linux/6/html-single/Logical_Volume_Manager_Administration/images/overview/basic-lvm-volume.png&lt;/p&gt;
 
-&lt;p&gt;So, imagine you have a disk that is sda, and the 3rd partition sda3 is on fdisk as fd to mard the partition as LVM
-Then you create a Volume Group called VG00, that have sda3 as member
-Then you can create logical volumes and initialize those as filesystem or swap devices.&lt;/p&gt;
+&lt;p&gt;So, imagine you have a disk that is sda, and the 3rd partition sda3 is on fdisk as fd to mard the partition as LVM&lt;/p&gt;
+
+&lt;p&gt;Then you create a Volume Group called VG00, that have sda3 as member&lt;/p&gt;
+
+&lt;p&gt;Then you can create logical volumes and initialize those as filesystem or swap devices.&lt;/p&gt;
 
 &lt;p&gt;For some tasks you can use those logical volumes as backed block deivices where is supported, like virtual machines on a desktop system to have virtual machines with XEN.&lt;/p&gt;
 
