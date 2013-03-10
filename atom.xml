@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-03-10T17:05:56+13:00</updated>
+ <updated>2013-03-10T17:36:24+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -27,6 +27,8 @@
 &lt;li&gt;ISO / DVD&lt;/li&gt;
 &lt;li&gt;Installation Method&lt;/li&gt;
 &lt;li&gt;Installation Media&lt;/li&gt;
+&lt;li&gt;Installation&lt;/li&gt;
+&lt;li&gt;Kickstart&lt;/li&gt;
 &lt;/ol&gt;
 
 
@@ -234,6 +236,99 @@ The best of this method is that doesn't require anything external, so you can se
 &lt;h3&gt;network&lt;/h3&gt;
 
 &lt;p&gt;With today networks speed, install over a network share is faster then CV/DVD or pendrive. Keep that idea on mind when you need to develop your internal standard build.&lt;/p&gt;
+
+&lt;h2&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;This is the normal installation, that you boot from a DVD and give you the interactive install.&lt;/p&gt;
+
+&lt;p&gt;The process of the installation, have several questions or customisation, every one of them can be later performed in an automated way.&lt;/p&gt;
+
+&lt;p&gt;The installer is called 'anaconda' and have a predefined set of options, like the default layout for hard drive if you just select next, or the groups of packages.&lt;/p&gt;
+
+&lt;p&gt;For an Oracle Database or Oracle Application, the installation layout should be something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/ 
+/boot
+swap
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As the minimun. This is OK for dev and testing or test virtual machines.&lt;/p&gt;
+
+&lt;p&gt;A more real layout for production, where our goal is uptime, is to separate those filesystem that can fill up or due heavy usage can become corrupted (due a crash, outage or run out of space)&lt;/p&gt;
+
+&lt;p&gt;So, for a production environment, a more common filesystem layout should be&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/ 
+/boot
+/home
+/tmp
+/usr
+/var
+/var/tmp
+swap
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In order to get the most simple approach, you may want to use Logical Volumes, that will give you a simple disk layout and the flexibility to grow those filesystem later in case you run out of space,&lt;/p&gt;
+
+&lt;p&gt;So, for a production environment, a more common filesystem layout using LVM should be&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1. first partition for /boot, say 500 MB format as ext4
+1. second partition for swap, say 4GB for most system, or 16GB if your sever is over 12GB of ram and you will use Oracle DB.
+2. third partition as PV, the rest of the space
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, logical volumes as&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/ 
+/home
+/tmp
+/usr
+/var
+/var/tmp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Kickstart&lt;/h2&gt;
+
+&lt;p&gt;The anaconda installer, allow us during the boot pass an argument with an address where anaconda can find a kickstart file.&lt;/p&gt;
+
+&lt;p&gt;A kickstart file is just a text file with a format with answers to each of the tasks to perform during the installation.&lt;/p&gt;
+
+&lt;p&gt;If your kickstart is missing an option, then it will prompt on the console for that information, so, if you kickstart is complete, then you will get an installation, end to end un-attended, that is what more sysadmin like to have, less work, a consistent delivery of machines. The opposite of this is the lack of standard, where 10 different servers will have different selection of packages, different time zone, different layout of disks, etc. You want to stay away of this.&lt;/p&gt;
+
+&lt;p&gt;Are several ways to start working with a kickstart file, the top 3 are:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create a kickstart based on a kickstart file&lt;/li&gt;
+&lt;li&gt;Create a kickstart using system-config-kickstart tool&lt;/li&gt;
+&lt;li&gt;Create a kickstart with just a text editor&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Or, of course a mix between any of these.&lt;/p&gt;
+
+&lt;h3&gt;Create a kickstart based on a kickstart file&lt;/h3&gt;
+
+&lt;p&gt;Any Oracle Linux machine, will leave /root/anaconda-ks.cfg file, that will be a template of the installation performed on that box.&lt;/p&gt;
+
+&lt;p&gt;This is a very nice feature and the best way to start creating a kickstart.&lt;/p&gt;
+
+&lt;p&gt;Take a server or virtual machine, perform a installation according the standard you have, and at the end, you will end with a system that will be your base and a kickstart file that will allow you to create a file to re-use on new installations.&lt;/p&gt;
+
+&lt;h3&gt;Create a kickstart using system-config-kickstart tool&lt;/h3&gt;
+
+&lt;p&gt;On a OracleLinux server, do yum install system-config-kickstart to install this tool&lt;/p&gt;
+
+&lt;p&gt;Then execute it as system-config-kickstart and you will be able to customise the different options and will save and create your very own kickstart file.&lt;/p&gt;
+
+&lt;p&gt;It also have the option to open a kickstart file in case you want to change or edit some options.&lt;/p&gt;
+
+&lt;h3&gt;Create a kickstart with just a text editor&lt;/h3&gt;
+
+&lt;p&gt;Once you are confortable with the process, you can just use a text editor and create your very own kickstart.&lt;/p&gt;
+
+&lt;p&gt;This is also valid to have scripts that create kickstart files, that is, you have a base, and your servers differ just in hostname, and network setup. Then you can create an script to create kickstart files.&lt;/p&gt;
+
+&lt;p&gt;A very nice manual and examples for kickstart files, can be found on &lt;a href=&quot;https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/ch-kickstart2.html&quot;&gt;Chapter 32. Kickstart Installations&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Alvaro&lt;/p&gt;
 </content>
