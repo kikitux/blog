@@ -4,13 +4,242 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-03-02T18:13:07+13:00</updated>
+ <updated>2013-03-10T17:02:03+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
    <email>kikitux@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Installing Oracle Linux 6</title>
+   <link href="http://kikitux.net/ol/installing-oracle-linux-6.html"/>
+   <updated>2013-03-02T00:00:00+13:00</updated>
+   <id>http://kikitux.net/ol/installing-oracle-linux-6</id>
+   <content type="html">&lt;p&gt;This post will cover a basic installation of Oracle Linux 6.&lt;/p&gt;
+
+&lt;p&gt;For this task, we will use a virtual box guest, however, the same idea apply to any other virtualization technology or bare metal install on a physical server.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Before we start&lt;/li&gt;
+&lt;li&gt;Release notes&lt;/li&gt;
+&lt;li&gt;ISO / DVD&lt;/li&gt;
+&lt;li&gt;Installation Method&lt;/li&gt;
+&lt;li&gt;Installation Media&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;Before we start&lt;/h2&gt;
+
+&lt;p&gt;In the &lt;a href=&quot;/about&quot;&gt;about page&lt;/a&gt; are few lines about who I am, my email and link to linkedin. All feedback is good feedback.&lt;/p&gt;
+
+&lt;p&gt;Let me share few lines about Linux and myself.&lt;/p&gt;
+
+&lt;p&gt;On the year 2003, RedHat took the first RHCE exam in Chile, RedHat 9.&lt;/p&gt;
+
+&lt;p&gt;Before that was just on the other countries like Argentina or Brazil, so this time was in Chile, quite expensive and the famous RHCE, the real deal with a lunch break in the middle and only hands on, trouble shooting and a installation request.&lt;/p&gt;
+
+&lt;p&gt;I took the exam and passed, and was well expended money. After that, the market was open to me, being RHCE gave me an enormous advantage vs the other peers that were good but they weren't rhce.&lt;/p&gt;
+
+&lt;p&gt;As soon as I got certified in RHCE got the invite to become RHCI, so from 2004 to 2011 I was an RedHat Certified Instructor.&lt;/p&gt;
+
+&lt;p&gt;In RedHat space, I got certified in 2003 with RH9, then on 2007 with RHEL5.&lt;/p&gt;
+
+&lt;p&gt;In Oracle space, In 2007 I took the beta exam for Oracle Linux 5, and last December took the beta exam for Oracle Linux 6. Both passed.&lt;/p&gt;
+
+&lt;p&gt;So if you are good, and you can pass an exam, do it, it will look nice on the resume, and will help you in your work.&lt;/p&gt;
+
+&lt;p&gt;Back to our goal, I will be sharing here, both sides of the coin, the teorical level from being an instructor, and the Implementation and Support side of being Unix Admin with many implementations under the belt, most of them always related with Oracle products like databases and ebusiness suite.&lt;/p&gt;
+
+&lt;p&gt;If you have worked with Oracle in the past, you are familiar with what I am going to discuss here.&lt;/p&gt;
+
+&lt;p&gt;If you have worked with any paid linux or unix, or hardware from some brands that require a minimun or supported version, you are somewhat familiar with certification matrix.&lt;/p&gt;
+
+&lt;p&gt;Certification matrix is an end-to-end matrix of versions.&lt;/p&gt;
+
+&lt;p&gt;You may want to go ahead, install the latest Oracle Linux available, apply all the patches available and hand over to the dba or apps team.&lt;/p&gt;
+
+&lt;p&gt;If you are using Oracle Linux, the chances that you are going to be working with enterprise grade hardware, and expensive applications are very high, in such cases better check and gather the requirement, rather than find the 6.4 Oracle Linux with kernel-uek-2.6.30-400 is not supported for that old application, or vice versa, the Oracle Linux 5.1 required to run that old application is not supported to run on that brand new hardware.&lt;/p&gt;
+
+&lt;p&gt;A certification Matrix should cover:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;hardware with their recommended firmware upgrades, and OS tools&lt;/li&gt;
+&lt;li&gt;Operating system that is supported, recommended for that hardware&lt;/li&gt;
+&lt;li&gt;Operating system that is supported, certified and recommended for that application&lt;/li&gt;
+&lt;li&gt;Application with their recommended patch level&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Let me give you some examples.&lt;/p&gt;
+
+&lt;p&gt;When Oracle Linux 5 came out, the installer of the Oracle Database 10.2 complained about the Version wasn't supported.
+When Oracle Linux 6 came out, the page of some hardware vendor only listed some versions of Enterprise Linux 5, not 6.&lt;/p&gt;
+
+&lt;p&gt;If you ignore the needs of the applications, or just skip checking the supported version of the hardware, you may find later in the project that the hardware or the application is behaving poorly, or crashing, and when the application team engage the vendor, for hardware or software, they may just suggest, give a try to the version X.Y.Z of the OS, and you may need to do extra work.&lt;/p&gt;
+
+&lt;p&gt;When you deal with paid applications (Top Dollar), you will learn are some rules, not written, that the called 'best practices'.&lt;/p&gt;
+
+&lt;p&gt;My best advice here is test, check, put on paper the versions of all the components, and in case of doubt, open a service request or support ticket with the vendor and ask the written confirmation or deny of using X.Y.Z combination.&lt;/p&gt;
+
+&lt;p&gt;Oracle is a big company, the chances you are going to end using Oracle products on top of the Oracle Linux are very high, and you need to double check in both sides that both layers are supported.&lt;/p&gt;
+
+&lt;p&gt;I will be covering some of this information for some of the products I use in later posts, but if you are going to be working and supporting Oracle Linux for Oracle Products, you should start becoming familiar with &lt;a href=&quot;http://www.oracle.com/technetwork/indexes/downloads/index-087287.html&quot;&gt;Certification Matrix&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Release notes and documentation&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.oracle.com/cd/E37670_01/E39522/html/&quot;&gt;Release notes&lt;/a&gt;, seriously? yes, seriously.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.oracle.com/cd/E37670_01/index.html&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Oracle is a big company, and they are very professional, you may not need at all check a single doc or release notes to get a linux installation, but at some point you should review the release notes and documentation&lt;/p&gt;
+
+&lt;p&gt;When Oracle linux 6.4 came out, &lt;a href=&quot;https://blogs.oracle.com/linux/entry/oracle_linux_6_4_has&quot;&gt;an oracle linux blog post&lt;/a&gt; came out&lt;/p&gt;
+
+&lt;p&gt;An &lt;a href=&quot;https://oss.oracle.com/pipermail/el-errata/2013-February/003307.html&quot;&gt;announcement was done at the errata mailing list&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Quote of the Oracle Linux Blog post:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;For further details, please see the Oracle Linux 6.4 Release Notes.
+
+Oracle Linux customers also have access to a number of recently announced unique features/benefits, including:
+
+Support for XFS file system: Today we also announced support for XFS file system in Oracle Linux. It is now available for customers with Premier Support subscriptions using Oracle Linux 6. Read the XFS support blog article for more details.
+
+Ksplice offline client: We recently announced a new feature in our Ksplice service, known as the Ksplice offline client. Ksplice provides zero downtime updates for your kernel and now this new option eliminates the requirement to have a direct connection to the internet to apply Ksplice patches. Read more details in Wim Coekaerts’ blog and watch this video describing updating and patching in Oracle Linux.
+
+DTrace for Oracle Linux: Another new addition is the general availability of DTrace for Oracle Linux. DTrace is a comprehensive dynamic tracing framework available to Oracle Linux customers. It is available to download from ULN for supported customers. 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From the &lt;a href=&quot;http://docs.oracle.com/cd/E37670_01/E39522/html/&quot;&gt;release note&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Table of Contents
+Preface
+1. New Features and Changes
+1.1. Supported Kernels
+1.1.1. Unbreakable Enterprise Kernel Release 2
+1.2. Notable New Features
+1.2.1. Xen Improvements
+1.2.2. Notable New Features Available with the Red Hat Compatible Kernel
+1.3. Technology Preview Features
+1.4. Packages Added to the Upstream Release
+1.5. Packages Modified from the Upstream Release
+1.6. Packages Removed from the Upstream Release
+1.7. Packages Added by Oracle
+2. Fixed and Known Issues
+2.1. Fixed Issues
+2.2. Known Issues
+3. Upgrading to Oracle Linux 6 Update 4
+3.1. Supported Upgrade Paths
+3.2. Obtaining Oracle Linux 6 Update 4 Packages
+3.2.1. About the Unbreakable Linux Network
+3.2.2. About Public Yum
+3.2.3. About Oracle Linux Installation Media
+3.3. Applying Updates
+3.4. Upgrading Unbreakable Enterprise Kernel Release 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And we are talking of minor release, from 6.3 to 6.4&lt;/p&gt;
+
+&lt;p&gt;For sure you can just install it, or do yum -u update in an existing Oracle Linux 6, but the release notes contain very nice information.&lt;/p&gt;
+
+&lt;p&gt;You should be checking at least&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;2. Fixed and Known Issues
+2.1. Fixed Issues
+2.2. Known Issues
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;ISO / DVD&lt;/h2&gt;
+
+&lt;p&gt;The chicken and the egg, what goes first.&lt;/p&gt;
+
+&lt;p&gt;As we did on a previous post, you need to &lt;a href=&quot;http://kikitux.net/ol/getting-started-with-oracle-linux.html&quot;&gt;download oracle linux&lt;/a&gt; , once you have the iso, you can start to plan the deployment of Oracle Linux.&lt;/p&gt;
+
+&lt;p&gt;For a single install, either physical or virtual, you can just burn the downloaded iso, or mount the iso and do a normal installation.&lt;/p&gt;
+
+&lt;p&gt;But this method is not efficient if you need to perform several installations.&lt;/p&gt;
+
+&lt;p&gt;The ISO image is the starting point, as we will review in the following sections, you will be able to use several methods to start the installation, and you will able to use several methods to get the media on the client. Further more, the whole process can be automated, and instead of the normal interactive installation, can be done silent.&lt;/p&gt;
+
+&lt;p&gt;For example an installation, for an Oracle Linux 6.3 using root filesystem as btrfs, including all the packages and parameter needed to run Oracle Rac&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;420&quot; src=&quot;http://www.youtube.com/embed/wmzm9GU9E2c&quot; frameborder=&quot;0&quot;&gt;        &lt;/iframe&gt;
+
+
+&lt;p&gt;At the of this post, you should be able to achieve the same, create your own unattended install&lt;/p&gt;
+
+&lt;p&gt;So get an DVD-RW as you may end modifying your Oracle Linux DVD to your own needs.&lt;/p&gt;
+
+&lt;h2&gt;Installation Method&lt;/h2&gt;
+
+&lt;p&gt;The installation of Oracle Linux, can be divided in 2 separate tasks.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Execution of the installed&lt;/li&gt;
+&lt;li&gt;Installation of linux to the hard disk&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;To execute the installer you can use&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cd/dvd&lt;/li&gt;
+&lt;li&gt;pendrive/hard drive&lt;/li&gt;
+&lt;li&gt;network&lt;/li&gt;
+&lt;li&gt;grub&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Let's review this options&lt;/p&gt;
+
+&lt;h3&gt;cd/dvd&lt;/h3&gt;
+
+&lt;p&gt;You are familiar with this one, is just use the iso in a dvd, physical or virtual, and start the installer.&lt;/p&gt;
+
+&lt;h3&gt;pendrive/hard drive&lt;/h3&gt;
+
+&lt;p&gt;You can put the image of the iso in a pendrive or a harddrive and boot from an internal hard drive, lun, virtual disk or attached usb pendrive or disk.&lt;/p&gt;
+
+&lt;p&gt;The pendrive is very useful if you keep changing the kickstart file, example, you can edit the pendrive to setup the server name, network settings, then go to the server, boot, and take the files from a network share. This combination is very useful and simple.&lt;/p&gt;
+
+&lt;h3&gt;network&lt;/h3&gt;
+
+&lt;p&gt;You can turn on a server, boot from the network and it will load the installer from the network&lt;/p&gt;
+
+&lt;h3&gt;grub&lt;/h3&gt;
+
+&lt;p&gt;This is very cool, in a system that you have to reinstall for any reason, you can put an entry in grub, reboot the server, choose that option, and it will start the installer&lt;/p&gt;
+
+&lt;p&gt;During this post, we will review cd/dvd execution of the installer. Either by full dvd or just boot.iso&lt;/p&gt;
+
+&lt;h2&gt;Installation Media&lt;/h2&gt;
+
+&lt;p&gt;Once the installer have been loaded, the 2nd part is to perform the installation of our OracleLinux.&lt;/p&gt;
+
+&lt;p&gt;The binaries to perform the installation can be taken from several sources&lt;/p&gt;
+
+&lt;h3&gt;cd/dvd&lt;/h3&gt;
+
+&lt;p&gt;This allow us to install from a CD or DVD, this usually goes related to boot from a cd/dvd and then install from the same media.
+The best of this method is that doesn't require anything external, so you can setup a server and later take care of the network part.&lt;/p&gt;
+
+&lt;p&gt;This method, goes very well with a custom DVD, were you can place a kickstart file to automate the installation. If your company have a standard, fixed or not, you can automate the process, anything than is asked during the installation, can be automated.&lt;/p&gt;
+
+&lt;h3&gt;pendrive/hard drive&lt;/h3&gt;
+
+&lt;p&gt;This one, allows to take the rpm from a pendrive or hard drive.&lt;/p&gt;
+
+&lt;p&gt;Ideal if you want to have a hard drive with the media plus some applications.The harddrive installation is very fast, as opposite to the pendrive.&lt;/p&gt;
+
+&lt;h3&gt;network&lt;/h3&gt;
+
+&lt;p&gt;With today networks speed, install over a network share is faster then CV/DVD or pendrive. Keep that idea on mind when you need to develop your internal standard build.&lt;/p&gt;
+
+&lt;p&gt;Alvaro&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Creating an Oracle Linux 6 Virtualbox guest</title>
