@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-03-10T17:51:28+13:00</updated>
+ <updated>2013-03-10T17:53:12+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -299,9 +299,9 @@ swap
 &lt;pre&gt;&lt;code&gt;first partition for
 /boot, say 500 MB format as ext4
 
-second partition for 
-swap, say  4GB for most system
-swap, say 16GB if your sever is over 12GB of ram and you will use Oracle DB
+second partition for swap
+say  4GB for most system
+say 16GB if your sever is over 12GB of ram and you will use Oracle DB
 
 third partition as 
 PV, the rest of the space
