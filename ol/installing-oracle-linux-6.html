@@ -391,12 +391,17 @@ swap
 
 <p>LVM, stand for Logical Volume, the basic idea behind this is.</p>
 
-<p>A physical disk (or more than one) provide PE, Physical Extend to the next layer
-A Volume group is made of Physical Devices with a number of PE, and this Volume Group hold Logical Volumes.
-A Logical Volume is mafe of LE, or logical extends
-A filesystem is created on top of a logical volume</p>
+<p>A physical disk (or more than one) provide PE, Physical Extend to the next layer</p>
+
+<p>A Volume group is made of Physical Devices with a number of PE, and this Volume Group hold Logical Volumes.</p>
+
+<p>A Logical Volume is mafe of LE, or logical extends</p>
+
+<p>A filesystem is created on top of a logical volume</p>
 
 <p><img src="https://access.redhat.com/knowledge/docs/resources/docs/en-US/Red_Hat_Enterprise_Linux/6/html-single/Logical_Volume_Manager_Administration/images/overview/basic-lvm-volume.png" alt="https://access.redhat.com/knowledge/docs/resources/docs/en-US/Red_Hat_Enterprise_Linux/6/html-single/Logical_Volume_Manager_Administration/images/overview/basic-lvm-volume.png" /></p>
+
+<p>This image is from <a href="">Redhat 6 LVM Manual</a>https://access.redhat.com/knowledge/docs/resources/docs/en-US/Red_Hat_Enterprise_Linux/6/html-single/Logical_Volume_Manager_Administration/images/overview/basic-lvm-volume.png</p>
 
 <p>So, imagine you have a disk that is sda, and the 3rd partition sda3 is on fdisk as fd to mard the partition as LVM
 Then you create a Volume Group called VG00, that have sda3 as member
