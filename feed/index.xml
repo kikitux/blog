@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-03-10T17:37:28+13:00</updated>
+ <updated>2013-03-10T17:38:20+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -328,7 +328,7 @@ third partition as PV, the rest of the space
 
 &lt;p&gt;This is also valid to have scripts that create kickstart files, that is, you have a base, and your servers differ just in hostname, and network setup. Then you can create an script to create kickstart files.&lt;/p&gt;
 
-&lt;p&gt;A very nice manual and examples for kickstart files, can be found on &lt;a href=&quot;https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/ch-kickstart2.html&quot;&gt;Chapter 32. Kickstart Installations&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A very nice manual and examples for kickstart files, can be found on &lt;a href=&quot;https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/ch-kickstart2.html&quot;&gt;Chapter 32. Kickstart Installations&lt;/a&gt; from redhat manual&lt;/p&gt;
 
 &lt;p&gt;Alvaro&lt;/p&gt;
 </content>
