@@ -389,13 +389,34 @@ swap
 
 <p>In order to get the most simple approach, you may want to use Logical Volumes, that will give you a simple disk layout and the flexibility to grow those filesystem later in case you run out of space,</p>
 
-<p>So, for a production environment, a more common filesystem layout using LVM should be</p>
+<p>LVM, stand for Logical Volume, the basic idea behind this is.</p>
 
-<pre><code>first partition for /boot, say 500 MB format as ext4
+<p>A physical disk (or more than one) provide PE, Physical Extend to the next layer
+A Volume group is made of Physical Devices with a number of PE, and this Volume Group hold Logical Volumes.
+A Logical Volume is mafe of LE, or logical extends
+A filesystem is created on top of a logical volume</p>
 
-second partition for swap, say 4GB for most system, or 16GB if your sever is over 12GB of ram and you will use Oracle DB
+<p><img src="https://access.redhat.com/knowledge/docs/resources/docs/en-US/Red_Hat_Enterprise_Linux/6/html-single/Logical_Volume_Manager_Administration/images/overview/basic-lvm-volume.png" alt="https://access.redhat.com/knowledge/docs/resources/docs/en-US/Red_Hat_Enterprise_Linux/6/html-single/Logical_Volume_Manager_Administration/images/overview/basic-lvm-volume.png" /></p>
 
-third partition as PV, the rest of the space
+<p>So, imagine you have a disk that is sda, and the 3rd partition sda3 is on fdisk as fd to mard the partition as LVM
+Then you create a Volume Group called VG00, that have sda3 as member
+Then you can create logical volumes and initialize those as filesystem or swap devices.</p>
+
+<p>For some tasks you can use those logical volumes as backed block deivices where is supported, like virtual machines on a desktop system to have virtual machines with XEN.</p>
+
+<p>If you want to read more about this, check <a href="https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Linux/6/html-single/Logical_Volume_Manager_Administration/index.html">RedHat 6 LVM manual</a></p>
+
+<p>Back to our installation, for a production environment, a more common filesystem layout using LVM should be</p>
+
+<pre><code>first partition for
+/boot, say 500 MB format as ext4
+
+second partition for 
+swap, say  4GB for most system
+swap, say 16GB if your sever is over 12GB of ram and you will use Oracle DB
+
+third partition as 
+PV, the rest of the space
 </code></pre>
 
 <p>Then, logical volumes as</p>
