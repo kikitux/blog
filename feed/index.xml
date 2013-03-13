@@ -4,13 +4,104 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-03-12T20:35:14+13:00</updated>
+ <updated>2013-03-14T12:55:35+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
    <email>kikitux@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Public yum downloader</title>
+   <link href="http://kikitux.net/ol/public-yum-downloader.html"/>
+   <updated>2013-03-14T00:00:00+13:00</updated>
+   <id>http://kikitux.net/ol/public-yum-downloader</id>
+   <content type="html">&lt;p&gt;I wrote an script called &lt;a href=&quot;https://github.com/kikitux/public-yum-downloader&quot;&gt;public-yum-downloader.sh&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This script will download a given repo from public-yum.oracle.com and create a local copy&lt;/p&gt;
+
+&lt;p&gt;The hierarchy is 100% the same as what is on public-yum&lt;/p&gt;
+
+&lt;p&gt;The script take 2 arguments, one is -P for the OS directory, and --url for where the same path will be public, so you can put the mirror in a different path&lt;/p&gt;
+
+&lt;p&gt;example, I have my own repo in /u02/stage/ and is shared like http://mirandaa00/stage&lt;/p&gt;
+
+&lt;p&gt;on my apache I have&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    Alias /stage &quot;/u02/stage/&quot;
+
+    &amp;lt;Directory &quot;/u02/stage/&quot;&amp;gt;
+    Options Indexes MultiViews FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+    &amp;lt;/Directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In that way, I have everything I want shared from my own local path&lt;/p&gt;
+
+&lt;p&gt;When you use the url, the script will create a local-yum-ol6.repo file with the url you gave, with GPG enabled, so you can be sure nothing wrong will happen in the middle&lt;/p&gt;
+
+&lt;p&gt;I use this script it this way&lt;/p&gt;
+
+&lt;p&gt;as root, i have /root/bin/dl.sh with this content&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.latest --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.4 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.9 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.9 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.8 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.UEK --url http://mirandaa00/stage
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.UEK --url http://mirandaa00/stage
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_addons --url http://mirandaa00/stage
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_addons --url http://mirandaa00/stage
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_oracle_addons --url http://mirandaa00/stage
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_playground_latest
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the -l will look on that path to find the rpm, useful for example if you have a dvd and you want to use as initial cache&lt;/p&gt;
+
+&lt;p&gt;I do run my commands in that way as when 5.9 came out, I had a lot of those rpms in 5.8 or 5 latest, rite?&lt;/p&gt;
+
+&lt;p&gt;Worst thing that could happen, is the rpm is not there, and will have to download, but if it's there will copy it&lt;/p&gt;
+
+&lt;p&gt;for UEK and addons those are unique rpm, so I don't use -l&lt;/p&gt;
+
+&lt;p&gt;for the playground, that are the new kernel based on 3.x directly, i don't use --url, as I don't wat the script to enable that repo, but I do want to download what that channel have&lt;/p&gt;
+
+&lt;p&gt;so, for known versions 6.0 to 6.4 you can use -R 6.n or even -R 6.UEK&lt;/p&gt;
+
+&lt;p&gt;for other repos you can pass the name as -r repo&lt;/p&gt;
+
+&lt;p&gt;Regarding the OVM3, the OVM3 is not on the repo, so I don't use my script for that, however, you can use the tools your self&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    mkdir -p /u02/stage/repo/OracleVM/OVM3/latest/x86_64/repodata/.cache
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and create a repo file&lt;/p&gt;
+
+&lt;p&gt;cat /u02/stage/public-yum-ovm3.repo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    [ovm3_latest]
+    name=Oracle Linux $releasever Latest (x86_64)
+    baseurl=http://public-yum.oracle.com/repo/OracleVM/OVM3/latest/x86_64/
+    gpgkey=http://public-yum.oracle.com/RPM-GPG-KEY-oracle-el5
+    gpgcheck=1
+    enabled=1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, you can download what is there as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    http_proxy=http://proxy:3128 yumdownloader -c /u02/stage/public-yum-ovm3.repo --destdir=/u02/stage/repo/OracleVM/OVM3/latest/x86_64/ '*'
+    createrepo -v -c /u02/stage/repo/OracleVM/OVM3/latest/x86_64/repodata/.cache /u02/stage/repo/OracleVM/OVM3/latest/x86_64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Please, take note the yumdownloader use --destdir=/path then SPACE, then what you want to download, as we want a mirror, space '*'&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Installing Oracle Linux 6</title>

@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38847503-1']);
+  _gaq.push(['_setDomainName', 'kikitux.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <meta charset="utf-8">
+    <title>Public yum downloader</title>
+    <meta name="description" content="Script public-yum-downloader.sh">
+    <meta name="author" content="Alvaro Miranda">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">kikitux.net</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Public yum downloader <small>Alvaro Miranda</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p>I wrote an script called <a href="https://github.com/kikitux/public-yum-downloader">public-yum-downloader.sh</a></p>
+
+<p>This script will download a given repo from public-yum.oracle.com and create a local copy</p>
+
+<p>The hierarchy is 100% the same as what is on public-yum</p>
+
+<p>The script take 2 arguments, one is -P for the OS directory, and --url for where the same path will be public, so you can put the mirror in a different path</p>
+
+<p>example, I have my own repo in /u02/stage/ and is shared like http://mirandaa00/stage</p>
+
+<p>on my apache I have</p>
+
+<pre><code>    Alias /stage "/u02/stage/"
+
+    &lt;Directory "/u02/stage/"&gt;
+    Options Indexes MultiViews FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+    &lt;/Directory&gt;
+</code></pre>
+
+<p>In that way, I have everything I want shared from my own local path</p>
+
+<p>When you use the url, the script will create a local-yum-ol6.repo file with the url you gave, with GPG enabled, so you can be sure nothing wrong will happen in the middle</p>
+
+<p>I use this script it this way</p>
+
+<p>as root, i have /root/bin/dl.sh with this content</p>
+
+<pre><code>    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.latest --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.4 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.9 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.9 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.8 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.UEK --url http://mirandaa00/stage
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.UEK --url http://mirandaa00/stage
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_addons --url http://mirandaa00/stage
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_addons --url http://mirandaa00/stage
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_oracle_addons --url http://mirandaa00/stage
+    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_playground_latest
+</code></pre>
+
+<p>the -l will look on that path to find the rpm, useful for example if you have a dvd and you want to use as initial cache</p>
+
+<p>I do run my commands in that way as when 5.9 came out, I had a lot of those rpms in 5.8 or 5 latest, rite?</p>
+
+<p>Worst thing that could happen, is the rpm is not there, and will have to download, but if it's there will copy it</p>
+
+<p>for UEK and addons those are unique rpm, so I don't use -l</p>
+
+<p>for the playground, that are the new kernel based on 3.x directly, i don't use --url, as I don't wat the script to enable that repo, but I do want to download what that channel have</p>
+
+<p>so, for known versions 6.0 to 6.4 you can use -R 6.n or even -R 6.UEK</p>
+
+<p>for other repos you can pass the name as -r repo</p>
+
+<p>Regarding the OVM3, the OVM3 is not on the repo, so I don't use my script for that, however, you can use the tools your self</p>
+
+<pre><code>    mkdir -p /u02/stage/repo/OracleVM/OVM3/latest/x86_64/repodata/.cache
+</code></pre>
+
+<p>and create a repo file</p>
+
+<p>cat /u02/stage/public-yum-ovm3.repo</p>
+
+<pre><code>    [ovm3_latest]
+    name=Oracle Linux $releasever Latest (x86_64)
+    baseurl=http://public-yum.oracle.com/repo/OracleVM/OVM3/latest/x86_64/
+    gpgkey=http://public-yum.oracle.com/RPM-GPG-KEY-oracle-el5
+    gpgcheck=1
+    enabled=1
+</code></pre>
+
+<p>Then, you can download what is there as:</p>
+
+<pre><code>    http_proxy=http://proxy:3128 yumdownloader -c /u02/stage/public-yum-ovm3.repo --destdir=/u02/stage/repo/OracleVM/OVM3/latest/x86_64/ '*'
+    createrepo -v -c /u02/stage/repo/OracleVM/OVM3/latest/x86_64/repodata/.cache /u02/stage/repo/OracleVM/OVM3/latest/x86_64
+</code></pre>
+
+<p>Please, take note the yumdownloader use --destdir=/path then SPACE, then what you want to download, as we want a mirror, space '*'</p>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/ol/installing-oracle-linux-6.html" title="Installing Oracle Linux 6">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="http://kikitux.net/ol/public-yum-downloader.html" data-num-posts="5" data-width="580" data-colorscheme="light"></div>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>14 March 2013</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#ol-ref">ol <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#yum-ref">yum <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Alvaro Miranda 2013
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
