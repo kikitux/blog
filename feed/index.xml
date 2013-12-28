@@ -4,13 +4,157 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-12-28T19:39:54+13:00</updated>
+ <updated>2013-12-28T19:41:28+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
    <email>kikitux@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Hello World</title>
+   <link href="http://kikitux.net/hello-world.html"/>
+   <updated>2013-12-28T00:00:00+13:00</updated>
+   <id>http://kikitux.net/hello-world</id>
+   <content type="html">&lt;p&gt;This is a regular paragraph.&lt;/p&gt;
+
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Foo&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+
+&lt;p&gt;This is another regular paragraph.&lt;/p&gt;
+
+&lt;h1&gt;This is an H1&lt;/h1&gt;
+
+&lt;h2&gt;This is an H2&lt;/h2&gt;
+
+&lt;p&gt;`aaaaa&lt;/p&gt;
+
+&lt;h1&gt;This is an H1&lt;/h1&gt;
+
+&lt;h2&gt;This is an H2&lt;/h2&gt;
+
+&lt;h6&gt;This is an H6&lt;/h6&gt;
+
+&lt;h1&gt;This is an H1&lt;/h1&gt;
+
+&lt;h2&gt;This is an H2&lt;/h2&gt;
+
+&lt;h3&gt;This is an H3&lt;/h3&gt;
+
+&lt;blockquote&gt;&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+
+&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+
+&lt;p&gt;This is the first level of quoting.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;This is nested blockquote.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Back to the first level.&lt;/p&gt;
+
+&lt;h2&gt;This is a header.&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt; This is the first list item.&lt;/li&gt;
+&lt;li&gt; This is the second list item.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Here's some example code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;return shell_exec(&quot;echo $input | $markdown_script&quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;return a&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;return a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;`
+    return a&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;McHale&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Parish
+or even:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;McHale&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Parish&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Magic
+will turn into:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;Bird&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;Magic&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But this:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Magic
+will turn into:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Bird&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Magic&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;. What a great season.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;1986. What a great season.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This is &lt;a href=&quot;http://example.com/&quot; title=&quot;Optional Title Here&quot;&gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://google.com/&quot;&gt;Google&lt;/a&gt;
+And then define the link:
+        &lt;a href=&quot;http://google.com/&quot;&gt;Google&lt;/a&gt;
+        &lt;a href=&quot;http://google.com/&quot;&gt;Google&lt;/a&gt;: http://google.com/&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;![OSX Server][osx]
+
+[osx]: https://github.com/kikitux/kikitux.github.com/raw/master/img/Server.png &quot;Osx Server&quot;
+
+![OSX Server][]
+
+[OSX Server]: https://github.com/kikitux/kikitux.github.com/raw/master/img/Server.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://example.com/&quot;&gt;http://example.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#x61;&amp;#x64;&amp;#x64;&amp;#114;&amp;#x65;&amp;#x73;&amp;#115;&amp;#64;&amp;#101;&amp;#x78;&amp;#x61;&amp;#109;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#x61;&amp;#100;&amp;#100;&amp;#114;&amp;#101;&amp;#115;&amp;#x73;&amp;#64;&amp;#101;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#x65;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Public yum downloader</title>
