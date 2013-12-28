@@ -164,22 +164,20 @@
 
 <p>I use this script it this way</p>
 
-<p>as root, i have /root/bin/dl.sh with this content</p>
-
-<pre><code>    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.latest --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.4 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.9 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.9 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.8 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.UEK --url http://mirandaa00/stage
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.UEK --url http://mirandaa00/stage
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_addons --url http://mirandaa00/stage
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_addons --url http://mirandaa00/stage
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_oracle_addons --url http://mirandaa00/stage
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_playground_latest
-</code></pre>
+<p>as root, i have /root/bin/dl.sh with this content
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.latest --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.4 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.9 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.9 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.8 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.UEK --url http://mirandaa00/stage
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.UEK --url http://mirandaa00/stage
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_addons --url http://mirandaa00/stage
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_addons --url http://mirandaa00/stage
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_oracle_addons --url http://mirandaa00/stage
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_playground_latest</p>
 
 <p>the -l will look on that path to find the rpm, useful for example if you have a dvd and you want to use as initial cache</p>
 

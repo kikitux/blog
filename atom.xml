@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-05-18T12:09:49+12:00</updated>
+ <updated>2013-12-28T19:39:54+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -45,22 +45,20 @@
 
 &lt;p&gt;I use this script it this way&lt;/p&gt;
 
-&lt;p&gt;as root, i have /root/bin/dl.sh with this content&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.latest --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.4 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.9 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.9 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.8 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.UEK --url http://mirandaa00/stage
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.UEK --url http://mirandaa00/stage
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_addons --url http://mirandaa00/stage
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_addons --url http://mirandaa00/stage
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_oracle_addons --url http://mirandaa00/stage
-    ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_playground_latest
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;as root, i have /root/bin/dl.sh with this content
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.latest --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.latest --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.4 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL6/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.9 --url http://mirandaa00/stage -l /u02/stage/repo/OracleLinux/OL5/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.9 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 4.8 --url http://mirandaa00/stage -l /u02/stage/repo/EnterpriseLinux/EL4/
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 6.UEK --url http://mirandaa00/stage
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -R 5.UEK --url http://mirandaa00/stage
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_addons --url http://mirandaa00/stage
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_addons --url http://mirandaa00/stage
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r el5_oracle_addons --url http://mirandaa00/stage
+        ~/bin/public-yum-downloader.sh -P /u02/stage/ -p http://proxy:3128 -r ol6_playground_latest&lt;/p&gt;
 
 &lt;p&gt;the -l will look on that path to find the rpm, useful for example if you have a dvd and you want to use as initial cache&lt;/p&gt;
 
@@ -200,7 +198,7 @@ Oracle Linux customers also have access to a number of recently announced unique
 
 Support for XFS file system: Today we also announced support for XFS file system in Oracle Linux. It is now available for customers with Premier Support subscriptions using Oracle Linux 6. Read the XFS support blog article for more details.
 
-Ksplice offline client: We recently announced a new feature in our Ksplice service, known as the Ksplice offline client. Ksplice provides zero downtime updates for your kernel and now this new option eliminates the requirement to have a direct connection to the internet to apply Ksplice patches. Read more details in Wim Coekaerts’ blog and watch this video describing updating and patching in Oracle Linux.
+Ksplice offline client: We recently announced a new feature in our Ksplice service, known as the Ksplice offline client. Ksplice provides zero downtime updates for your kernel and now this new option eliminates the requirement to have a direct connection to the internet to apply Ksplice patches. Read more details in Wim Coekaerts blog and watch this video describing updating and patching in Oracle Linux.
 
 DTrace for Oracle Linux: Another new addition is the general availability of DTrace for Oracle Linux. DTrace is a comprehensive dynamic tracing framework available to Oracle Linux customers. It is available to download from ULN for supported customers. 
 &lt;/code&gt;&lt;/pre&gt;
