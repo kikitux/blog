@@ -13,6 +13,7 @@ http://kikitux.net/tags.html
 http://kikitux.net/zsync/.htaccess
 http://kikitux.net/zsync/index.html
 
+http://kikitux.net/vagrant-part2.html
 http://kikitux.net/vagrant.html
 http://kikitux.net/packer.html
 http://kikitux.net/ol/public-yum-downloader.html
