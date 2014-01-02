@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2013-12-28T19:48:39+13:00</updated>
+ <updated>2014-01-02T15:26:57+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -13,146 +13,609 @@
 
  
  <entry>
-   <title>Hello World</title>
-   <link href="http://kikitux.net/hello-world.html"/>
-   <updated>2013-12-28T00:00:00+13:00</updated>
-   <id>http://kikitux.net/hello-world</id>
-   <content type="html">&lt;p&gt;This is a regular paragraph.&lt;/p&gt;
+   <title>Vagrant</title>
+   <link href="http://kikitux.net/vagrant.html"/>
+   <updated>2014-01-02T00:00:00+13:00</updated>
+   <id>http://kikitux.net/vagrant</id>
+   <content type="html">&lt;p&gt;This post is dedicated to &lt;a href=&quot;http://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt;&lt;/p&gt;
 
-&lt;table&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Foo&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
+&lt;p&gt;From the Vagrant webpage:&lt;/p&gt;
 
-
-&lt;p&gt;This is another regular paragraph.&lt;/p&gt;
-
-&lt;h1&gt;This is an H1&lt;/h1&gt;
-
-&lt;h2&gt;This is an H2&lt;/h2&gt;
-
-&lt;p&gt;`aaaaa&lt;/p&gt;
-
-&lt;h1&gt;This is an H1&lt;/h1&gt;
-
-&lt;h2&gt;This is an H2&lt;/h2&gt;
-
-&lt;h6&gt;This is an H6&lt;/h6&gt;
-
-&lt;h1&gt;This is an H1&lt;/h1&gt;
-
-&lt;h2&gt;This is an H2&lt;/h2&gt;
-
-&lt;h3&gt;This is an H3&lt;/h3&gt;
-
-&lt;blockquote&gt;&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
-
-&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
-
-&lt;p&gt;This is the first level of quoting.&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;This is nested blockquote.&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;Back to the first level.&lt;/p&gt;
-
-&lt;h2&gt;This is a header.&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt; This is the first list item.&lt;/li&gt;
-&lt;li&gt; This is the second list item.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;p&gt;Here's some example code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;return shell_exec(&quot;echo $input | $markdown_script&quot;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;return a&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;return a
+&lt;pre&gt;&lt;code&gt;Create and configure lightweight, reproducible, and portable development environments
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;`
-    return a&lt;/p&gt;
+&lt;center&gt;&lt;figure&gt;&lt;a href=''&gt;&lt;img src='https://lh4.googleusercontent.com/-Vd_-kasWU7M/UsSt9doSuYI/AAAAAAAAADw/pq9jHp_ye7U/s0/2014-01-02_13-08-20.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/center&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Bird&lt;/li&gt;
-&lt;li&gt;McHale&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Parish
-or even:&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;McHale&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Parish&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Magic
-will turn into:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  &amp;lt;ul&amp;gt;
-  &amp;lt;li&amp;gt;Bird&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;Magic&amp;lt;/li&amp;gt;
-  &amp;lt;/ul&amp;gt;
+&lt;p&gt;Using simple commands like:&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;a href=''&gt;&lt;img src='https://lh3.googleusercontent.com/-dhfdhl2q1Mg/UsSuHmTYAtI/AAAAAAAAAD4/HK_BZk2qrRQ/s0/2014-01-02_13-09-02.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/center&gt;
+
+
+&lt;p&gt;Let's check a workflow to create VM's using vagrant:&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;a href='https://lh3.googleusercontent.com/-34-UeeFlDFk/UsSxXEgOFvI/AAAAAAAAAEE/U3VozfSmcYw/s0/0f28ea00.jpg'&gt;&lt;img src='https://lh3.googleusercontent.com/-34-UeeFlDFk/UsSxXEgOFvI/AAAAAAAAAEE/U3VozfSmcYw/s0/0f28ea00.jpg' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/center&gt;
+
+
+&lt;p&gt;This looks pretty straightforward and very convenient, let's have a deeper look at this.&lt;/p&gt;
+
+&lt;p&gt;Vagrant use boxes, that are pre-packer vms and a vagrant file, that have all the configuration for the specific box.&lt;/p&gt;
+
+&lt;p&gt;To get Vagrant boxes, have a look at &lt;a href=&quot;http://www.vagrantbox.es/&quot;&gt;vagrantbox.es&lt;/a&gt;, or you can download some of the boxes I use from my &lt;a href=&quot;https://www.dropbox.com/sh/3ks3e34en9bbec9/vf_s1n0Pps&quot;&gt;packer-vagrant dropbox folder&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.vagrantup.com/downloads.html&quot;&gt;Download&lt;/a&gt; and Install Vagrant&lt;/li&gt;
+&lt;li&gt;Download oracle65.box from my &lt;a href=&quot;https://www.dropbox.com/sh/3ks3e34en9bbec9/vf_s1n0Pps&quot;&gt;packer-vagrant dropbox folder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Once you click on the dropbox folder and find the oracle65.box you can select to copy to your own dropbox instead of download, which is pretty cool.&lt;/p&gt;
+
+&lt;p&gt;Once the pre-requirements are set, let's import the oracle65.box:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    alvaros-mini:~ alvarom$ vagrant box list
+    There are no installed boxes! Use `vagrant box add` to add some.
+    alvaros-mini:~ alvarom$ vagrant box add oracle65 ~/Downloads/oracle65.box
+    Downloading box from URL: file:~/Downloads/oracle65.box
+    Extracting box...te: 104M/s, Estimated time remaining: 0:00:01))
+    Successfully added box 'oracle65' with provider 'virtualbox'!
+    alvaros-mini:~ alvarom$ vagrant box list
+    oracle65 (virtualbox)
+    alvaros-mini:~ alvarom$
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;But this:&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Magic
-will turn into:&lt;/p&gt;
+&lt;p&gt;The command &lt;code&gt;vagrant init&lt;/code&gt; will create a basic Vagrantfile to get this started.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  &amp;lt;ul&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Bird&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Magic&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;. What a great season.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;We can later modify this Vagrantfile, or use one already created.&lt;/p&gt;
 
+&lt;p&gt;Let's create a basic box using this template&lt;/p&gt;
 
-&lt;p&gt;1986. What a great season.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This is &lt;a href=&quot;http://example.com/&quot; title=&quot;Optional Title Here&quot;&gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://google.com/&quot;&gt;Google&lt;/a&gt;
-And then define the link:
-        &lt;a href=&quot;http://google.com/&quot;&gt;Google&lt;/a&gt;
-        &lt;a href=&quot;http://google.com/&quot;&gt;Google&lt;/a&gt;: http://google.com/&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;![OSX Server][osx]
-
-[osx]: https://github.com/kikitux/kikitux.github.com/raw/master/img/Server.png &quot;Osx Server&quot;
-
-![OSX Server][]
-
-[OSX Server]: https://github.com/kikitux/kikitux.github.com/raw/master/img/Server.png
+&lt;pre&gt;&lt;code&gt;    alvaros-mini:~ alvarom$ mkdir box1
+    alvaros-mini:~ alvarom$ cd box1/
+    alvaros-mini:box1 alvarom$ vagrant init oracle65
+    A `Vagrantfile` has been placed in this directory. You are now
+    ready to `vagrant up` your first virtual environment! Please read
+    the comments in the Vagrantfile as well as documentation on
+    `vagrantup.com` for more information on using Vagrant.
+    alvaros-mini:box1 alvarom$ vagrant up
+    Bringing machine 'default' up with 'virtualbox' provider...
+    [default] Importing base box 'oracle65'...
+    [default] Matching MAC address for NAT networking...
+    [default] Setting the name of the VM...
+    [default] Clearing any previously set forwarded ports...
+    [default] Fixed port collision for 22 =&amp;gt; 2222. Now on port 2200.
+    [default] Clearing any previously set network interfaces...
+    [default] Preparing network interfaces based on configuration...
+    [default] Forwarding ports...
+    [default] -- 22 =&amp;gt; 2200 (adapter 1)
+    [default] Booting VM...
+    [default] Waiting for machine to boot. This may take a few minutes...
+    [default] Machine booted and ready!
+    [default] Mounting shared folders...
+    [default] -- /vagrant
+    alvaros-mini:box1 alvarom$
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://example.com/&quot;&gt;http://example.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;That's all.. pretty easy.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#97;&amp;#100;&amp;#100;&amp;#114;&amp;#x65;&amp;#x73;&amp;#x73;&amp;#64;&amp;#x65;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#x61;&amp;#100;&amp;#x64;&amp;#x72;&amp;#101;&amp;#x73;&amp;#115;&amp;#x40;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#x65;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Connect to the VM:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    [vagrant@vagrant-oracle65 ~]$ hostname
+    vagrant-oracle65
+    [vagrant@vagrant-oracle65 ~]$ ifconfig
+    eth0      Link encap:Ethernet  HWaddr 08:00:27:1D:AE:B5
+          inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fe1d:aeb5/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:320 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:206 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:35017 (34.1 KiB)  TX bytes:28844 (28.1 KiB)
+
+    lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+    [vagrant@vagrant-oracle65 ~]$ logout
+    Connection to 127.0.0.1 closed.
+    alvaros-mini:box1 alvarom$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Shutdown the VM:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    alvaros-mini:box1 alvarom$ vagrant halt
+    [default] Attempting graceful shutdown of VM...
+    alvaros-mini:box1 alvarom$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let's modify the Vagrantfile to set an specific hostaname, add a second nic and set some other options:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    # -*- mode: ruby -*-
+    # vi: set ft=ruby :
+
+    # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+    VAGRANTFILE_API_VERSION = &quot;2&quot;
+
+    Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+      # Every Vagrant virtual environment requires a box to build off of.
+      config.vm.box = &quot;oracle65&quot;
+
+      # The url from where the 'config.vm.box' box will be fetched if it
+      # doesn't already exist on the user's system.
+      # config.vm.box_url = &quot;http://domain.com/path/to/above.box&quot;
+
+      # Create a private network, which allows host-only access to the machine
+      # using a specific IP.
+      config.vm.network :private_network, ip: &quot;192.168.56.11&quot;
+
+      config.vm.hostname = &quot;box1&quot;
+
+      # Provider-specific configuration so you can fine-tune various
+      # backing providers for Vagrant. These expose provider-specific options.
+      # Example for VirtualBox:
+      #
+      config.vm.provider :virtualbox do |vb|
+      #   # Don't boot with headless mode
+      #   vb.gui = true
+      #
+      #   # Use VBoxManage to customize the VM. For example to change memory:
+        vb.customize [&quot;modifyvm&quot;, :id, &quot;--memory&quot;, &quot;6000&quot;]
+        vb.customize [&quot;modifyvm&quot;, :id, &quot;--cpus&quot;, &quot;4&quot;]
+      end
+      #
+      # View the documentation for the provider you're using for more
+      # information on available options.
+
+    end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once the Vagrantfile have been modified, let's start our machine again:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    alvaros-mini:box1 alvarom$ vagrant up
+    Bringing machine 'default' up with 'virtualbox' provider...
+    [default] Clearing any previously set forwarded ports...
+    [default] Fixed port collision for 22 =&amp;gt; 2222. Now on port 2200.
+    [default] Clearing any previously set network interfaces...
+    [default] Preparing network interfaces based on configuration...
+    [default] Forwarding ports...
+    [default] -- 22 =&amp;gt; 2200 (adapter 1)
+    [default] Running 'pre-boot' VM customizations...
+    [default] Booting VM...
+    [default] Waiting for machine to boot. This may take a few minutes...
+    [default] Machine booted and ready!
+    [default] Setting hostname...
+    [default] Configuring and enabling network interfaces...
+    [default] Mounting shared folders...
+    [default] -- /vagrant
+    [default] VM already provisioned. Run `vagrant provision` or use `--provision` to force it
+    alvaros-mini:box1 alvarom$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Connect to the machine and verify:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    alvaros-mini:box1 alvarom$ vagrant ssh
+    Last login: Thu Jan  2 14:23:06 2014 from 10.0.2.2
+    [vagrant@box1 ~]$ hostname
+    box1
+    [vagrant@box1 ~]$ ifconfig
+    eth0      Link encap:Ethernet  HWaddr 08:00:27:1D:AE:B5
+          inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fe1d:aeb5/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:527 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:330 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:56982 (55.6 KiB)  TX bytes:47053 (45.9 KiB)
+
+    eth1      Link encap:Ethernet  HWaddr 08:00:27:B5:02:67
+          inet addr:192.168.56.11  Bcast:192.168.56.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:feb5:267/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:6 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:1662 (1.6 KiB)  TX bytes:588 (588.0 b)
+
+    lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+    [vagrant@box1 ~]$ top
+    top - 14:33:34 up 4 min,  1 user,  load average: 0.00, 0.01, 0.01
+    Tasks: 131 total,   1 running, 130 sleeping,   0 stopped,   0 zombie
+    Cpu0  :  0.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+    Cpu1  :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+    Cpu2  :  0.0%us,100.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+    Cpu3  :  0.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+    Mem:   5967708k total,   144904k used,  5822804k free,     1320k buffers
+    Swap:  6143996k total,        0k used,  6143996k free,    57704k cached
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pretty impresive.&lt;/p&gt;
+
+&lt;p&gt;Let's do more stuff with our machine, let's say we need a set of specific packages once the machine is created, we will use standard command line arguments to install couple of packages.&lt;/p&gt;
+
+&lt;p&gt;Add to the vagrant file, the following line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    config.vm.provision :shell, :inline =&amp;gt; &quot;cd /etc/yum.repos.d ; &amp;gt; public-yum-ol6.repo ; wget http://mini.home.kikitux.net/stage/mini-yum-ol6.repo&quot;
+    config.vm.provision :shell, :inline =&amp;gt; &quot;yum install -y mc&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The first line, will zero the public-yum-ol6.repo file, and download my private mini-yum-ol6.repo file, so the machine will be using my local yum repository.
+The second line will install one rpm for us.&lt;/p&gt;
+
+&lt;p&gt;As the virtual guest was already created, we need to run the provision manually.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    alvaros-mini:box1 alvarom$ vagrant provision
+    [default] Running provisioner: shell...
+    [default] Running: inline script
+    --2014-01-02 14:46:15--  http://mini.home.kikitux.net/stage/mini-yum-ol6.repo
+    Resolving mini.home.kikitux.net... 192.168.1.2
+    Connecting to mini.home.kikitux.net|192.168.1.2|:80... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 4354 (4.3K) [application/octet-stream]
+    Saving to: “mini-yum-ol6.repo”
+
+         0K ....                                                  100%  214K=0.02s
+
+    2014-01-02 14:46:20 (214 KB/s) - “mini-yum-ol6.repo” saved [4354/4354]
+
+    [default] Running provisioner: shell...
+    [default] Running: inline script
+    Loaded plugins: security
+    Setting up Install Process
+    Resolving Dependencies
+    --&amp;gt; Running transaction check
+    ---&amp;gt; Package mc.x86_64 1:4.7.0.2-3.el6 will be installed
+    --&amp;gt; Finished Dependency Resolution
+
+    Dependencies Resolved
+
+    ================================================================================
+     Package     Arch            Version                  Repository           Size
+    ================================================================================
+    Installing:
+     mc          x86_64          1:4.7.0.2-3.el6          ol6_latest          1.6 M
+
+    Transaction Summary
+    ================================================================================
+    Install       1 Package(s)
+
+    Total download size: 1.6 M
+    Installed size: 5.4 M
+    Downloading Packages:
+    Running rpm_check_debug
+    Running Transaction Test
+    Transaction Test Succeeded
+    Running Transaction
+      Installing : 1:mc-4.7.0.2-3.el6.x86_64                                    1/1
+      Verifying  : 1:mc-4.7.0.2-3.el6.x86_64                                    1/1
+
+    Installed:
+      mc.x86_64 1:4.7.0.2-3.el6
+
+    Complete!
+    alvaros-mini:box1 alvarom$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pretty cool, let's remove the VM, and start over again:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    alvaros-mini:box1 alvarom$ vagrant destroy
+    Are you sure you want to destroy the 'default' VM? [y/N] y
+    [default] Forcing shutdown of VM...
+    [default] Destroying VM and associated drives...
+    alvaros-mini:box1 alvarom$ 
+
+    alvaros-mini:box1 alvarom$ vagrant up --provision
+    Bringing machine 'default' up with 'virtualbox' provider...
+    [default] Importing base box 'oracle65'...
+    [default] Matching MAC address for NAT networking...
+    [default] Setting the name of the VM...
+    [default] Clearing any previously set forwarded ports...
+    [default] Clearing any previously set network interfaces...
+    [default] Preparing network interfaces based on configuration...
+    [default] Forwarding ports...
+    [default] -- 22 =&amp;gt; 2222 (adapter 1)
+    [default] Running 'pre-boot' VM customizations...
+    [default] Booting VM...
+    [default] Waiting for machine to boot. This may take a few minutes...
+    [default] Machine booted and ready!
+    [default] Setting hostname...
+    [default] Configuring and enabling network interfaces...
+    [default] Mounting shared folders...
+    [default] -- /vagrant
+    [default] Running provisioner: shell...
+    [default] Running: inline script
+    --2014-01-02 15:21:18--  http://mini.home.kikitux.net/stage/mini-yum-ol6.repo
+    Resolving mini.home.kikitux.net... 192.168.1.2
+    Connecting to mini.home.kikitux.net|192.168.1.2|:80... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 4354 (4.3K) [application/octet-stream]
+    Saving to: “mini-yum-ol6.repo”
+
+         0K ....                                                  100%  185K=0.02s
+
+    2014-01-02 15:21:24 (185 KB/s) - “mini-yum-ol6.repo” saved [4354/4354]
+
+    [default] Running provisioner: shell...
+    [default] Running: inline script
+    Loaded plugins: security
+    Setting up Install Process
+    Resolving Dependencies
+    --&amp;gt; Running transaction check
+    ---&amp;gt; Package mc.x86_64 1:4.7.0.2-3.el6 will be installed
+    --&amp;gt; Processing Dependency: perl(strict) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&amp;gt; Processing Dependency: perl(bytes) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&amp;gt; Processing Dependency: perl(POSIX) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&amp;gt; Processing Dependency: perl(File::Temp) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&amp;gt; Processing Dependency: perl(File::Basename) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&amp;gt; Processing Dependency: /usr/bin/perl for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&amp;gt; Processing Dependency: libgpm.so.2()(64bit) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&amp;gt; Running transaction check
+    ---&amp;gt; Package gpm-libs.x86_64 0:1.20.6-12.el6 will be installed
+    ---&amp;gt; Package perl.x86_64 4:5.10.1-136.el6 will be installed
+    --&amp;gt; Processing Dependency: perl-libs = 4:5.10.1-136.el6 for package: 4:perl-5.10.1-136.el6.x86_64
+    --&amp;gt; Processing Dependency: perl-libs for package: 4:perl-5.10.1-136.el6.x86_64
+    --&amp;gt; Processing Dependency: perl(version) for package: 4:perl-5.10.1-136.el6.x86_64
+    --&amp;gt; Processing Dependency: perl(Pod::Simple) for package: 4:perl-5.10.1-136.el6.x86_64
+    --&amp;gt; Processing Dependency: perl(Module::Pluggable) for package: 4:perl-5.10.1-136.el6.x86_64
+    --&amp;gt; Processing Dependency: libperl.so()(64bit) for package: 4:perl-5.10.1-136.el6.x86_64
+    --&amp;gt; Running transaction check
+    ---&amp;gt; Package perl-Module-Pluggable.x86_64 1:3.90-136.el6 will be installed
+    ---&amp;gt; Package perl-Pod-Simple.x86_64 1:3.13-136.el6 will be installed
+    --&amp;gt; Processing Dependency: perl(Pod::Escapes) &amp;gt;= 1.04 for package: 1:perl-Pod-Simple-3.13-136.el6.x86_64
+    ---&amp;gt; Package perl-libs.x86_64 4:5.10.1-136.el6 will be installed
+    ---&amp;gt; Package perl-version.x86_64 3:0.77-136.el6 will be installed
+    --&amp;gt; Running transaction check
+    ---&amp;gt; Package perl-Pod-Escapes.x86_64 1:1.04-136.el6 will be installed
+    --&amp;gt; Finished Dependency Resolution
+
+    Dependencies Resolved
+
+    ================================================================================
+     Package                   Arch       Version              Repository      Size
+    ================================================================================
+    Installing:
+     mc                        x86_64     1:4.7.0.2-3.el6      ol6_latest     1.6 M
+    Installing for dependencies:
+     gpm-libs                  x86_64     1.20.6-12.el6        ol6_latest      28 k
+     perl                      x86_64     4:5.10.1-136.el6     ol6_latest      10 M
+     perl-Module-Pluggable     x86_64     1:3.90-136.el6       ol6_latest      39 k
+     perl-Pod-Escapes          x86_64     1:1.04-136.el6       ol6_latest      32 k
+     perl-Pod-Simple           x86_64     1:3.13-136.el6       ol6_latest     211 k
+     perl-libs                 x86_64     4:5.10.1-136.el6     ol6_latest     577 k
+     perl-version              x86_64     3:0.77-136.el6       ol6_latest      50 k
+
+    Transaction Summary
+    ================================================================================
+    Install       8 Package(s)
+
+    Total download size: 13 M
+    Installed size: 41 M
+    Downloading Packages:
+    --------------------------------------------------------------------------------
+    Total                                            15 MB/s |  13 MB     00:00
+    warning: rpmts_HdrFromFdno: Header V3 RSA/SHA256 Signature, key ID ec551f03: NOKEY
+    Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-oracle
+    Importing GPG key 0xEC551F03:
+     Userid : Oracle OSS group (Open Source Software group) &amp;lt;build@oss.oracle.com&amp;gt;
+     Package: 6:oraclelinux-release-6Server-5.0.2.x86_64 (@anaconda-OracleLinuxServer-201311261449.x86_64/6.5)
+     From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-oracle
+    Running rpm_check_debug
+    Running Transaction Test
+    Transaction Test Succeeded
+    Running Transaction
+      Installing : 1:perl-Pod-Escapes-1.04-136.el6.x86_64                       1/8
+      Installing : 4:perl-libs-5.10.1-136.el6.x86_64                            2/8
+      Installing : 1:perl-Pod-Simple-3.13-136.el6.x86_64                        3/8
+      Installing : 3:perl-version-0.77-136.el6.x86_64                           4/8
+      Installing : 1:perl-Module-Pluggable-3.90-136.el6.x86_64                  5/8
+      Installing : 4:perl-5.10.1-136.el6.x86_64                                 6/8
+      Installing : gpm-libs-1.20.6-12.el6.x86_64                                7/8
+      Installing : 1:mc-4.7.0.2-3.el6.x86_64                                    8/8
+      Verifying  : 1:perl-Module-Pluggable-3.90-136.el6.x86_64                  1/8
+      Verifying  : gpm-libs-1.20.6-12.el6.x86_64                                2/8
+      Verifying  : 1:perl-Pod-Escapes-1.04-136.el6.x86_64                       3/8
+      Verifying  : 4:perl-5.10.1-136.el6.x86_64                                 4/8
+      Verifying  : 4:perl-libs-5.10.1-136.el6.x86_64                            5/8
+      Verifying  : 1:perl-Pod-Simple-3.13-136.el6.x86_64                        6/8
+      Verifying  : 1:mc-4.7.0.2-3.el6.x86_64                                    7/8
+      Verifying  : 3:perl-version-0.77-136.el6.x86_64                           8/8
+
+    Installed:
+      mc.x86_64 1:4.7.0.2-3.el6
+
+    Dependency Installed:
+      gpm-libs.x86_64 0:1.20.6-12.el6
+      perl.x86_64 4:5.10.1-136.el6
+      perl-Module-Pluggable.x86_64 1:3.90-136.el6
+      perl-Pod-Escapes.x86_64 1:1.04-136.el6
+      perl-Pod-Simple.x86_64 1:3.13-136.el6
+      perl-libs.x86_64 4:5.10.1-136.el6
+      perl-version.x86_64 3:0.77-136.el6
+
+    Complete!
+    alvaros-mini:box1 alvarom$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Awesome.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Packer</title>
+   <link href="http://kikitux.net/packer.html"/>
+   <updated>2014-01-02T00:00:00+13:00</updated>
+   <id>http://kikitux.net/packer</id>
+   <content type="html">&lt;p&gt;In the last few weeks, I have been using packer and vagrant a lot.
+This post is dedicated to &lt;a href=&quot;http://packer.io&quot;&gt;packer&lt;/a&gt;, specifically to build oracle linux using packer.&lt;/p&gt;
+
+&lt;p&gt;I suggest check the &lt;a href=&quot;http://www.packer.io/docs&quot;&gt;official packer documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Have a look at the &lt;a href=&quot;http://groups.google.com/group/packer-tool&quot;&gt;packer google groups&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Packer is a powerful tool that take arguments from the command line, variables, and use them on top of a template file.&lt;/p&gt;
+
+&lt;p&gt;All the files used here are available on github at the url &lt;a href=&quot;https://github.com/kikitux/packer-vagrant-oracle&quot;&gt;https://github.com/kikitux/packer-vagrant-oracle&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Inside this github project, you will find the files used for &lt;a href=&quot;https://github.com/kikitux/packer-vagrant-oracle/tree/master/packer&quot;&gt;this packer project&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The outcome of build, will be a box file (file.box) that can be imported on Vagrant, or optionally can leave the ova/ovf file to import directly the created VM back into virtual box.&lt;/p&gt;
+
+&lt;p&gt;We will focus on Virtual Box + Oracle Linux.&lt;/p&gt;
+
+&lt;p&gt;A tipical workflow to build a machine using Packer will be:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-PGKhlw021k0/UsOnB6zakbI/AAAAAAAAACU/0pG1kZIO4o4/s0/8346768f.jpg&quot; alt=&quot;Example Workflow&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A packer file, have a very simple, yet powerful structure:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    {
+
+    &quot;variables&quot;: {},
+
+    &quot;builders&quot;: [{}],
+
+    &quot;provisioners&quot;: [{}],
+
+    &quot;post-processors&quot;: [{}]
+
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Variables&lt;/h3&gt;
+
+&lt;p&gt;In the variables group, we can define user defined variables, that will allow create different machines without having to modify the whole template.
+This variables will be override with values given to packer from the command line, so this give us a very convenient method to create different machines from the command line.&lt;/p&gt;
+
+&lt;p&gt;In the template files I am using, I have defined the following variables:&lt;/p&gt;
+
+&lt;script src='https://gist.github.com/8192010.js?file='&gt;&lt;/script&gt;
+
+
+&lt;div&gt;&lt;noscript&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;You are being &amp;lt;a href=&amp;quot;https://github.com/gist/8192010&amp;quot;&amp;gt;redirected&amp;lt;/a&amp;gt;.&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So a typical run could be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    packer build -var 'hostname=myserver' -var 'outputfile=myserver.box' packer-vagrant-oracle65.json
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;At the end of this execution, we will have a vagrant box file named myserver.box with the hostname of myserver. All automatically done by packer.&lt;/p&gt;
+
+&lt;h3&gt;Builders&lt;/h3&gt;
+
+&lt;p&gt;Packer support several builders:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;figure&gt;&lt;a href='http://www.packer.io/docs/templates/builders.html'&gt;&lt;img src='https://lh4.googleusercontent.com/-5SdU8_UYbzc/UsI0FRywDPI/AAAAAAAAABE/R76GEi_2WV4/s0/2013-12-31_16-03-39.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;/center&gt;
+
+
+&lt;p&gt;For Virtualbox as a builder, we can pass as many arguments we want that will be executed aftet the virtual machine is created, so any task that you can manually perform using VBoxManage, can be also pass to packer in the Builders section.&lt;/p&gt;
+
+&lt;p&gt;For these particular files we are using VBoxManage to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Set video memory&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Set VM memory&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Set VM cpus&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Set OS disk size&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Set OS disk interface as SATA&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create and attach a 2nd, 3rd and 4th hard drive&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pass to the VM boot arguments that will be typed on the screen&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Provisioners&lt;/h3&gt;
+
+&lt;p&gt;Packer support several provisioners:&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;a href='http://www.packer.io/docs/templates/provisioners.html'&gt;&lt;img src='https://lh3.googleusercontent.com/-mJ-C4EbM_x0/UsSl71ufyqI/AAAAAAAAADM/zNHoMeVRI1I/s0/2014-01-02_12-34-05.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/center&gt;
+
+
+&lt;p&gt;In these packer files, we are using plain shell scripts.&lt;/p&gt;
+
+&lt;p&gt;These shell scripts, can be inline, that is the command is typed on the packer file, or a file, that will be uploaded and then executed at the guest.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        &quot;inline&quot;: [
+          &quot;mkdir -p /media/dvd&quot;,
+          &quot;mount -o loop VBoxGuestAdditions*.iso /media/dvd&quot;,
+          &quot;sh /media/dvd/VBoxLinuxAdditions.run --nox11&quot;,
+          &quot;umount /media/dvd&quot;,
+        ]
+
+        &quot;script&quot;:       &quot;script.sh&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Post-Processors&lt;/h3&gt;
+
+&lt;p&gt;Packer support at this moment, 2 post-processors:&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;a href='http://www.packer.io/docs/templates/provisioners.html'&gt;&lt;img src='https://lh3.googleusercontent.com/-nf5_NzKCNHQ/UsSnNiVUxMI/AAAAAAAAADY/G-2CLQ9PBnc/s0/2014-01-02_12-39-33.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/center&gt;
+
+
+&lt;p&gt;In our files, we will be using the vagrant specific tasks.&lt;/p&gt;
+
+&lt;p&gt;If you have scripts to take care of application dependencies, then installation of the application, you can build in one shot, a very customized machine, without any manual intervention, read to be used in virtualbox, or imported and used by Vagrant.&lt;/p&gt;
+
+&lt;h3&gt;Build&lt;/h3&gt;
+
+&lt;p&gt;An just the OS build, on my computer take about 10 minutes. The output can be used on Virtualbox as an appliance, or by vagrant, so create a new vm using the outof packer, will take less than 10 minutes, typically is the time is needed to copy the files and turn on the new VM.&lt;/p&gt;
+
+&lt;p&gt;A more complex build:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a VM&lt;/li&gt;
+&lt;li&gt;Create 4 HDD&lt;/li&gt;
+&lt;li&gt;Setup VM for memory and cpus&lt;/li&gt;
+&lt;li&gt;Install OS with a kickstart file&lt;/li&gt;
+&lt;li&gt;Setup hostname&lt;/li&gt;
+&lt;li&gt;Format 2nd hdd and mount as /u01&lt;/li&gt;
+&lt;li&gt;Install the pre-requirements for Oracle Clusterware/grid and database&lt;/li&gt;
+&lt;li&gt;Install Oracle Clusterware/grid and database on 2nd hard drive&lt;/li&gt;
+&lt;li&gt;Run the post scripts as root&lt;/li&gt;
+&lt;li&gt;Update OPAtch on Oracle Clusterware/grid and database&lt;/li&gt;
+&lt;li&gt;Apply latest CPU/PSU on Oracle Clusterware/grid and database&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;This will create a VM, with a custom hostname with all the binaries needed to just go and create a database. Very cool.&lt;/p&gt;
+
+&lt;p&gt;This execution took 35 minutes, that can sound like a lot of time, but again, we are creating a new machine from scratch, a fully updated OS, plus Oracle Clusterware/grid and database, which done manually takes around 1 hours more of dedicated time.&lt;/p&gt;
+
+&lt;p&gt;Here, you just execute packer, and enjoy a cup of coffee.&lt;/p&gt;
+
+&lt;p&gt;The output of the execution of this build is:&lt;/p&gt;
+
+&lt;script src='https://gist.github.com/8205555.js?file='&gt;&lt;/script&gt;
+
+
+&lt;div&gt;&lt;noscript&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;You are being &amp;lt;a href=&amp;quot;https://github.com/gist/8205555&amp;quot;&amp;gt;redirected&amp;lt;/a&amp;gt;.&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
+
+
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Automatization</title>
+   <link href="http://kikitux.net/automatization.html"/>
+   <updated>2014-01-02T00:00:00+13:00</updated>
+   <id>http://kikitux.net/automatization</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-nahUqAl-St8/UsOUfKu_77I/AAAAAAAAAB4/cwtlnfR7FsA/s0/4acf4e69.jpg&quot; alt=&quot;flow&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  
