@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2014-01-02T17:07:36+13:00</updated>
+ <updated>2014-01-02T17:18:41+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -1020,28 +1020,16 @@ This variables will be override with values given to packer from the command lin
 &lt;li&gt;Setup hostname&lt;/li&gt;
 &lt;li&gt;Format 2nd hdd and mount as /u01&lt;/li&gt;
 &lt;li&gt;Install the pre-requirements for Oracle Clusterware/grid and database&lt;/li&gt;
-&lt;li&gt;Install Oracle Clusterware/grid and database on 2nd hard drive&lt;/li&gt;
-&lt;li&gt;Run the post scripts as root&lt;/li&gt;
-&lt;li&gt;Update OPAtch on Oracle Clusterware/grid and database&lt;/li&gt;
-&lt;li&gt;Apply latest CPU/PSU on Oracle Clusterware/grid and database&lt;/li&gt;
 &lt;/ul&gt;
 
 
-&lt;p&gt;This will create a VM, with a custom hostname with all the binaries needed to just go and create a database. Very cool.&lt;/p&gt;
+&lt;p&gt;This will create a VM, with a custom hostname with all the binaries needed to just go and install crs/grid and database. Very cool.&lt;/p&gt;
 
-&lt;p&gt;This execution took 35 minutes, that can sound like a lot of time, but again, we are creating a new machine from scratch, a fully updated OS, plus Oracle Clusterware/grid and database, which done manually takes around 1 hours more of dedicated time.&lt;/p&gt;
+&lt;p&gt;We are creating a new machine from scratch, a fully updated OS, plus all the requirements for Oracle Clusterware/grid and database, which done manually takes around 1 hours more of dedicated time.&lt;/p&gt;
 
 &lt;p&gt;Here, you just execute packer, and enjoy a cup of coffee.&lt;/p&gt;
 
-&lt;p&gt;The output of the execution of this build is:&lt;/p&gt;
-
-&lt;script src='https://gist.github.com/8205555.js?file='&gt;&lt;/script&gt;
-
-
-&lt;div&gt;&lt;noscript&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;You are being &amp;lt;a href=&amp;quot;https://github.com/gist/8205555&amp;quot;&amp;gt;redirected&amp;lt;/a&amp;gt;.&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
-
-
-
+&lt;p&gt;Alvaro.&lt;/p&gt;
 </content>
  </entry>
  
