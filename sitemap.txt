@@ -13,9 +13,9 @@ http://kikitux.net/tags.html
 http://kikitux.net/zsync/.htaccess
 http://kikitux.net/zsync/index.html
 
-http://kikitux.net/vagrant-part2.html
-http://kikitux.net/vagrant.html
-http://kikitux.net/packer.html
+http://kikitux.net/vagrant/vagrant-part2.html
+http://kikitux.net/vagrant/vagrant.html
+http://kikitux.net/packer/packer.html
 http://kikitux.net/ol/public-yum-downloader.html
 http://kikitux.net/ol/installing-oracle-linux-6.html
 http://kikitux.net/vbox/creating-an-oracle-linux-6-virtualbox-guest.html
