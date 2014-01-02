@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2014-01-02T17:18:41+13:00</updated>
+ <updated>2014-01-02T17:23:11+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -1028,6 +1028,10 @@ This variables will be override with values given to packer from the command lin
 &lt;p&gt;We are creating a new machine from scratch, a fully updated OS, plus all the requirements for Oracle Clusterware/grid and database, which done manually takes around 1 hours more of dedicated time.&lt;/p&gt;
 
 &lt;p&gt;Here, you just execute packer, and enjoy a cup of coffee.&lt;/p&gt;
+
+&lt;p&gt;This is all included in the page of &lt;a href=&quot;https://github.com/kikitux/packer-vagrant-oracle/blob/master/packer&quot;&gt;packer on github project&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Just check the &lt;a href=&quot;https://github.com/kikitux/packer-vagrant-oracle/blob/master/packer/stagefiles/&quot;&gt;stagefiles&lt;/a&gt; and &lt;a href=&quot;https://github.com/kikitux/packer-vagrant-oracle/blob/master/packer/packer-vagrant-oracle65-btrfs-4disk.json&quot;&gt;packer-vagrant-oracle65-btrfs-4disk.json&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Alvaro.&lt;/p&gt;
 </content>
