@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2014-01-02T17:05:42+13:00</updated>
+ <updated>2014-01-02T17:07:36+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -17,7 +17,7 @@
    <link href="http://kikitux.net/vagrant/vagrant-part2.html"/>
    <updated>2014-01-02T00:00:00+13:00</updated>
    <id>http://kikitux.net/vagrant/vagrant-part2</id>
-   <content type="html">&lt;p&gt;On the previous post &lt;a href=&quot;http://kikitux.net/vagrant.html&quot;&gt;vagrant part 1&lt;/a&gt; we get the things started.&lt;/p&gt;
+   <content type="html">&lt;p&gt;On the previous post &lt;a href=&quot;http://kikitux.net/vagrant/vagrant.html&quot;&gt;vagrant part 1&lt;/a&gt; we get the things started.&lt;/p&gt;
 
 &lt;p&gt;Let's continue doing more staff on our vagrant machine.&lt;/p&gt;
 
