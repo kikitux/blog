@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2014-01-02T18:14:24+13:00</updated>
+ <updated>2014-01-02T20:18:48+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -1032,6 +1032,13 @@ This variables will be override with values given to packer from the command lin
 &lt;p&gt;This is all included in the page of &lt;a href=&quot;https://github.com/kikitux/packer-vagrant-oracle/blob/master/packer&quot;&gt;packer on github project&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Just check the &lt;a href=&quot;https://github.com/kikitux/packer-vagrant-oracle/blob/master/packer/stagefiles/&quot;&gt;stagefiles&lt;/a&gt; and &lt;a href=&quot;https://github.com/kikitux/packer-vagrant-oracle/blob/master/packer/packer-vagrant-oracle65-btrfs-4disk.json&quot;&gt;packer-vagrant-oracle65-btrfs-4disk.json&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you haven't seen packer in action, here's a video of the build of the first VM.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;420&quot; src=&quot;http://www.youtube.com/embed/HfIbUEMIcSg&quot; frameborder=&quot;0&quot;&gt;        &lt;/iframe&gt;
+&lt;/center&gt;
+
 
 &lt;p&gt;Alvaro.&lt;/p&gt;
 </content>
