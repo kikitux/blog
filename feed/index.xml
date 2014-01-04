@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2014-01-04T18:58:39+13:00</updated>
+ <updated>2014-01-04T19:59:26+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -25,6 +25,103 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Now we have the required software and we are on the latest kernel, let's have a look on how lxc works.&lt;/p&gt;
+
+&lt;h3&gt;Basics&lt;/h3&gt;
+
+&lt;p&gt;According to &lt;a href=&quot;http://en.wikipedia.org/wiki/LXC&quot;&gt;Wikipedia, LXC&lt;/a&gt; is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    Overview
+
+    LXC provides operating system-level virtualization not via a virtual machine, but rather provides a virtual environment that has its own process and network space. LXC relies on the Linux kernel cgroups functionality that was released in version 2.6.24. It also relies on other kinds of namespace-isolation functionality, which were developed and integrated into the mainline Linux kernel. It is used by Heroku to provide separation between their dynos.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From a sysadmin point of view, LXC is a very nice to create isolated, lightweight machines.&lt;/p&gt;
+
+&lt;p&gt;If you are new to LXC, I suggest read &lt;a href=&quot;http://docs.oracle.com/cd/E37670_01/E37355/html/ol_about_containers.html&quot;&gt;Oracle LXC documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Examples&lt;/h3&gt;
+
+&lt;p&gt;Oracle Linux 6 provide today a very convenient way to create containers.&lt;/p&gt;
+
+&lt;p&gt;Included with the &lt;code&gt;lxc&lt;/code&gt; package, came oracle template.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    [root@vagrant-oracle65 ~]# lxc-create -n lxc1 -t oracle -- -h
+    usage: lxc-create -n NAME [-f CONFIG_FILE] [-t TEMPLATE] [FS_OPTIONS] --
+         [-P lxcpath] [TEMPLATE_OPTIONS]
+
+    where FS_OPTIONS is one of:
+      -B none
+      -B dir [--dir rootfs_dir]
+      -B lvm [--lvname LV_NAME] [--vgname VG_NAME] [--fstype FS_TYPE]
+        [--fssize FS_SIZE]
+      -B btrfs
+
+    Create a new container on the system.
+
+    Options:
+      -n NAME            specify the name of the container
+      -f CONFIG_FILE     use an existing configuration file
+      -t TEMPLATE        use an accessible template script
+      -B BACKING_STORE   alter the container backing store (default: none)
+      --lxcpath path     specify an alternate container patch (default: /container)
+      --lvname LV_NAME   specify the LVM logical volume name
+                  (default: container name)
+      --dir ROOTFS_DIR   specify path for custom rootfs directory location
+      --vgname VG_NAME   specify the LVM volume group name (default: lxc)
+      --fstype FS_TYPE   specify the filesystem type (default: ext4)
+      --fssize FS_SIZE   specify the filesystem size (default: 500M)
+
+
+    Template-specific options (TEMPLATE_OPTIONS):
+      -a|--arch=&amp;lt;arch&amp;gt;        architecture (ie. i386, x86_64)
+      -R|--release=&amp;lt;release&amp;gt;  release to download for the new container
+      -r|--rpms=&amp;lt;rpm name&amp;gt;    additional rpms to install into container
+      -u|--url=&amp;lt;url&amp;gt;          replace yum repo url (ie. local yum mirror)
+      -t|--templatefs=&amp;lt;path&amp;gt;  copy/clone rootfs at path instead of downloading
+      -h|--help
+
+    Release is of the format &quot;major.minor&quot;, for example &quot;5.8&quot;, &quot;6.3&quot;, or &quot;6.latest&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let's say you want to create a container that is OL6 with the latest updates:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    lxc-create -n lxc1 -t oracle -- -R 6.latest
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Same as before, but 32bit:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    lxc-create -n lxc1 -t oracle -- -R 6.latest -a i386
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;OL5 with updates:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    lxc-create -n lxc1 -t oracle -- -R 5.latest
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or an specific version of 4, say the oldest one posible, 4.6:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    lxc-create -n lxc1 -t oracle -- -R 4.6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Other useful options of the template, are &lt;code&gt;--url&lt;/code&gt;, to point to your own repo of files.&lt;/p&gt;
+
+&lt;p&gt;Let's build one OL 4.latest:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    lxc-create -n lxc1 -t oracle -- -R 4.latest --url http://mini.home.kikitux.net/stage
+
+    Complete!
+    Fixing (downgrading) rpm database from version 9
+    Rebuilding rpm database
+    Configuring container for Oracle Linux 4.9
+    chcon: can't apply partial context to unlabeled file `/container/lxc1/rootfs/dev'
+    Added container user:oracle password:oracle
+    Added container user:root password:root
+    Container : /container/lxc1/rootfs
+    Config    : /container/lxc1/config
+    Network   : eth0 (veth) on virbr0
+    'oracle' template installed
+    'lxc1' created
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3&gt;Filesystem&lt;/h3&gt;
 
