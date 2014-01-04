@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2014-01-04T18:55:27+13:00</updated>
+ <updated>2014-01-04T18:57:42+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -238,7 +238,7 @@
 
 &lt;h3&gt;Networking&lt;/h3&gt;
 
-&lt;p&gt;After we restart out machine, in order to have a clean boot with new updates and lxc, we will notice a new network interface is available:&lt;/p&gt;
+&lt;p&gt;After we restart our machine, in order to have a clean boot with new updates and lxc, we will notice a new network interface is available:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    virbr0    Link encap:Ethernet  HWaddr 52:54:00:94:9D:63
           inet addr:192.168.122.1  Bcast:192.168.122.255  Mask:255.255.255.0
