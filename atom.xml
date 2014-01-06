@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2014-01-05T01:04:04+13:00</updated>
+ <updated>2014-01-06T13:16:16+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -1684,6 +1684,74 @@ This variables will be override with values given to packer from the command lin
 &lt;center&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;420&quot; src=&quot;http://www.youtube.com/embed/HfIbUEMIcSg&quot; frameborder=&quot;0&quot;&gt;        &lt;/iframe&gt;
 &lt;/center&gt;
+
+
+&lt;p&gt;Alvaro.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Automatization</title>
+   <link href="http://kikitux.net/oracle/automatization.html"/>
+   <updated>2014-01-02T00:00:00+13:00</updated>
+   <id>http://kikitux.net/oracle/automatization</id>
+   <content type="html">&lt;p&gt;A workflow to get Oracle Clusterware/grid and Database installed can be as follow:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-nahUqAl-St8/UsOUfKu_77I/AAAAAAAAAB4/cwtlnfR7FsA/s0/4acf4e69.jpg&quot; alt=&quot;workflow&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This task can be a big challenge at firt sight, with practice, and some of trial-error you will came with a recipe book, steps to perform your own installation.&lt;/p&gt;
+
+&lt;p&gt;What about automated install from scratch, from Create the VM until Get everything sorted?&lt;/p&gt;
+
+&lt;p&gt;Let's say:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create the VM,&lt;/li&gt;
+&lt;li&gt;Setup memory,&lt;/li&gt;
+&lt;li&gt;Setup cpu,&lt;/li&gt;
+&lt;li&gt;Create and attach 2nd, 3rd, 4th hard disk,&lt;/li&gt;
+&lt;li&gt;Install OS,&lt;/li&gt;
+&lt;li&gt;Format and mount 2nd disk as /u01,&lt;/li&gt;
+&lt;li&gt;Formant and mount 3rd and 4th disk as /u02 and /u03,&lt;/li&gt;
+&lt;li&gt;Install LXC,&lt;/li&gt;
+&lt;li&gt;Create a base lxc guest,&lt;/li&gt;
+&lt;li&gt;Attach /u01, /u02 and /u03 to the lxc guest,&lt;/li&gt;
+&lt;li&gt;Install all the oracle clusterware/grid and database pre-requirements on this base lxc guest,&lt;/li&gt;
+&lt;li&gt;Create grid and oracle users and related groups on the lxc guest,&lt;/li&gt;
+&lt;li&gt;Setup limits.conf and sysctl.conf on the lxc guest,&lt;/li&gt;
+&lt;li&gt;Install clusterware/grid on the lxc guest,&lt;/li&gt;
+&lt;li&gt;Update OPatch on clusterware/grid on the lxc guest,&lt;/li&gt;
+&lt;li&gt;Apply PSU/CPU on clusterware/grid on the lxc guest,&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Install database binaries on the lxc guest&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Clone base lxc guest into server1,&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Configure clusterware/grid into server1,&lt;/li&gt;
+&lt;li&gt;Create LISTENER into server1,&lt;/li&gt;
+&lt;li&gt;Update OPatch on database into server1,&lt;/li&gt;
+&lt;li&gt;Apply PSU/CPU on database into server1,&lt;/li&gt;
+&lt;li&gt;Create a db called db into server1,&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Clone db to disk as copy into server1&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Clone base lxc into server2,&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Move db from disk of server1 into server2,&lt;/li&gt;
+&lt;li&gt;Configure clusterware/grid into server2,&lt;/li&gt;
+&lt;li&gt;Create LISTENER into server2,&lt;/li&gt;
+&lt;li&gt;Update OPatch on database into server2,&lt;/li&gt;
+&lt;li&gt;Apply PSU/CPU on database into server2,&lt;/li&gt;
+&lt;li&gt;Configure db as empty db on server2,&lt;/li&gt;
+&lt;li&gt;Restore controlfile from copy on disk on server2&lt;/li&gt;
+&lt;li&gt;Perform a restore of db on server2 from copy on disk,&lt;/li&gt;
+&lt;li&gt;Perform a recover of db on server2,&lt;/li&gt;
+&lt;li&gt;Open db with resetlogs and shutdown on server2,&lt;/li&gt;
+&lt;li&gt;Register db on srvctl on server2,&lt;/li&gt;
+&lt;li&gt;Start db on server2 with srvctl&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Doable?
+In a fully automated hands free way?&lt;/p&gt;
+
+&lt;p&gt;The below video start creating the lxc guest client:&lt;/p&gt;
+
+&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/v/olc9LKtWFY0?rel=0&amp;vq=large&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 
 &lt;p&gt;Alvaro.&lt;/p&gt;
