@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2014-01-06T13:18:32+13:00</updated>
+ <updated>2014-01-11T22:40:54+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -1190,15 +1190,12 @@ target     prot opt source               destination
 
 &lt;p&gt;Vagrant use boxes, that are pre-packer vms and a vagrant file, that have all the configuration for the specific box.&lt;/p&gt;
 
-&lt;p&gt;To get Vagrant boxes, have a look at &lt;a href=&quot;http://www.vagrantbox.es/&quot;&gt;vagrantbox.es&lt;/a&gt;, or you can download some of the boxes I use from my &lt;a href=&quot;https://www.dropbox.com/sh/3ks3e34en9bbec9/vf_s1n0Pps&quot;&gt;packer-vagrant dropbox folder&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To get Vagrant boxes, have a look at &lt;a href=&quot;http://www.vagrantbox.es/&quot;&gt;vagrantbox.es&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.vagrantup.com/downloads.html&quot;&gt;Download&lt;/a&gt; and Install Vagrant&lt;/li&gt;
-&lt;li&gt;Download oracle65.box from my &lt;a href=&quot;https://www.dropbox.com/sh/3ks3e34en9bbec9/vf_s1n0Pps&quot;&gt;packer-vagrant dropbox folder&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;p&gt;Once you click on the dropbox folder and find the oracle65.box you can select to copy to your own dropbox instead of download, which is pretty cool.&lt;/p&gt;
 
 &lt;p&gt;Once the pre-requirements are set, let's import the oracle65.box:&lt;/p&gt;
 
@@ -2522,16 +2519,6 @@ Fixed is supposed to be a bit faster as will avoid defragmentation the disk.&lt;
 &lt;p&gt;Now you should see the welcome window for the OS install, in our case, Oracle Linux 6.3&lt;/p&gt;
 
 &lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.26.01 PM.png'&gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.26.01 PM.png' max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h1&gt;What's next&lt;/h1&gt;
-
-&lt;p&gt;The installation of the Oracle Linux will be in a separate post, as will review some options we have, and won't be just Virtual Box related.&lt;/p&gt;
-
-&lt;p&gt;If you want to get started, you can &lt;a href=&quot;/dropbox&quot;&gt;download one of the virtual appliances&lt;/a&gt; I have created and are shared by Dropbox&lt;/p&gt;
-
-&lt;p&gt;Download the file, double click, and review the options.&lt;/p&gt;
-
-&lt;p&gt;Once the machine is imported, review the Options for ram, cpu, disks, and turn the machine on.&lt;/p&gt;
 </content>
  </entry>
  
@@ -2728,10 +2715,6 @@ US          Wimmekes.net
 &lt;p&gt;In the README are the instructions on how to use the UEK Boot ISO image for x86_64, those instruction are are very clear on how to prepare a network point.&lt;/p&gt;
 
 &lt;p&gt;In a separate post, I will cover how to do this, and how to create a new Oracle Linux 6.3 ISO.&lt;/p&gt;
-
-&lt;p&gt;If you will like to try this, without all the problems to extract the iso, modified, recreate one, you may try an &lt;a href=&quot;https://www.dropbox.com/s/waht5bii6nchkrd/OracleLinux-R6-U3-Server-x86_64-btrfs.iso&quot;&gt;ISO image that I have created&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Other resources, check what I have shared &lt;a href=&quot;/dropbox&quot;&gt;on dropbox&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The main difference is, you can actually choose btrfs from the installer.&lt;/p&gt;
 

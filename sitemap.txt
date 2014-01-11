@@ -3,7 +3,6 @@ http://kikitux.net/about.html
 http://kikitux.net/archive.html
 http://kikitux.net/atom.xml
 http://kikitux.net/categories.html
-http://kikitux.net/dropbox.html
 http://kikitux.net/feed/index.xml
 http://kikitux.net/index.html
 http://kikitux.net/ol/oracle-linux.html
