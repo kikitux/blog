@@ -12,6 +12,7 @@ http://kikitux.net/tags.html
 http://kikitux.net/zsync/.htaccess
 http://kikitux.net/zsync/index.html
 
+http://kikitux.net/oracle-rac-vagrant.html
 http://kikitux.net/oracle/automatization.html
 http://kikitux.net/lxc/lxc.html
 http://kikitux.net/vagrant/vagrant-part2.html
