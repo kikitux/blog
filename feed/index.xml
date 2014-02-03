@@ -4,7 +4,7 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2014-02-03T16:52:06+13:00</updated>
+ <updated>2014-02-03T16:59:03+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
@@ -13,11 +13,12 @@
 
  
  <entry>
-   <title>new post</title>
-   <link href="http://kikitux.net/oracle-rac-vagrant.html"/>
+   <title>Oracle Rac with Vagrant</title>
+   <link href="http://kikitux.net/howto/oracle-rac-vagrant.html"/>
    <updated>2014-02-03T00:00:00+13:00</updated>
-   <id>http://kikitux.net/oracle-rac-vagrant</id>
-   <content type="html">
+   <id>http://kikitux.net/howto/oracle-rac-vagrant</id>
+   <content type="html">&lt;p&gt;#
+placeholder.. came back later..&lt;/p&gt;
 </content>
  </entry>
  

@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Automatization</title>
-    <meta name="description" content="Automatization of Clusterware Grid and Database Install">
+    <title>Oracle Rac with Vagrant</title>
+    <meta name="description" content="Oracle RAC made easy with Vagrant">
     <meta name="author" content="Alvaro Miranda">
 
     <!-- Enable responsive viewport -->
@@ -127,75 +127,17 @@
 
         
 <div class="page-header">
-  <h1>Automatization </h1>
+  <h1>Oracle Rac with Vagrant </h1>
 </div>
 
 <div class="row post-full">
   <div class="col-md12">
     <div class="date">
-      <span>06 January 2014</span>
+      <span>03 February 2014</span>
     </div>
     <div class="content">
-      <p>A workflow to get Oracle Clusterware/grid and Database installed can be as follow:</p>
-
-<p><img src="https://lh3.googleusercontent.com/-nahUqAl-St8/UsOUfKu_77I/AAAAAAAAAB4/cwtlnfR7FsA/s0/4acf4e69.jpg" alt="workflow" /></p>
-
-<p>This task can be a big challenge at firt sight, with practice, and some of trial-error you will came with a recipe book, steps to perform your own installation.</p>
-
-<p>What about automated install from scratch, from Create the VM until Get everything sorted?</p>
-
-<p>Let's say:</p>
-
-<ul>
-<li>Create the VM,</li>
-<li>Setup memory,</li>
-<li>Setup cpu,</li>
-<li>Create and attach 2nd, 3rd, 4th hard disk,</li>
-<li>Install OS,</li>
-<li>Format and mount 2nd disk as /u01,</li>
-<li>Formant and mount 3rd and 4th disk as /u02 and /u03,</li>
-<li>Install LXC,</li>
-<li>Create a base lxc guest,</li>
-<li>Attach /u01, /u02 and /u03 to the lxc guest,</li>
-<li>Install all the oracle clusterware/grid and database pre-requirements on this base lxc guest,</li>
-<li>Create grid and oracle users and related groups on the lxc guest,</li>
-<li>Setup limits.conf and sysctl.conf on the lxc guest,</li>
-<li>Install clusterware/grid on the lxc guest,</li>
-<li>Update OPatch on clusterware/grid on the lxc guest,</li>
-<li>Apply PSU/CPU on clusterware/grid on the lxc guest,</li>
-<li><p>Install database binaries on the lxc guest</p></li>
-<li><p>Clone base lxc guest into server1,</p></li>
-<li>Configure clusterware/grid into server1,</li>
-<li>Create LISTENER into server1,</li>
-<li>Update OPatch on database into server1,</li>
-<li>Apply PSU/CPU on database into server1,</li>
-<li>Create a db called db into server1,</li>
-<li><p>Clone db to disk as copy into server1</p></li>
-<li><p>Clone base lxc into server2,</p></li>
-<li>Move db from disk of server1 into server2,</li>
-<li>Configure clusterware/grid into server2,</li>
-<li>Create LISTENER into server2,</li>
-<li>Update OPatch on database into server2,</li>
-<li>Apply PSU/CPU on database into server2,</li>
-<li>Configure db as empty db on server2,</li>
-<li>Restore controlfile from copy on disk on server2</li>
-<li>Perform a restore of db on server2 from copy on disk,</li>
-<li>Perform a recover of db on server2,</li>
-<li>Open db with resetlogs and shutdown on server2,</li>
-<li>Register db on srvctl on server2,</li>
-<li>Start db on server2 with srvctl</li>
-</ul>
-
-
-<p>Doable?
-In a fully automated hands free way?</p>
-
-<p>The below video start creating the lxc guest client:</p>
-
-<iframe width="853" height="480" src="//www.youtube.com/v/olc9LKtWFY0?rel=0&vq=large" frameborder="0" allowfullscreen></iframe>
-
-
-<p>Alvaro.</p>
+      <p>#
+placeholder.. came back later..</p>
 
     </div>
 
@@ -206,7 +148,11 @@ In a fully automated hands free way?</p>
 
   
      
-    	<li><a href="/tags.html#automatization-ref">automatization <span>1</span></a></li>
+    	<li><a href="/tags.html#vagrant-ref">vagrant <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#oracle-ref">oracle <span>7</span></a></li>
+     
+    	<li><a href="/tags.html#rac-ref">rac <span>1</span></a></li>
     
   
 
@@ -217,11 +163,11 @@ In a fully automated hands free way?</p>
     <hr>
       <ul class="pagination">
       
-        <li class="prev"><a href="/lxc/lxc.html" title="Lxc">&larr; Previous</a></li>
+        <li class="prev"><a href="/oracle/automatization.html" title="Automatization">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/howto/oracle-rac-vagrant.html" title="Oracle Rac with Vagrant">Next &rarr;</a></li>
+        <li class="next disabled"><a>Next &rarr;</a>
       
       </ul>
     <hr>
