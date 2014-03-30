@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Automatization</title>
+    <meta name="description" content="Automatization of Clusterware Grid and Database Install">
+    <meta name="author" content="Alvaro Miranda">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/bootstrap/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+	  <!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="/">kikitux.net</a>
+	  </div>
+
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse navbar-ex1-collapse">
+		<ul class="nav navbar-nav">
+		  
+		  
+		  
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+		</ul>
+	  </div><!-- /.navbar-collapse -->
+	</nav>
+  
+    <div class="container">
+
+        
+<div class="page-header">
+  <h1>Automatization </h1>
+</div>
+
+<div class="row post-full">
+  <div class="col-md12">
+    <div class="date">
+      <span>06 January 2014</span>
+    </div>
+    <div class="content">
+      <p>A workflow to get Oracle Clusterware/grid and Database installed can be as follow:</p>
+
+<p><img src="https://lh3.googleusercontent.com/-nahUqAl-St8/UsOUfKu_77I/AAAAAAAAAB4/cwtlnfR7FsA/s0/4acf4e69.jpg" alt="workflow" /></p>
+
+<p>This task can be a big challenge at firt sight, with practice, and some of trial-error you will came with a recipe book, steps to perform your own installation.</p>
+
+<p>What about automated install from scratch, from Create the VM until Get everything sorted?</p>
+
+<p>Let's say:</p>
+
+<ul>
+<li>Create the VM,</li>
+<li>Setup memory,</li>
+<li>Setup cpu,</li>
+<li>Create and attach 2nd, 3rd, 4th hard disk,</li>
+<li>Install OS,</li>
+<li>Format and mount 2nd disk as /u01,</li>
+<li>Formant and mount 3rd and 4th disk as /u02 and /u03,</li>
+<li>Install LXC,</li>
+<li>Create a base lxc guest,</li>
+<li>Attach /u01, /u02 and /u03 to the lxc guest,</li>
+<li>Install all the oracle clusterware/grid and database pre-requirements on this base lxc guest,</li>
+<li>Create grid and oracle users and related groups on the lxc guest,</li>
+<li>Setup limits.conf and sysctl.conf on the lxc guest,</li>
+<li>Install clusterware/grid on the lxc guest,</li>
+<li>Update OPatch on clusterware/grid on the lxc guest,</li>
+<li>Apply PSU/CPU on clusterware/grid on the lxc guest,</li>
+<li><p>Install database binaries on the lxc guest</p></li>
+<li><p>Clone base lxc guest into server1,</p></li>
+<li>Configure clusterware/grid into server1,</li>
+<li>Create LISTENER into server1,</li>
+<li>Update OPatch on database into server1,</li>
+<li>Apply PSU/CPU on database into server1,</li>
+<li>Create a db called db into server1,</li>
+<li><p>Clone db to disk as copy into server1</p></li>
+<li><p>Clone base lxc into server2,</p></li>
+<li>Move db from disk of server1 into server2,</li>
+<li>Configure clusterware/grid into server2,</li>
+<li>Create LISTENER into server2,</li>
+<li>Update OPatch on database into server2,</li>
+<li>Apply PSU/CPU on database into server2,</li>
+<li>Configure db as empty db on server2,</li>
+<li>Restore controlfile from copy on disk on server2</li>
+<li>Perform a restore of db on server2 from copy on disk,</li>
+<li>Perform a recover of db on server2,</li>
+<li>Open db with resetlogs and shutdown on server2,</li>
+<li>Register db on srvctl on server2,</li>
+<li>Start db on server2 with srvctl</li>
+</ul>
+
+
+<p>Doable?
+In a fully automated hands free way?</p>
+
+<p>The below video start creating the lxc guest client:</p>
+
+<iframe width="853" height="480" src="//www.youtube.com/v/olc9LKtWFY0?rel=0&vq=large" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Alvaro.</p>
+
+    </div>
+
+  
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#automatization-ref">automatization <span>1</span></a></li>
+    
+  
+
+
+
+    
+
+    <hr>
+      <ul class="pagination">
+      
+        <li class="prev"><a href="/lxc/2014/01/04/lxc" title="Lxc">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    <hr>
+    
+
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="http://kikitux.net" data-num-posts="5" data-width="580" data-colorscheme="light"></div>
+
+
+
+  </div>
+</div>
+
+
+      <hr>
+    </div>
+    <footer>
+      <p>&copy; 2014 Alvaro Miranda
+        with help from <a href="http://dbtek.github.io/jekyll-bootstrap-3" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap-3</a>
+        and <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap</a>
+      </p>
+    </footer>
+
+    
+    <script src="/assets/themes/bootstrap/resources/jquery/jquery.min.js"></script>
+    <script src="/assets/themes/bootstrap/resources/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

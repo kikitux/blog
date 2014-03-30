@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vagrant</title>
+    <meta name="description" content="Automatization with Vagrant part 1">
+    <meta name="author" content="Alvaro Miranda">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/bootstrap/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+	  <!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="/">kikitux.net</a>
+	  </div>
+
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse navbar-ex1-collapse">
+		<ul class="nav navbar-nav">
+		  
+		  
+		  
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+		</ul>
+	  </div><!-- /.navbar-collapse -->
+	</nav>
+  
+    <div class="container">
+
+        
+<div class="page-header">
+  <h1>Vagrant </h1>
+</div>
+
+<div class="row post-full">
+  <div class="col-md12">
+    <div class="date">
+      <span>02 January 2014</span>
+    </div>
+    <div class="content">
+      <p>This post is dedicated to <a href="http://www.vagrantup.com/">Vagrant</a></p>
+
+<p>From the Vagrant webpage:</p>
+
+<pre><code>Create and configure lightweight, reproducible, and portable development environments
+</code></pre>
+
+<center><figure><a href=''><img src='https://lh4.googleusercontent.com/-Vd_-kasWU7M/UsSt9doSuYI/AAAAAAAAADw/pq9jHp_ye7U/s0/2014-01-02_13-08-20.png' max-width='99%' /></a></figure></center>
+
+
+<p>Using simple commands like:</p>
+
+<center><figure><a href=''><img src='https://lh3.googleusercontent.com/-dhfdhl2q1Mg/UsSuHmTYAtI/AAAAAAAAAD4/HK_BZk2qrRQ/s0/2014-01-02_13-09-02.png' max-width='99%' /></a></figure></center>
+
+
+<p>Let's check a workflow to create VM's using vagrant:</p>
+
+<center><figure><a href='https://lh3.googleusercontent.com/-34-UeeFlDFk/UsSxXEgOFvI/AAAAAAAAAEE/U3VozfSmcYw/s0/0f28ea00.jpg'><img src='https://lh3.googleusercontent.com/-34-UeeFlDFk/UsSxXEgOFvI/AAAAAAAAAEE/U3VozfSmcYw/s0/0f28ea00.jpg' max-width='99%' /></a></figure></center>
+
+
+<p>This looks pretty straightforward and very convenient, let's have a deeper look at this.</p>
+
+<p>Vagrant use boxes, that are pre-packer vms and a vagrant file, that have all the configuration for the specific box.</p>
+
+<p>To get Vagrant boxes, have a look at <a href="http://www.vagrantbox.es/">vagrantbox.es</a></p>
+
+<ul>
+<li><a href="http://www.vagrantup.com/downloads.html">Download</a> and Install Vagrant</li>
+</ul>
+
+
+<p>Once the pre-requirements are set, let's import the oracle65.box:</p>
+
+<pre><code>    alvaros-mini:~ alvarom$ vagrant box list
+    There are no installed boxes! Use `vagrant box add` to add some.
+    alvaros-mini:~ alvarom$ vagrant box add oracle65 ~/Downloads/oracle65.box
+    Downloading box from URL: file:~/Downloads/oracle65.box
+    Extracting box...te: 104M/s, Estimated time remaining: 0:00:01))
+    Successfully added box 'oracle65' with provider 'virtualbox'!
+    alvaros-mini:~ alvarom$ vagrant box list
+    oracle65 (virtualbox)
+    alvaros-mini:~ alvarom$
+</code></pre>
+
+<p>The command <code>vagrant init</code> will create a basic Vagrantfile to get this started.</p>
+
+<p>We can later modify this Vagrantfile, or use one already created.</p>
+
+<p>Let's create a basic box using this template</p>
+
+<pre><code>    alvaros-mini:~ alvarom$ mkdir box1
+    alvaros-mini:~ alvarom$ cd box1/
+    alvaros-mini:box1 alvarom$ vagrant init oracle65
+    A `Vagrantfile` has been placed in this directory. You are now
+    ready to `vagrant up` your first virtual environment! Please read
+    the comments in the Vagrantfile as well as documentation on
+    `vagrantup.com` for more information on using Vagrant.
+    alvaros-mini:box1 alvarom$ vagrant up
+    Bringing machine 'default' up with 'virtualbox' provider...
+    [default] Importing base box 'oracle65'...
+    [default] Matching MAC address for NAT networking...
+    [default] Setting the name of the VM...
+    [default] Clearing any previously set forwarded ports...
+    [default] Fixed port collision for 22 =&gt; 2222. Now on port 2200.
+    [default] Clearing any previously set network interfaces...
+    [default] Preparing network interfaces based on configuration...
+    [default] Forwarding ports...
+    [default] -- 22 =&gt; 2200 (adapter 1)
+    [default] Booting VM...
+    [default] Waiting for machine to boot. This may take a few minutes...
+    [default] Machine booted and ready!
+    [default] Mounting shared folders...
+    [default] -- /vagrant
+    alvaros-mini:box1 alvarom$
+</code></pre>
+
+<p>That's all.. pretty easy.</p>
+
+<p>Connect to the VM:</p>
+
+<pre><code>    [vagrant@vagrant-oracle65 ~]$ hostname
+    vagrant-oracle65
+    [vagrant@vagrant-oracle65 ~]$ ifconfig
+    eth0      Link encap:Ethernet  HWaddr 08:00:27:1D:AE:B5
+          inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fe1d:aeb5/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:320 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:206 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:35017 (34.1 KiB)  TX bytes:28844 (28.1 KiB)
+
+    lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+    [vagrant@vagrant-oracle65 ~]$ logout
+    Connection to 127.0.0.1 closed.
+    alvaros-mini:box1 alvarom$
+</code></pre>
+
+<p>Shutdown the VM:</p>
+
+<pre><code>    alvaros-mini:box1 alvarom$ vagrant halt
+    [default] Attempting graceful shutdown of VM...
+    alvaros-mini:box1 alvarom$
+</code></pre>
+
+<p>Let's modify the Vagrantfile to set an specific hostaname, add a second nic and set some other options:</p>
+
+<pre><code>    # -*- mode: ruby -*-
+    # vi: set ft=ruby :
+
+    # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+    VAGRANTFILE_API_VERSION = "2"
+
+    Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+      # Every Vagrant virtual environment requires a box to build off of.
+      config.vm.box = "oracle65"
+
+      # The url from where the 'config.vm.box' box will be fetched if it
+      # doesn't already exist on the user's system.
+      # config.vm.box_url = "http://domain.com/path/to/above.box"
+
+      # Create a private network, which allows host-only access to the machine
+      # using a specific IP.
+      config.vm.network :private_network, ip: "192.168.56.11"
+
+      config.vm.hostname = "box1"
+
+      # Provider-specific configuration so you can fine-tune various
+      # backing providers for Vagrant. These expose provider-specific options.
+      # Example for VirtualBox:
+      #
+      config.vm.provider :virtualbox do |vb|
+      #   # Don't boot with headless mode
+      #   vb.gui = true
+      #
+      #   # Use VBoxManage to customize the VM. For example to change memory:
+        vb.customize ["modifyvm", :id, "--memory", "6000"]
+        vb.customize ["modifyvm", :id, "--cpus", "4"]
+      end
+      #
+      # View the documentation for the provider you're using for more
+      # information on available options.
+
+    end
+</code></pre>
+
+<p>Once the Vagrantfile have been modified, let's start our machine again:</p>
+
+<pre><code>    alvaros-mini:box1 alvarom$ vagrant up
+    Bringing machine 'default' up with 'virtualbox' provider...
+    [default] Clearing any previously set forwarded ports...
+    [default] Fixed port collision for 22 =&gt; 2222. Now on port 2200.
+    [default] Clearing any previously set network interfaces...
+    [default] Preparing network interfaces based on configuration...
+    [default] Forwarding ports...
+    [default] -- 22 =&gt; 2200 (adapter 1)
+    [default] Running 'pre-boot' VM customizations...
+    [default] Booting VM...
+    [default] Waiting for machine to boot. This may take a few minutes...
+    [default] Machine booted and ready!
+    [default] Setting hostname...
+    [default] Configuring and enabling network interfaces...
+    [default] Mounting shared folders...
+    [default] -- /vagrant
+    [default] VM already provisioned. Run `vagrant provision` or use `--provision` to force it
+    alvaros-mini:box1 alvarom$
+</code></pre>
+
+<p>Connect to the machine and verify:</p>
+
+<pre><code>    alvaros-mini:box1 alvarom$ vagrant ssh
+    Last login: Thu Jan  2 14:23:06 2014 from 10.0.2.2
+    [vagrant@box1 ~]$ hostname
+    box1
+    [vagrant@box1 ~]$ ifconfig
+    eth0      Link encap:Ethernet  HWaddr 08:00:27:1D:AE:B5
+          inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fe1d:aeb5/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:527 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:330 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:56982 (55.6 KiB)  TX bytes:47053 (45.9 KiB)
+
+    eth1      Link encap:Ethernet  HWaddr 08:00:27:B5:02:67
+          inet addr:192.168.56.11  Bcast:192.168.56.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:feb5:267/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:6 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:1662 (1.6 KiB)  TX bytes:588 (588.0 b)
+
+    lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+    [vagrant@box1 ~]$ top
+    top - 14:33:34 up 4 min,  1 user,  load average: 0.00, 0.01, 0.01
+    Tasks: 131 total,   1 running, 130 sleeping,   0 stopped,   0 zombie
+    Cpu0  :  0.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+    Cpu1  :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+    Cpu2  :  0.0%us,100.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+    Cpu3  :  0.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+    Mem:   5967708k total,   144904k used,  5822804k free,     1320k buffers
+    Swap:  6143996k total,        0k used,  6143996k free,    57704k cached
+</code></pre>
+
+<p>Pretty impresive.</p>
+
+<p>Let's do more stuff with our machine, let's say we need a set of specific packages once the machine is created, we will use standard command line arguments to install couple of packages.</p>
+
+<p>Add to the vagrant file, the following line:</p>
+
+<pre><code>    config.vm.provision :shell, :inline =&gt; "cd /etc/yum.repos.d ; &gt; public-yum-ol6.repo ; wget http://mini.home.kikitux.net/stage/mini-yum-ol6.repo"
+    config.vm.provision :shell, :inline =&gt; "yum install -y mc"
+</code></pre>
+
+<p>The first line, will zero the public-yum-ol6.repo file, and download my private mini-yum-ol6.repo file, so the machine will be using my local yum repository.
+The second line will install one rpm for us.</p>
+
+<p>As the virtual guest was already created, we need to run the provision manually.</p>
+
+<pre><code>    alvaros-mini:box1 alvarom$ vagrant provision
+    [default] Running provisioner: shell...
+    [default] Running: inline script
+    --2014-01-02 14:46:15--  http://mini.home.kikitux.net/stage/mini-yum-ol6.repo
+    Resolving mini.home.kikitux.net... 192.168.1.2
+    Connecting to mini.home.kikitux.net|192.168.1.2|:80... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 4354 (4.3K) [application/octet-stream]
+    [default] Running provisioner: shell...
+    [default] Running: inline script
+    Loaded plugins: security
+    Setting up Install Process
+    Resolving Dependencies
+    --&gt; Running transaction check
+    ---&gt; Package mc.x86_64 1:4.7.0.2-3.el6 will be installed
+    --&gt; Finished Dependency Resolution
+
+    Dependencies Resolved
+
+    ================================================================================
+     Package     Arch            Version                  Repository           Size
+    ================================================================================
+    Installing:
+     mc          x86_64          1:4.7.0.2-3.el6          ol6_latest          1.6 M
+
+    Transaction Summary
+    ================================================================================
+    Install       1 Package(s)
+
+    Total download size: 1.6 M
+    Installed size: 5.4 M
+    Downloading Packages:
+    Running rpm_check_debug
+    Running Transaction Test
+    Transaction Test Succeeded
+    Running Transaction
+      Installing : 1:mc-4.7.0.2-3.el6.x86_64                                    1/1
+      Verifying  : 1:mc-4.7.0.2-3.el6.x86_64                                    1/1
+
+    Installed:
+      mc.x86_64 1:4.7.0.2-3.el6
+
+    Complete!
+    alvaros-mini:box1 alvarom$
+</code></pre>
+
+<p>Pretty cool, let's remove the VM, and start over again:</p>
+
+<pre><code>    alvaros-mini:box1 alvarom$ vagrant destroy
+    Are you sure you want to destroy the 'default' VM? [y/N] y
+    [default] Forcing shutdown of VM...
+    [default] Destroying VM and associated drives...
+    alvaros-mini:box1 alvarom$ 
+
+    alvaros-mini:box1 alvarom$ vagrant up --provision
+    Bringing machine 'default' up with 'virtualbox' provider...
+    [default] Importing base box 'oracle65'...
+    [default] Matching MAC address for NAT networking...
+    [default] Setting the name of the VM...
+    [default] Clearing any previously set forwarded ports...
+    [default] Clearing any previously set network interfaces...
+    [default] Preparing network interfaces based on configuration...
+    [default] Forwarding ports...
+    [default] -- 22 =&gt; 2222 (adapter 1)
+    [default] Running 'pre-boot' VM customizations...
+    [default] Booting VM...
+    [default] Waiting for machine to boot. This may take a few minutes...
+    [default] Machine booted and ready!
+    [default] Setting hostname...
+    [default] Configuring and enabling network interfaces...
+    [default] Mounting shared folders...
+    [default] -- /vagrant
+    [default] Running provisioner: shell...
+    [default] Running: inline script
+    --2014-01-02 15:21:18--  http://mini.home.kikitux.net/stage/mini-yum-ol6.repo
+    Resolving mini.home.kikitux.net... 192.168.1.2
+    Connecting to mini.home.kikitux.net|192.168.1.2|:80... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 4354 (4.3K) [application/octet-stream]
+    [default] Running provisioner: shell...
+    [default] Running: inline script
+    Loaded plugins: security
+    Setting up Install Process
+    Resolving Dependencies
+    --&gt; Running transaction check
+    ---&gt; Package mc.x86_64 1:4.7.0.2-3.el6 will be installed
+    --&gt; Processing Dependency: perl(strict) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&gt; Processing Dependency: perl(bytes) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&gt; Processing Dependency: perl(POSIX) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&gt; Processing Dependency: perl(File::Temp) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&gt; Processing Dependency: perl(File::Basename) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&gt; Processing Dependency: /usr/bin/perl for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&gt; Processing Dependency: libgpm.so.2()(64bit) for package: 1:mc-4.7.0.2-3.el6.x86_64
+    --&gt; Running transaction check
+    ---&gt; Package gpm-libs.x86_64 0:1.20.6-12.el6 will be installed
+    ---&gt; Package perl.x86_64 4:5.10.1-136.el6 will be installed
+    --&gt; Processing Dependency: perl-libs = 4:5.10.1-136.el6 for package: 4:perl-5.10.1-136.el6.x86_64
+    --&gt; Processing Dependency: perl-libs for package: 4:perl-5.10.1-136.el6.x86_64
+    --&gt; Processing Dependency: perl(version) for package: 4:perl-5.10.1-136.el6.x86_64
+    --&gt; Processing Dependency: perl(Pod::Simple) for package: 4:perl-5.10.1-136.el6.x86_64
+    --&gt; Processing Dependency: perl(Module::Pluggable) for package: 4:perl-5.10.1-136.el6.x86_64
+    --&gt; Processing Dependency: libperl.so()(64bit) for package: 4:perl-5.10.1-136.el6.x86_64
+    --&gt; Running transaction check
+    ---&gt; Package perl-Module-Pluggable.x86_64 1:3.90-136.el6 will be installed
+    ---&gt; Package perl-Pod-Simple.x86_64 1:3.13-136.el6 will be installed
+    --&gt; Processing Dependency: perl(Pod::Escapes) &gt;= 1.04 for package: 1:perl-Pod-Simple-3.13-136.el6.x86_64
+    ---&gt; Package perl-libs.x86_64 4:5.10.1-136.el6 will be installed
+    ---&gt; Package perl-version.x86_64 3:0.77-136.el6 will be installed
+    --&gt; Running transaction check
+    ---&gt; Package perl-Pod-Escapes.x86_64 1:1.04-136.el6 will be installed
+    --&gt; Finished Dependency Resolution
+
+    Dependencies Resolved
+
+    ================================================================================
+     Package                   Arch       Version              Repository      Size
+    ================================================================================
+    Installing:
+     mc                        x86_64     1:4.7.0.2-3.el6      ol6_latest     1.6 M
+    Installing for dependencies:
+     gpm-libs                  x86_64     1.20.6-12.el6        ol6_latest      28 k
+     perl                      x86_64     4:5.10.1-136.el6     ol6_latest      10 M
+     perl-Module-Pluggable     x86_64     1:3.90-136.el6       ol6_latest      39 k
+     perl-Pod-Escapes          x86_64     1:1.04-136.el6       ol6_latest      32 k
+     perl-Pod-Simple           x86_64     1:3.13-136.el6       ol6_latest     211 k
+     perl-libs                 x86_64     4:5.10.1-136.el6     ol6_latest     577 k
+     perl-version              x86_64     3:0.77-136.el6       ol6_latest      50 k
+
+    Transaction Summary
+    ================================================================================
+    Install       8 Package(s)
+
+    Total download size: 13 M
+    Installed size: 41 M
+    Downloading Packages:
+    --------------------------------------------------------------------------------
+    Total                                            15 MB/s |  13 MB     00:00
+    warning: rpmts_HdrFromFdno: Header V3 RSA/SHA256 Signature, key ID ec551f03: NOKEY
+    Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-oracle
+    Importing GPG key 0xEC551F03:
+     Userid : Oracle OSS group (Open Source Software group) &lt;build@oss.oracle.com&gt;
+     Package: 6:oraclelinux-release-6Server-5.0.2.x86_64 (@anaconda-OracleLinuxServer-201311261449.x86_64/6.5)
+     From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-oracle
+    Running rpm_check_debug
+    Running Transaction Test
+    Transaction Test Succeeded
+    Running Transaction
+      Installing : 1:perl-Pod-Escapes-1.04-136.el6.x86_64                       1/8
+      Installing : 4:perl-libs-5.10.1-136.el6.x86_64                            2/8
+      Installing : 1:perl-Pod-Simple-3.13-136.el6.x86_64                        3/8
+      Installing : 3:perl-version-0.77-136.el6.x86_64                           4/8
+      Installing : 1:perl-Module-Pluggable-3.90-136.el6.x86_64                  5/8
+      Installing : 4:perl-5.10.1-136.el6.x86_64                                 6/8
+      Installing : gpm-libs-1.20.6-12.el6.x86_64                                7/8
+      Installing : 1:mc-4.7.0.2-3.el6.x86_64                                    8/8
+      Verifying  : 1:perl-Module-Pluggable-3.90-136.el6.x86_64                  1/8
+      Verifying  : gpm-libs-1.20.6-12.el6.x86_64                                2/8
+      Verifying  : 1:perl-Pod-Escapes-1.04-136.el6.x86_64                       3/8
+      Verifying  : 4:perl-5.10.1-136.el6.x86_64                                 4/8
+      Verifying  : 4:perl-libs-5.10.1-136.el6.x86_64                            5/8
+      Verifying  : 1:perl-Pod-Simple-3.13-136.el6.x86_64                        6/8
+      Verifying  : 1:mc-4.7.0.2-3.el6.x86_64                                    7/8
+      Verifying  : 3:perl-version-0.77-136.el6.x86_64                           8/8
+
+    Installed:
+      mc.x86_64 1:4.7.0.2-3.el6
+
+    Dependency Installed:
+      gpm-libs.x86_64 0:1.20.6-12.el6
+      perl.x86_64 4:5.10.1-136.el6
+      perl-Module-Pluggable.x86_64 1:3.90-136.el6
+      perl-Pod-Escapes.x86_64 1:1.04-136.el6
+      perl-Pod-Simple.x86_64 1:3.13-136.el6
+      perl-libs.x86_64 4:5.10.1-136.el6
+      perl-version.x86_64 3:0.77-136.el6
+
+    Complete!
+    alvaros-mini:box1 alvarom$
+</code></pre>
+
+<p>Awesome.</p>
+
+    </div>
+
+  
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#oracle-ref">oracle <span>6</span></a></li>
+     
+    	<li><a href="/tags.html#linux-ref">linux <span>7</span></a></li>
+     
+    	<li><a href="/tags.html#vagrant-ref">vagrant <span>2</span></a></li>
+    
+  
+
+
+
+    
+
+    <hr>
+      <ul class="pagination">
+      
+        <li class="prev"><a href="/packer/2014/01/02/packer" title="Packer">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/vagrant/2014/01/02/vagrant-part2" title="Vagrant Part 2">Next &rarr;</a></li>
+      
+      </ul>
+    <hr>
+    
+
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="http://kikitux.net" data-num-posts="5" data-width="580" data-colorscheme="light"></div>
+
+
+
+  </div>
+</div>
+
+
+      <hr>
+    </div>
+    <footer>
+      <p>&copy; 2014 Alvaro Miranda
+        with help from <a href="http://dbtek.github.io/jekyll-bootstrap-3" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap-3</a>
+        and <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap</a>
+      </p>
+    </footer>
+
+    
+    <script src="/assets/themes/bootstrap/resources/jquery/jquery.min.js"></script>
+    <script src="/assets/themes/bootstrap/resources/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

@@ -4,29 +4,19 @@
  <title>kikitux.net</title>
  <link href="http://kikitux.net/atom.xml" rel="self"/>
  <link href="http://kikitux.net"/>
- <updated>2014-02-03T16:59:03+13:00</updated>
+ <updated>2014-03-30T18:15:23+13:00</updated>
  <id>http://kikitux.net</id>
  <author>
    <name>Alvaro Miranda</name>
-   <email>kikitux@gmail.com</email>
+   <email>alvaro@kikitux.net</email>
  </author>
 
  
  <entry>
-   <title>Oracle Rac with Vagrant</title>
-   <link href="http://kikitux.net/howto/oracle-rac-vagrant.html"/>
-   <updated>2014-02-03T00:00:00+13:00</updated>
-   <id>http://kikitux.net/howto/oracle-rac-vagrant</id>
-   <content type="html">&lt;p&gt;#
-placeholder.. came back later..&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
    <title>Automatization</title>
-   <link href="http://kikitux.net/oracle/automatization.html"/>
+   <link href="http://kikitux.net/oracle/2014/01/06/automatization"/>
    <updated>2014-01-06T00:00:00+13:00</updated>
-   <id>http://kikitux.net/oracle/automatization</id>
+   <id>http://kikitux.net/oracle/2014/01/06/automatization</id>
    <content type="html">&lt;p&gt;A workflow to get Oracle Clusterware/grid and Database installed can be as follow:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-nahUqAl-St8/UsOUfKu_77I/AAAAAAAAAB4/cwtlnfR7FsA/s0/4acf4e69.jpg&quot; alt=&quot;workflow&quot; /&gt;&lt;/p&gt;
@@ -92,9 +82,9 @@ In a fully automated hands free way?&lt;/p&gt;
  
  <entry>
    <title>Lxc</title>
-   <link href="http://kikitux.net/lxc/lxc.html"/>
+   <link href="http://kikitux.net/lxc/2014/01/04/lxc"/>
    <updated>2014-01-04T00:00:00+13:00</updated>
-   <id>http://kikitux.net/lxc/lxc</id>
+   <id>http://kikitux.net/lxc/2014/01/04/lxc</id>
    <content type="html">&lt;p&gt;Get working with &lt;code&gt;LXC&lt;/code&gt; on Oracle Linux is very easy today.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    * yum -y update
@@ -738,9 +728,9 @@ target     prot opt source               destination
  
  <entry>
    <title>Vagrant Part 2</title>
-   <link href="http://kikitux.net/vagrant/vagrant-part2.html"/>
+   <link href="http://kikitux.net/vagrant/2014/01/02/vagrant-part2"/>
    <updated>2014-01-02T00:00:00+13:00</updated>
-   <id>http://kikitux.net/vagrant/vagrant-part2</id>
+   <id>http://kikitux.net/vagrant/2014/01/02/vagrant-part2</id>
    <content type="html">&lt;p&gt;On the previous post &lt;a href=&quot;http://kikitux.net/vagrant/vagrant.html&quot;&gt;vagrant part 1&lt;/a&gt; we get the things started.&lt;/p&gt;
 
 &lt;p&gt;Let's continue doing more staff on our vagrant machine.&lt;/p&gt;
@@ -812,12 +802,6 @@ target     prot opt source               destination
     Connecting to mini.home.kikitux.net|192.168.1.2|:80... connected.
     HTTP request sent, awaiting response... 200 OK
     Length: 4354 (4.3K) [application/octet-stream]
-    Saving to: “mini-yum-ol6.repo.1”
-
-         0K ....                                                  100%  239K=0.02s
-
-    2014-01-02 15:45:02 (239 KB/s) - “mini-yum-ol6.repo.1” saved [4354/4354]
-
     [default] Running provisioner: shell...
     [default] Running: inline script
     Loaded plugins: security
@@ -958,12 +942,6 @@ target     prot opt source               destination
     Connecting to mini.home.kikitux.net|192.168.1.2|:80... connected.
     HTTP request sent, awaiting response... 200 OK
     Length: 4354 (4.3K) [application/octet-stream]
-    Saving to: “mini-yum-ol6.repo.2”
-
-         0K ....                                                  100%  246K=0.02s
-
-    2014-01-02 15:59:07 (246 KB/s) - “mini-yum-ol6.repo.2” saved [4354/4354]
-
     [default] Running provisioner: shell...
     [default] Running: inline script
     Loaded plugins: security
@@ -1038,12 +1016,6 @@ target     prot opt source               destination
     Connecting to mini.home.kikitux.net|192.168.1.2|:80... connected.
     HTTP request sent, awaiting response... 200 OK
     Length: 4354 (4.3K) [application/octet-stream]
-    Saving to: “mini-yum-ol6.repo”
-
-         0K ....                                                  100% 43.1K=0.1s
-
-    2014-01-02 16:31:58 (43.1 KB/s) - “mini-yum-ol6.repo” saved [4354/4354]
-
     [default] Running provisioner: shell...
     [default] Running: /var/folders/_h/d14sw7c55ds3qr05nnp6ckhc0000gn/T/vagrant-shell20140102-38466-d5jfr2
     installing oracle-rdbms-server-12cR1-preinstall
@@ -1173,9 +1145,9 @@ target     prot opt source               destination
  
  <entry>
    <title>Vagrant</title>
-   <link href="http://kikitux.net/vagrant/vagrant.html"/>
+   <link href="http://kikitux.net/vagrant/2014/01/02/vagrant"/>
    <updated>2014-01-02T00:00:00+13:00</updated>
-   <id>http://kikitux.net/vagrant/vagrant</id>
+   <id>http://kikitux.net/vagrant/2014/01/02/vagrant</id>
    <content type="html">&lt;p&gt;This post is dedicated to &lt;a href=&quot;http://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;From the Vagrant webpage:&lt;/p&gt;
@@ -1420,12 +1392,6 @@ The second line will install one rpm for us.&lt;/p&gt;
     Connecting to mini.home.kikitux.net|192.168.1.2|:80... connected.
     HTTP request sent, awaiting response... 200 OK
     Length: 4354 (4.3K) [application/octet-stream]
-    Saving to: “mini-yum-ol6.repo”
-
-         0K ....                                                  100%  214K=0.02s
-
-    2014-01-02 14:46:20 (214 KB/s) - “mini-yum-ol6.repo” saved [4354/4354]
-
     [default] Running provisioner: shell...
     [default] Running: inline script
     Loaded plugins: security
@@ -1497,12 +1463,6 @@ The second line will install one rpm for us.&lt;/p&gt;
     Connecting to mini.home.kikitux.net|192.168.1.2|:80... connected.
     HTTP request sent, awaiting response... 200 OK
     Length: 4354 (4.3K) [application/octet-stream]
-    Saving to: “mini-yum-ol6.repo”
-
-         0K ....                                                  100%  185K=0.02s
-
-    2014-01-02 15:21:24 (185 KB/s) - “mini-yum-ol6.repo” saved [4354/4354]
-
     [default] Running provisioner: shell...
     [default] Running: inline script
     Loaded plugins: security
@@ -1610,9 +1570,9 @@ The second line will install one rpm for us.&lt;/p&gt;
  
  <entry>
    <title>Packer</title>
-   <link href="http://kikitux.net/packer/packer.html"/>
+   <link href="http://kikitux.net/packer/2014/01/02/packer"/>
    <updated>2014-01-02T00:00:00+13:00</updated>
-   <id>http://kikitux.net/packer/packer</id>
+   <id>http://kikitux.net/packer/2014/01/02/packer</id>
    <content type="html">&lt;p&gt;In the last few weeks, I have been using packer and vagrant a lot.
 This post is dedicated to &lt;a href=&quot;http://packer.io&quot;&gt;packer&lt;/a&gt;, specifically to build oracle linux using packer.&lt;/p&gt;
 
@@ -1767,9 +1727,9 @@ This variables will be override with values given to packer from the command lin
  
  <entry>
    <title>Public yum downloader</title>
-   <link href="http://kikitux.net/ol/public-yum-downloader.html"/>
+   <link href="http://kikitux.net/ol/2013/03/14/public-yum-downloader"/>
    <updated>2013-03-14T00:00:00+13:00</updated>
-   <id>http://kikitux.net/ol/public-yum-downloader</id>
+   <id>http://kikitux.net/ol/2013/03/14/public-yum-downloader</id>
    <content type="html">&lt;p&gt;I wrote an script called &lt;a href=&quot;https://github.com/kikitux/public-yum-downloader&quot;&gt;public-yum-downloader.sh&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;This script will download a given repo from public-yum.oracle.com and create a local copy&lt;/p&gt;
@@ -1856,9 +1816,9 @@ This variables will be override with values given to packer from the command lin
  
  <entry>
    <title>Installing Oracle Linux 6</title>
-   <link href="http://kikitux.net/ol/installing-oracle-linux-6.html"/>
+   <link href="http://kikitux.net/ol/2013/03/02/installing-oracle-linux-6"/>
    <updated>2013-03-02T00:00:00+13:00</updated>
-   <id>http://kikitux.net/ol/installing-oracle-linux-6</id>
+   <id>http://kikitux.net/ol/2013/03/02/installing-oracle-linux-6</id>
    <content type="html">&lt;p&gt;This post will cover a basic installation of Oracle Linux 6.&lt;/p&gt;
 
 &lt;p&gt;For this task, we will use a virtual box guest, however, the same idea apply to any other virtualization technology or bare metal install on a physical server.&lt;/p&gt;
@@ -2208,9 +2168,9 @@ PV, the rest of the space
  
  <entry>
    <title>Creating an Oracle Linux 6 Virtualbox guest</title>
-   <link href="http://kikitux.net/vbox/creating-an-oracle-linux-6-virtualbox-guest.html"/>
+   <link href="http://kikitux.net/vbox/2013/03/02/creating-an-oracle-linux-6-virtualbox-guest"/>
    <updated>2013-03-02T00:00:00+13:00</updated>
-   <id>http://kikitux.net/vbox/creating-an-oracle-linux-6-virtualbox-guest</id>
+   <id>http://kikitux.net/vbox/2013/03/02/creating-an-oracle-linux-6-virtualbox-guest</id>
    <content type="html">&lt;p&gt;On a previous post, we did check the way to &lt;a href=&quot;http://kikitux.net/ol/getting-started-with-oracle-linux.html&quot;&gt;download oracle linux 6 dvd&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Now that you got the iso image, let's create a virtualbox guest and create our first Oracle Linux 6 guest.&lt;/p&gt;
@@ -2534,9 +2494,9 @@ Fixed is supposed to be a bit faster as will avoid defragmentation the disk.&lt;
  
  <entry>
    <title>Public Yum for Oracle Linux 6.4 is out</title>
-   <link href="http://kikitux.net/ol/public-yum-for-oracle-linux-64-is-out.html"/>
+   <link href="http://kikitux.net/ol/2013/02/28/public-yum-for-oracle-linux-64-is-out"/>
    <updated>2013-02-28T00:00:00+13:00</updated>
-   <id>http://kikitux.net/ol/public-yum-for-oracle-linux-64-is-out</id>
+   <id>http://kikitux.net/ol/2013/02/28/public-yum-for-oracle-linux-64-is-out</id>
    <content type="html">&lt;p&gt;Oracle Linux 6.4 public-yum channel is out, happy updating.&lt;/p&gt;
 
 &lt;p&gt;New kernel UEK also, 2.6.39-400&lt;/p&gt;
@@ -2547,9 +2507,9 @@ Fixed is supposed to be a bit faster as will avoid defragmentation the disk.&lt;
  
  <entry>
    <title>Getting started with Oracle Linux</title>
-   <link href="http://kikitux.net/ol/getting-started-with-oracle-linux.html"/>
+   <link href="http://kikitux.net/ol/2013/02/27/getting-started-with-oracle-linux"/>
    <updated>2013-02-27T00:00:00+13:00</updated>
-   <id>http://kikitux.net/ol/getting-started-with-oracle-linux</id>
+   <id>http://kikitux.net/ol/2013/02/27/getting-started-with-oracle-linux</id>
    <content type="html">&lt;h2&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;This post will be very basic, the goal is to end with the iso of Oracle Linux on your local machine.&lt;/p&gt;
@@ -2800,9 +2760,9 @@ US          Wimmekes.net
  
  <entry>
    <title>zsync</title>
-   <link href="http://kikitux.net/zsync/zsync.html"/>
+   <link href="http://kikitux.net/zsync/2013/02/25/zsync"/>
    <updated>2013-02-25T00:00:00+13:00</updated>
-   <id>http://kikitux.net/zsync/zsync</id>
+   <id>http://kikitux.net/zsync/2013/02/25/zsync</id>
    <content type="html">&lt;p&gt;I have been testing zsync and it's great.&lt;/p&gt;
 
 &lt;p&gt;You can &lt;a href=&quot;/zsync&quot;&gt;download from here&lt;/a&gt;&lt;/p&gt;
@@ -2855,9 +2815,9 @@ retina:tmp mirandaa$
  
  <entry>
    <title>OL6 Certified Implementation Specialist</title>
-   <link href="http://kikitux.net/cert/ol6-certified-implementation-specialist.html"/>
+   <link href="http://kikitux.net/cert/2013/02/25/ol6-certified-implementation-specialist"/>
    <updated>2013-02-25T00:00:00+13:00</updated>
-   <id>http://kikitux.net/cert/ol6-certified-implementation-specialist</id>
+   <id>http://kikitux.net/cert/2013/02/25/ol6-certified-implementation-specialist</id>
    <content type="html">&lt;p&gt;Back on December I took the 1z1-460 exam for Oracle Linux 6.&lt;/p&gt;
 
 &lt;p&gt;Last Saturday, got a letter from Oracle with a printed certificate, quite nice.&lt;/p&gt;
@@ -2876,9 +2836,9 @@ retina:tmp mirandaa$
  
  <entry>
    <title>zfs data protection</title>
-   <link href="http://kikitux.net/zfs/zfs-data-protection.html"/>
+   <link href="http://kikitux.net/zfs/2013/02/22/zfs-data-protection"/>
    <updated>2013-02-22T00:00:00+13:00</updated>
-   <id>http://kikitux.net/zfs/zfs-data-protection</id>
+   <id>http://kikitux.net/zfs/2013/02/22/zfs-data-protection</id>
    <content type="html">&lt;p&gt;When ZFS for MAC came out with ZEVO, I did run to get the software and being used for about a year or so..&lt;/p&gt;
 
 &lt;p&gt;If you stay away enabling dedup, the filesystem run very good.&lt;/p&gt;
@@ -2980,9 +2940,9 @@ zwimming/triple  23.8M   310M  23.8M  /zwimming/triple
  
  <entry>
    <title>SQL Staments</title>
-   <link href="http://kikitux.net/sql/sql-staments.html"/>
+   <link href="http://kikitux.net/sql/2013/02/21/sql-staments"/>
    <updated>2013-02-21T00:00:00+13:00</updated>
-   <id>http://kikitux.net/sql/sql-staments</id>
+   <id>http://kikitux.net/sql/2013/02/21/sql-staments</id>
    <content type="html">&lt;h3&gt;Data manipulation language (DML)&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;SELECT
@@ -3019,9 +2979,9 @@ SAVEPOINT
  
  <entry>
    <title>HR Schema</title>
-   <link href="http://kikitux.net/oracle/hr-schema.html"/>
+   <link href="http://kikitux.net/oracle/2013/02/21/hr-schema"/>
    <updated>2013-02-21T00:00:00+13:00</updated>
-   <id>http://kikitux.net/oracle/hr-schema</id>
+   <id>http://kikitux.net/oracle/2013/02/21/hr-schema</id>
    <content type="html">&lt;h1&gt;HR Schema in Oracle sample database&lt;/h1&gt;
 
 &lt;p&gt;&lt;figure&gt;&lt;a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/oracle/hr.png' &gt;&lt;img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/oracle/hr.png'  max-width='99%' /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -3032,9 +2992,9 @@ SAVEPOINT
  
  <entry>
    <title>OSX server and ruby dependencies</title>
-   <link href="http://kikitux.net/osx/osx-server-and-ruby-dependencies.html"/>
+   <link href="http://kikitux.net/osx/2013/02/14/osx-server-and-ruby-dependencies"/>
    <updated>2013-02-14T00:00:00+13:00</updated>
-   <id>http://kikitux.net/osx/osx-server-and-ruby-dependencies</id>
+   <id>http://kikitux.net/osx/2013/02/14/osx-server-and-ruby-dependencies</id>
    <content type="html">&lt;p&gt;I am a person who likes to have backups, and be on the bleeding edge most of the time, testing, checking.. learnings.. even when that mean break my database box at the office and also found that yesterdy update of ruby at my mac mini server &lt;a href=&quot;http://support.apple.com/kb/TS4042&quot;&gt;broke the ruby dependencies&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I was wondering how long it will take break my mac server anyways.. took, 2 days.. :D&lt;/p&gt;

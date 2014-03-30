@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Creating an Oracle Linux 6 Virtualbox guest</title>
+    <meta name="description" content="Virtualbox + Oracle Linux + yum update">
+    <meta name="author" content="Alvaro Miranda">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/bootstrap/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+	  <!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="/">kikitux.net</a>
+	  </div>
+
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse navbar-ex1-collapse">
+		<ul class="nav navbar-nav">
+		  
+		  
+		  
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+		</ul>
+	  </div><!-- /.navbar-collapse -->
+	</nav>
+  
+    <div class="container">
+
+        
+<div class="page-header">
+  <h1>Creating an Oracle Linux 6 Virtualbox guest </h1>
+</div>
+
+<div class="row post-full">
+  <div class="col-md12">
+    <div class="date">
+      <span>02 March 2013</span>
+    </div>
+    <div class="content">
+      <p>On a previous post, we did check the way to <a href="http://kikitux.net/ol/getting-started-with-oracle-linux.html">download oracle linux 6 dvd</a></p>
+
+<p>Now that you got the iso image, let's create a virtualbox guest and create our first Oracle Linux 6 guest.</p>
+
+<h2>Downloading Virtual Box</h2>
+
+<p>The good friends of Oracle Linux have been working in create hand ons lab for Oracle Linux.</p>
+
+<p>You can check the wiki <a href="https://wikis.oracle.com/display/oraclelinux/Oracle+Linux+Hands-on+Labs">here</a></p>
+
+<p>They start from the basic that is download the Virtual Box and end with some cool hand on guided tasks, it worth have a look.</p>
+
+<p>Download virtualbox, is quite easy, go to <a href="https://www.virtualbox.org/wiki/Downloads">Virtualbox download page</a> and download the software and Expansion pack.</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.08.49 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.08.49 PM.png' max-width='99%' /></a></figure></p>
+
+<p>Download the software for your platform and install first the VirtualBox part, and then the Expansion pack.</p>
+
+<p>When you execute virtual box for the first time, you should see a window similar to this:</p>
+
+<p>OSX</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.12.57 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.12.57 PM.png' max-width='99%' /></a></figure></p>
+
+<h2>Virtualbox networking</h2>
+
+<p>Virtualbox provide a very powerful networking component for our virtual machines</p>
+
+<p>there are 5 network types for virtual guests</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.19.10 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.19.10 PM.png' max-width='99%' /></a></figure></p>
+
+<ul>
+<li><p>not attached</p>
+
+<p>  This means the virtual nic is not connected to any particular network.</p></li>
+<li><p>NAT</p>
+
+<p>  This is the Network Address Translation, the same kind of network that you are familiar in your home with a router for internet that give you those private address 192.168.x.x</p>
+
+<p>  This type is very useful when you want to work from the console of the virtual machine and you require the guest having access to the network or internet and you don't require the virtual machine having his own ip in the network.</p>
+
+<p>  The virtual guest will take an ip like 10.2.0.15 and you can't reach from your computer or from any computer from the network.</p></li>
+<li><p>Bridged Adapter</p>
+
+<p>  This type of networking is the most easy to use.</p>
+
+<p>  You choose to bridge the virtual nic to one nic on your physical host, and will behave like any computer on the network.</p>
+
+<p>  This is, if there is an dhcp server on the network, the virtual guest will take an IP from the network, and you will be able to ssh or connect to any application running on the virtual guest, plus the guest will have access to the network as any other machine.</p>
+
+<p>  Keep in mind if you need to set up a proxy to reach internet, you will have to do the same on the virtual guest in order to get to internet.</p></li>
+<li><p>Internal Network</p>
+
+<p>  This type of network is like connecting the virtual guest to a switch that is not connected to any other device or network.</p>
+
+<p>  You will end with the virtual guest connected to the virtual switch, and will be isolated.</p>
+
+<p>  This type of network is very useful when you need to connect 2 or more virtual guest in a isolated network, example, Oracle RAC, 2 nodes with private interconnect</p></li>
+<li><p>Host-Only</p>
+
+<p>  This type of network is similar to the Internal Network, but the host machine (the real computer) will be able to connect and work with the virtual guests.</p>
+
+<p>  This type of network also allow create the network on the host, set up the ip you want to use, and will enable dhcp, so the guest will take an IP automatically.</p>
+
+<p>  example:</p>
+
+<p>  From the settings of virtual box, go to network</p>
+
+<p>  Then click on the + sign</p>
+
+<p>  <figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.31.15 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.31.15 PM.png' max-width='99%' /></a></figure></p>
+
+<p>  This will create a network called vboxnet0 with some default settings</p>
+
+<p>  <figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.32.39 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.32.39 PM.png' max-width='99%' /></a></figure></p>
+
+<ul>
+<li>Address 192.168.56.1 (this is the IP that will be assigned to the physical host)</li>
+<li>Netmask 255.255.255.0</li>
+<li>DHCP disabled</li>
+</ul>
+
+
+<p>  Double click on the network, or select and click on the screwdriver, and you will be able to change the parameters or enable the DHCP for the guest</p>
+
+<p>  Example:</p>
+
+<p>  <figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.34.54 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.34.54 PM.png' max-width='99%' /></a></figure></p></li>
+</ul>
+
+
+<h2>More about virtualbox networking</h2>
+
+<p>Each virtualguest can have 4 virtual nics from the gui, but you always can add more from the command line</p>
+
+<ul>
+<li><p>A typical setup when you want the guest connected to the network at your home or office will be</p>
+
+<pre><code>  virtual nic 1, type Bridge
+</code></pre></li>
+<li><p>A setup where you don't need the guest to be avaliable to the network will be</p>
+
+<pre><code>  virtual nic 1, type NAT
+</code></pre></li>
+<li><p>A setup where you want to have the guest be able to access the network, but need some portability, example a virtual guest in a laptop, will be</p>
+
+<pre><code>  virtual nic 1, type NAT
+  virtual nic 2, type Bridge  when the phyiscal host is connected to a network
+                              if you are on the the go, like a demo, use Host Only
+</code></pre></li>
+</ul>
+
+
+<p>With this setup, the IP on the virtual nic 1, eth0 will be always the same, so you won't run in troubles or won't have to edit /etc/hosts each time you change network.</p>
+
+<ul>
+<li><p>A more complex but real setup, will be for example an Oracle RAC in virtual box</p>
+
+<pre><code>  virtual nic 1, type Bridge
+  virtual nic 2, type Internal Network (interconnect 1)
+  virtual nic 3, type Internal Network (interconnect 2)
+</code></pre></li>
+</ul>
+
+
+<p>If you are on the go, you can change nic 1 to Host Only, as the guest will be with fixed IP, the virtual machines will be reachable between them.</p>
+
+<h2>Creating the first virtual machine</h2>
+
+<ul>
+<li>On the main window of virtual box, you can click on NEW, and this will lead us to create the first virtual guest</li>
+</ul>
+
+
+<p>OSX</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.16.36 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.16.36 PM.png' max-width='99%' /></a></figure></p>
+
+<p>Windows 7</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_5c315d51.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_5c315d51.png' max-width='99%' /></a></figure></p>
+
+<p>Or go to the menu machine, and then new</p>
+
+<p>OSX</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.48.42 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.48.42 PM.png' max-width='99%' /></a></figure></p>
+
+<p>Windows 7</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_60b3e6e4.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_60b3e6e4.png' max-width='99%' /></a></figure></p>
+
+<ul>
+<li>Write a name and Select the OS</li>
+</ul>
+
+
+<p>OSX</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.50.17 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.50.17 PM.png' max-width='99%' /></a></figure></p>
+
+<p>Windows 7</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_740f5071.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/Creating_a_VirtualMachine_for_OL6_html_740f5071.png' max-width='99%' /></a></figure></p>
+
+<ul>
+<li>Set memory size</li>
+</ul>
+
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.08 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.08 PM.png' max-width='99%' /></a></figure></p>
+
+<ul>
+<li>Hard drive</li>
+</ul>
+
+
+<p>If you are creating a virtual machine for an existing virtual hard drive select existing, otherwise, select new</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.44 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.51.44 PM.png' max-width='99%' /></a></figure></p>
+
+<ul>
+<li>Hard disk format</li>
+</ul>
+
+
+<p>You can choose between several formats</p>
+
+<p>VDI from virtual box works just fine, and allow you increase the size of the disk, like when you expand a lun.</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.52.46 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.52.46 PM.png' max-width='99%' /></a></figure></p>
+
+<ul>
+<li>Storage on physical hard drive</li>
+</ul>
+
+
+<p>Here you can choose between dynamic or fixed assigned</p>
+
+<p>Dynamic will create an small disk, and will grow as you use more space on the virtual disk
+Fixed will create the disk immediately of the size you assign.</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.53.56 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.53.56 PM.png' max-width='99%' /></a></figure></p>
+
+<p>Dynamic have the advantage you can make the disk to grow.
+Fixed is supposed to be a bit faster as will avoid defragmentation the disk.</p>
+
+<p>In my personal case, I always go as Dynamic, because my virtual machines have a very short life span.</p>
+
+<ul>
+<li>Size</li>
+</ul>
+
+
+<p>Here, there is no magic formula.</p>
+
+<p>If you are confortable managing separate disks, like in the real world, you can setup a disk for just the OS.</p>
+
+<p>Depending on how much memory and how much you will need, the size will change.</p>
+
+<p>For just the OS, and 4GB of Swap, you can go with 16GB disk.</p>
+
+<p>For having say Oracle grid and Oracle database binaries installed, make the disk 32GB minimun.</p>
+
+<p>If you want to have a database on disk, add more disk, but you should go with separate disk for datafiles with asm.</p>
+
+<p>If you don't want to use ASM, you should either way use a separate disk for the datafiles (and another for FRA and archivelogs)</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.57.13 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 4.57.13 PM.png' max-width='99%' /></a></figure></p>
+
+<h2>Review of the normal setup of the new guest</h2>
+
+<p>Now the virtual guest have been created, is time to check few options, like CPU and Network.</p>
+
+<p>Right click on the machine, then Settings will open the settings page</p>
+
+<h3>Systems - Motherboard</h3>
+
+<p>Here you will be able to change some options like you were interacting at motherboard level</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.03.08 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.03.08 PM.png' max-width='99%' /></a></figure></p>
+
+<p>You can adjust the amount of memory here</p>
+
+<h3>Systems - Processor</h3>
+
+<p>Here you will be able to change some options like the number of processors/core</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.04.12 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.04.12 PM.png' max-width='99%' /></a></figure></p>
+
+<h3>Storage</h3>
+
+<p>On storage, you will see what looks like the controllers on a real computer/server</p>
+
+<p>The first controller, is IDE, for a CD-ROM/DVD</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.06.36 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.06.36 PM.png' max-width='99%' /></a></figure></p>
+
+<p>The second controller, is SATA, for the virtual hard disk</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.07.02 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.07.02 PM.png' max-width='99%' /></a></figure></p>
+
+<p>You can select the virtual hard disk, and see the size and how much is being used at the moment</p>
+
+<p>You can also select an ssd option, and tell virtualbox the disk is on ssd.</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.05.36 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.05.36 PM.png' max-width='99%' /></a></figure></p>
+
+<h3>Network</h3>
+
+<p>On the network options, you have the chance to modify the default value of 1 nic as NAT.</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.08.17 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.08.17 PM.png' max-width='99%' /></a></figure></p>
+
+<p>For this particular machine, as I am home, I will use Bridge to the wifi of the mac</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.06.36 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.06.36 PM.png' max-width='99%' /></a></figure></p>
+
+<h2>Review the configuration</h2>
+
+<p>Now the machine have been setup, and we change some values from the default options, you can check on the side panel an overview of the machine</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.12.23 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.12.23 PM.png' max-width='99%' /></a></figure></p>
+
+<h2>Starting the virtual machine</h2>
+
+<p>Select the virtual machine, right click and start</p>
+
+<p>or, Select the virtual machine, then the green arrow on the menu</p>
+
+<p>or, double click on the virtual machine</p>
+
+<p>all this options will start our virtual machine</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.14.19 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.14.19 PM.png' max-width='99%' /></a></figure></p>
+
+<h2>First boot</h2>
+
+<p>Now the virtual machine is one, you should see an error that the machine doesn't have an OS installed</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.16.15 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.16.15 PM.png' max-width='99%' /></a></figure></p>
+
+<p>If you just create a virtual machine, and go straight to start, it will open a dialog box to mount a DVD to install the OS.</p>
+
+<p>On the Devices menu, Select CD/DVD, Choose CD/DVD and browse for the OS you want to use</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.20.39 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.20.39 PM.png' max-width='99%' /></a></figure></p>
+
+<p>Now the virtual DVD iso is on the virtual DVD, reboot the machine.</p>
+
+<p>This can be done, selecting the virtual machine on virtual box, right click and reset</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.24.42 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.24.42 PM.png' max-width='99%' /></a></figure></p>
+
+<p>Now you should see the welcome window for the OS install, in our case, Oracle Linux 6.3</p>
+
+<p><figure><a href='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.26.01 PM.png'><img src='https://raw.github.com/kikitux/kikitux.github.com/master/images/2013/03/kikitux.net 2013-03-02 at 5.26.01 PM.png' max-width='99%' /></a></figure></p>
+
+    </div>
+
+  
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#ol-ref">ol <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#vbox-ref">vbox <span>1</span></a></li>
+    
+  
+
+
+
+    
+
+    <hr>
+      <ul class="pagination">
+      
+        <li class="prev"><a href="/ol/2013/02/28/public-yum-for-oracle-linux-64-is-out" title="Public Yum for Oracle Linux 6.4 is out">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/ol/2013/03/02/installing-oracle-linux-6" title="Installing Oracle Linux 6">Next &rarr;</a></li>
+      
+      </ul>
+    <hr>
+    
+
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="http://kikitux.net" data-num-posts="5" data-width="580" data-colorscheme="light"></div>
+
+
+
+  </div>
+</div>
+
+
+      <hr>
+    </div>
+    <footer>
+      <p>&copy; 2014 Alvaro Miranda
+        with help from <a href="http://dbtek.github.io/jekyll-bootstrap-3" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap-3</a>
+        and <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap</a>
+      </p>
+    </footer>
+
+    
+    <script src="/assets/themes/bootstrap/resources/jquery/jquery.min.js"></script>
+    <script src="/assets/themes/bootstrap/resources/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
